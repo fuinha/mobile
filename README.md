@@ -1,4 +1,4 @@
-# petcode_app_2
+# PetCode
 
 The mobile application for PetCode
 
