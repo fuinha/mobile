@@ -6,9 +6,13 @@ class ScansScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: BackAppBar(name: 'Scan Locations',),
-      body: ScansMap(),
+      appBar: BackAppBar(
+        name: 'Scan Locations',
+      ),
+      body: ClipRRect(
+          borderRadius: BorderRadius.only(
+              topLeft: Radius.circular(25.0), topRight: Radius.circular(25.0)),
+          child: ScansMap()),
     );
   }
 }
-

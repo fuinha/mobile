@@ -14,7 +14,7 @@ class _ScansMapState extends State<ScansMap> {
   @override
   Widget build(BuildContext context) {
     return GoogleMap(
-      initialCameraPosition: CameraPosition(target: LatLng(37, 37)),
+      initialCameraPosition: CameraPosition(target: LatLng(37, 37), zoom: 10.0),
       mapType: MapType.normal,
       onMapCreated: (GoogleMapController controller) {
         _controller.complete(controller);
