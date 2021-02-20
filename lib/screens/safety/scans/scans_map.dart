@@ -3,6 +3,7 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
 import 'package:petcode_app/providers/current_location_provider.dart';
+import 'package:petcode_app/providers/scans_map_provider.dart';
 import 'package:petcode_app/utils/style_constants.dart';
 import 'package:provider/provider.dart';
 
@@ -21,7 +22,7 @@ class _ScansMapState extends State<ScansMap> {
     CurrentLocationProvider currentLocationProvider =
         Provider.of<CurrentLocationProvider>(context);
 
-    print(currentLocationProvider.currentLocation);
+    ScansMapProvider scansMapProvider = Provider.of<ScansMapProvider>(context);
 
     return currentLocationProvider.currentLocation != null
         ? GoogleMap(
@@ -34,6 +35,9 @@ class _ScansMapState extends State<ScansMap> {
               _controller.complete(controller);
             },
             padding: EdgeInsets.only(bottom: height * 0.27),
+            markers: scansMapProvider.markersSet()
+                ? scansMapProvider.getMarkers(context)
+                : null,
           )
         : currentLocationProvider.errorString != null &&
                 currentLocationProvider.errorString.isNotEmpty
