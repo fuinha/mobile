@@ -1,7 +1,6 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
-import 'package:google_maps_flutter/google_maps_flutter.dart';
 import 'package:petcode_app/screens/safety/scans/recent_scan.dart';
 import 'package:petcode_app/utils/style_constants.dart';
 
