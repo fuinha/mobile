@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:petcode_app/providers/current_location_provider.dart';
 import 'package:petcode_app/screens/safety/scans/scans_screen.dart';
 import 'package:petcode_app/utils/style_constants.dart';
+import 'package:provider/provider.dart';
 
 void main() {
   runApp(MyApp());
@@ -9,12 +11,16 @@ void main() {
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Flutter Demo',
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
+    return MultiProvider(
+      providers: [
+        ChangeNotifierProvider<CurrentLocationProvider>(
+          create: (BuildContext context) => CurrentLocationProvider(),
+        ),
+      ],
+      child: MaterialApp(
+        title: 'PetCode',
+        home: RouteScreen(),
       ),
-      home: RouteScreen(),
     );
   }
 }
