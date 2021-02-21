@@ -71,7 +71,7 @@ class AppRouter extends _i1.RootStackRouter {
                         routeBuilder: (match) =>
                             UpcomingScreen.fromMatch(match)),
                     _i1.RouteConfig<ScanScreenL>(ScanScreenL.name,
-                        path: 'scansL',
+                        path: 'scans',
                         routeBuilder: (match) => ScanScreenL.fromMatch(match))
                   ]),
               _i1.RouteConfig<SafetyTab>(SafetyTab.name,
@@ -88,7 +88,7 @@ class AppRouter extends _i1.RootStackRouter {
                         routeBuilder: (match) =>
                             StatisticsScreen.fromMatch(match)),
                     _i1.RouteConfig<ScanScreenS>(ScanScreenS.name,
-                        path: 'scansS',
+                        path: 'scans',
                         routeBuilder: (match) => ScanScreenS.fromMatch(match))
                   ])
             ])
@@ -139,7 +139,7 @@ class UpcomingScreen extends _i1.PageRouteInfo {
 }
 
 class ScanScreenL extends _i1.PageRouteInfo {
-  const ScanScreenL() : super(name, path: 'scansL');
+  const ScanScreenL() : super(name, path: 'scans');
 
   ScanScreenL.fromMatch(_i1.RouteMatch match) : super.fromMatch(match);
 
@@ -164,7 +164,7 @@ class StatisticsScreen extends _i1.PageRouteInfo {
 }
 
 class ScanScreenS extends _i1.PageRouteInfo {
-  const ScanScreenS() : super(name, path: 'scansS');
+  const ScanScreenS() : super(name, path: 'scans');
 
   ScanScreenS.fromMatch(_i1.RouteMatch match) : super.fromMatch(match);
 

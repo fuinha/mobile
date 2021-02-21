@@ -17,6 +17,7 @@ class QuickLinkButton extends StatelessWidget {
     return InkWell(
       onTap: () {
         context.router.pushPath(this.path);
+        context.router.pushPath('scans');
       },
       borderRadius: BorderRadius.circular(16.0),
       child: Container(
