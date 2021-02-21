@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:petcode_app/providers/current_location_provider.dart';
 import 'package:petcode_app/providers/scans_map_provider.dart';
 import 'package:petcode_app/screens/safety/scans/scans_screen.dart';
+import 'package:petcode_app/utils/routes.gr.dart';
 import 'package:petcode_app/utils/style_constants.dart';
 import 'package:provider/provider.dart';
 
@@ -10,6 +11,8 @@ void main() {
 }
 
 class MyApp extends StatelessWidget {
+  final AppRouter _appRouter = AppRouter();
+
   @override
   Widget build(BuildContext context) {
     return MultiProvider(
@@ -21,18 +24,11 @@ class MyApp extends StatelessWidget {
           create: (_) => ScansMapProvider(),
         ),
       ],
-      child: MaterialApp(
+      child: MaterialApp.router(
         title: 'PetCode',
-        home: RouteScreen(),
+        routerDelegate: _appRouter.delegate(),
+        routeInformationParser: _appRouter.defaultRouteParser(),
       ),
     );
-  }
-}
-
-class RouteScreen extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    StyleConstants().init(context);
-    return ScansScreen();
   }
 }
