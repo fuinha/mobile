@@ -1,3 +1,4 @@
+import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:petcode_app/utils/style_constants.dart';
 
@@ -26,7 +27,7 @@ class BackAppBar extends StatelessWidget implements PreferredSize {
           color: StyleConstants.pcBlue,
         ),
         onPressed: () {
-          Navigator.pop(context);
+          context.router.pop();
         },
       ),
       centerTitle: true,

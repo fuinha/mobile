@@ -24,10 +24,10 @@ import 'package:petcode_app/screens/safety/statistics/statistics_screen.dart';
       name: 'SafetyTab',
       children: [
         AutoRoute(path: '', page: SafetyDashboardScreen),
-        AutoRoute(path: 'statistics', page: StatisticsScreen)
+        AutoRoute(path: 'statistics', page: StatisticsScreen),
       ],
     ),
+    AutoRoute(path: 'scans', page: ScansScreen),
   ]),
-  AutoRoute(page: ScansScreen),
 ])
 class $AppRouter {}
