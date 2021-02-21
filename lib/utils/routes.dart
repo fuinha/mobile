@@ -19,7 +19,6 @@ import 'package:petcode_app/screens/safety/statistics/statistics_screen.dart';
         children: [
           AutoRoute(path: '', page: HomeScreen),
           AutoRoute(path: 'scans', page: ScansScreen, name: 'ScanScreenL'),
-
         ],
       ),
       AutoRoute(

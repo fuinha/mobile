@@ -82,7 +82,7 @@ class StyleConstants{
   );
 
   static TextStyle regTextMedium = TextStyle(
-    fontSize: 14.0,
+    fontSize: 16.0,
     fontWeight: FontWeight.w400,
     color: darkGrey,
   );
