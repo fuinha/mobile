@@ -3,6 +3,10 @@ import 'package:petcode_app/utils/style_constants.dart';
 import 'package:petcode_app/widgets/quick_links/quick_link_button.dart';
 
 class QuickLinksWidget extends StatelessWidget {
+  QuickLinksWidget({Key key, this.paths}) : super(key: key);
+
+  final List<String> paths;
+
   @override
   Widget build(BuildContext context) {
     double height = StyleConstants.height;
@@ -18,7 +22,7 @@ class QuickLinksWidget extends StatelessWidget {
                 Icons.phone_outlined,
                 color: StyleConstants.pcBlue,
               ),
-              path: 'ownerInfo',
+              path: paths[0],
             ),
             QuickLinkButton(
               name: 'Pet Information',
@@ -26,7 +30,7 @@ class QuickLinksWidget extends StatelessWidget {
                 Icons.list_alt_outlined,
                 color: StyleConstants.pcBlue,
               ),
-              path: 'petInfo',
+              path: paths[1],
             ),
           ],
         ),
@@ -42,7 +46,7 @@ class QuickLinksWidget extends StatelessWidget {
                 Icons.location_pin,
                 color: StyleConstants.pcBlue,
               ),
-              path: 'scans',
+              path: paths[2],
             ),
             QuickLinkButton(
               name: 'Create Lost Poster',
@@ -50,7 +54,7 @@ class QuickLinksWidget extends StatelessWidget {
                 Icons.photo,
                 color: StyleConstants.pcBlue,
               ),
-              path: 'lostPoster',
+              path: paths[3],
             ),
           ],
         ),
