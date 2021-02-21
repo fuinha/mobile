@@ -1,20 +1,32 @@
 import 'package:flutter/material.dart';
-import 'package:petcode_app/screens/root_screen.dart';
+import 'package:petcode_app/providers/current_location_provider.dart';
+import 'package:petcode_app/providers/scans_map_provider.dart';
+import 'package:petcode_app/utils/routes.gr.dart';
+import 'package:provider/provider.dart';
 
 void main() {
   runApp(MyApp());
 }
 
 class MyApp extends StatelessWidget {
+  final AppRouter _appRouter = AppRouter();
+
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'PetCode Mobile',
-      theme: ThemeData(
-
-        primarySwatch: Colors.blue,
+    return MultiProvider(
+      providers: [
+        ChangeNotifierProvider<CurrentLocationProvider>(
+          create: (_) => CurrentLocationProvider(),
+        ),
+        ChangeNotifierProvider<ScansMapProvider>(
+          create: (_) => ScansMapProvider(),
+        ),
+      ],
+      child: MaterialApp.router(
+        title: 'PetCode',
+        routerDelegate: _appRouter.delegate(),
+        routeInformationParser: _appRouter.defaultRouteParser(),
       ),
-      home: RootScreen(),
     );
   }
 }

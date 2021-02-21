@@ -31,7 +31,7 @@ class StyleConstants{
 
   static Color yellow = new Color(0xffF1AF25);
 
-  static Color pcBlue = new Color(0xff51CBCE);
+  static Color pcBlue = new Color(0xff51BCDA);
 
   static Color pcYellow = new Color(0xffFBC658);
 

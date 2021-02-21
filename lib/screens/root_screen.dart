@@ -1,80 +1,46 @@
+import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:petcode_app/screens/discovery_screen.dart';
-import 'package:petcode_app/screens/health_screen.dart';
-import 'package:petcode_app/screens/safety_screen.dart';
+import 'package:petcode_app/utils/routes.gr.dart';
 import 'package:petcode_app/utils/style_constants.dart';
 
-import 'dashboard/dashboard_screen.dart';
-
-class RootScreen extends StatefulWidget {
-  @override
-  _RootScreenState createState() => _RootScreenState();
-}
-
-class _RootScreenState extends State<RootScreen> {
-
-  final List<Widget> _pageOptions = [
-    DashboardScreen(),
-    SafetyScreen(),
-    HealthScreen(),
-    DiscoveryScreen()
-  ];
-
-  //double height = StyleConstants.height;
-
-  int currentIndex = 0;
-
-  void _onItemTapped(int index) {
-    setState(() {
-      currentIndex = index;
-    });
-  }
-
+class RootScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    double height = MediaQuery.of(context).size.height;
-    double width = MediaQuery.of(context).size.width;
+    bool loggedIn = true;
 
+    StyleConstants().init(context);
+    return loggedIn
+        ? AutoTabsRouter(
+            routes: [
+              LogTab(),
+              SafetyTab(),
+            ],
+            builder: (context, child, animation) {
+              var tabsRouter = context.tabsRouter;
 
+              return Scaffold(
+                bottomNavigationBar: buildBottomNav(tabsRouter),
+                body: child
+              );
+            },
+          )
+        : Scaffold(
+            body: Center(
+              child: Text('Root Screen'),
+            ),
+          );
+  }
 
-    return Scaffold(
-      body: IndexedStack(
-        index: currentIndex,
-        children: _pageOptions,
-      ),
-      bottomNavigationBar: SizedBox(
-        //height: height * 0.12,
-        child: BottomNavigationBar(
-          type: BottomNavigationBarType.fixed,
-          currentIndex: currentIndex,
-          onTap: (index) => _onItemTapped(index),
-          selectedItemColor: StyleConstants.pcBlue,
-          backgroundColor: Colors.white,
-          unselectedItemColor: Colors.black.withOpacity(0.2),
-          unselectedIconTheme: IconThemeData(size: height * 0.028),
-          selectedIconTheme: IconThemeData(size: height * 0.028),
-          showUnselectedLabels: true,
-          items: [
-            BottomNavigationBarItem(
-              icon: Icon(Icons.home),
-              label: 'Home',
-            ),
-            BottomNavigationBarItem(
-              icon: FaIcon(FontAwesomeIcons.shieldAlt),
-              label: 'Safety',
-            ),
-            BottomNavigationBarItem(
-              icon: FaIcon(FontAwesomeIcons.heartbeat),
-              label: 'Health',
-            ),
-            BottomNavigationBarItem(
-              icon: FaIcon(FontAwesomeIcons.search),
-              label: 'Discovery',
-            ),
-          ],
-        ),
-      ),
+  BottomNavigationBar buildBottomNav(TabsRouter tabsRouter) {
+    return BottomNavigationBar(
+      currentIndex: tabsRouter.activeIndex,
+      onTap: (int index) {
+        tabsRouter.setActiveIndex(index);
+      },
+      items: [
+        BottomNavigationBarItem(icon: Icon(Icons.home_outlined), label: 'Home'),
+        BottomNavigationBarItem(icon: Icon(Icons.shield), label: 'Safety'),
+      ],
     );
   }
 }
