@@ -9,9 +9,7 @@ class SafetyDashboardScreen extends StatelessWidget {
         child: Column(
           children: [
             Text('Safety Dashboard Screen'),
-            QuickLinksWidget(
-              paths: ['', '', 'scansS', ''],
-            ),
+            QuickLinksWidget(),
           ],
         ),
       ),

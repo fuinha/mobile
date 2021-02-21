@@ -18,7 +18,7 @@ import 'package:petcode_app/screens/safety/statistics/statistics_screen.dart';
         children: [
           AutoRoute(path: '', page: EventsScreen),
           AutoRoute(path: 'upcoming', page: UpcomingScreen),
-          AutoRoute(path: 'scansL', page: ScansScreen, name: 'ScanScreenL'),
+          AutoRoute(path: 'scans', page: ScansScreen, name: 'ScanScreenL'),
         ],
       ),
       AutoRoute(
@@ -28,7 +28,7 @@ import 'package:petcode_app/screens/safety/statistics/statistics_screen.dart';
         children: [
           AutoRoute(path: '', page: SafetyDashboardScreen),
           AutoRoute(path: 'statistics', page: StatisticsScreen),
-          AutoRoute(path: 'scansS', page: ScansScreen, name: 'ScanScreenS'),
+          AutoRoute(path: 'scans', page: ScansScreen, name: 'ScanScreenS'),
         ],
       ),
     ]),
