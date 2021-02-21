@@ -2,18 +2,19 @@ import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:petcode_app/utils/style_constants.dart';
 
-class DashboardScreen extends StatefulWidget {
+class HomeScreen extends StatefulWidget {
   @override
-  _DashboardScreenState createState() => _DashboardScreenState();
+  _HomeScreenState createState() => _HomeScreenState();
 }
 
-class _DashboardScreenState extends State<DashboardScreen> {
+class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
     double width = MediaQuery.of(context).size.width;
     double height = MediaQuery.of(context).size.height;
 
     return DefaultTabController(
+
       length: 2,
       child: Scaffold(
         appBar: AppBar(
@@ -21,9 +22,7 @@ class _DashboardScreenState extends State<DashboardScreen> {
           backgroundColor: Colors.white,
           centerTitle: true,
           title: Container(
-            height: 1000.0,
             color: Colors.blue,
-
           ),
           bottom: TabBar(
             unselectedLabelColor: StyleConstants.grey,

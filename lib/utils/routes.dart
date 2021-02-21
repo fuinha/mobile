@@ -1,6 +1,7 @@
 import 'package:auto_route/auto_route.dart';
-import 'package:petcode_app/screens/logging/events/events_screen.dart';
-import 'package:petcode_app/screens/logging/upcoming/upcoming_screen.dart';
+import 'package:petcode_app/screens/home/events/events_screen.dart';
+import 'package:petcode_app/screens/home/home_screen.dart';
+import 'package:petcode_app/screens/home/upcoming/upcoming_screen.dart';
 import 'package:petcode_app/screens/root_screen.dart';
 import 'package:petcode_app/screens/safety/dashboard/safety_dashboard_screen.dart';
 import 'package:petcode_app/screens/safety/scans/scans_screen.dart';
@@ -14,11 +15,11 @@ import 'package:petcode_app/screens/safety/statistics/statistics_screen.dart';
       AutoRoute(
         path: 'home',
         page: EmptyRouterPage,
-        name: 'LogTab',
+        name: 'HomeTab',
         children: [
-          AutoRoute(path: '', page: EventsScreen),
-          AutoRoute(path: 'upcoming', page: UpcomingScreen),
+          AutoRoute(path: '', page: HomeScreen),
           AutoRoute(path: 'scans', page: ScansScreen, name: 'ScanScreenL'),
+
         ],
       ),
       AutoRoute(

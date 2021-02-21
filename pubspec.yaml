@@ -12,7 +12,7 @@ dependencies:
   flutter:
     sdk: flutter
 
-  cupertino_icons: ^1.0.2
+  cupertino_icons: ^1.0.0
   auto_route: ^1.0.0-beta.10
   geolocator: ^6.2.0
   google_maps_flutter: ^1.2.0

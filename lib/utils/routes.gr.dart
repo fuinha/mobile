@@ -6,12 +6,11 @@
 
 import 'package:auto_route/auto_route.dart' as _i1;
 
-import '../screens/logging/events/events_screen.dart' as _i3;
-import '../screens/logging/upcoming/upcoming_screen.dart' as _i4;
+import '../screens/home/home_screen.dart' as _i3;
 import '../screens/root_screen.dart' as _i2;
-import '../screens/safety/dashboard/safety_dashboard_screen.dart' as _i6;
-import '../screens/safety/scans/scans_screen.dart' as _i5;
-import '../screens/safety/statistics/statistics_screen.dart' as _i7;
+import '../screens/safety/dashboard/safety_dashboard_screen.dart' as _i5;
+import '../screens/safety/scans/scans_screen.dart' as _i4;
+import '../screens/safety/statistics/statistics_screen.dart' as _i6;
 
 class AppRouter extends _i1.RootStackRouter {
   AppRouter();
@@ -21,7 +20,7 @@ class AppRouter extends _i1.RootStackRouter {
     RootScreen.name: (entry) {
       return _i1.MaterialPageX(entry: entry, child: _i2.RootScreen());
     },
-    LogTab.name: (entry) {
+    HomeTab.name: (entry) {
       return _i1.MaterialPageX(
           entry: entry, child: const _i1.EmptyRouterPage());
     },
@@ -29,24 +28,21 @@ class AppRouter extends _i1.RootStackRouter {
       return _i1.MaterialPageX(
           entry: entry, child: const _i1.EmptyRouterPage());
     },
-    EventsScreen.name: (entry) {
-      return _i1.MaterialPageX(entry: entry, child: _i3.EventsScreen());
-    },
-    UpcomingScreen.name: (entry) {
-      return _i1.MaterialPageX(entry: entry, child: _i4.UpcomingScreen());
+    HomeScreen.name: (entry) {
+      return _i1.MaterialPageX(entry: entry, child: _i3.HomeScreen());
     },
     ScanScreenL.name: (entry) {
-      return _i1.MaterialPageX(entry: entry, child: _i5.ScansScreen());
+      return _i1.MaterialPageX(entry: entry, child: _i4.ScansScreen());
     },
     SafetyDashboardScreen.name: (entry) {
       return _i1.MaterialPageX(
-          entry: entry, child: _i6.SafetyDashboardScreen());
+          entry: entry, child: _i5.SafetyDashboardScreen());
     },
     StatisticsScreen.name: (entry) {
-      return _i1.MaterialPageX(entry: entry, child: _i7.StatisticsScreen());
+      return _i1.MaterialPageX(entry: entry, child: _i6.StatisticsScreen());
     },
     ScanScreenS.name: (entry) {
-      return _i1.MaterialPageX(entry: entry, child: _i5.ScansScreen());
+      return _i1.MaterialPageX(entry: entry, child: _i4.ScansScreen());
     }
   };
 
@@ -59,17 +55,13 @@ class AppRouter extends _i1.RootStackRouter {
             children: [
               _i1.RouteConfig('#redirect',
                   path: '', redirectTo: 'log', fullMatch: true),
-              _i1.RouteConfig<LogTab>(LogTab.name,
+              _i1.RouteConfig<HomeTab>(HomeTab.name,
                   path: 'home',
-                  routeBuilder: (match) => LogTab.fromMatch(match),
+                  routeBuilder: (match) => HomeTab.fromMatch(match),
                   children: [
-                    _i1.RouteConfig<EventsScreen>(EventsScreen.name,
+                    _i1.RouteConfig<HomeScreen>(HomeScreen.name,
                         path: '',
-                        routeBuilder: (match) => EventsScreen.fromMatch(match)),
-                    _i1.RouteConfig<UpcomingScreen>(UpcomingScreen.name,
-                        path: 'upcoming',
-                        routeBuilder: (match) =>
-                            UpcomingScreen.fromMatch(match)),
+                        routeBuilder: (match) => HomeScreen.fromMatch(match)),
                     _i1.RouteConfig<ScanScreenL>(ScanScreenL.name,
                         path: 'scans',
                         routeBuilder: (match) => ScanScreenL.fromMatch(match))
@@ -104,13 +96,13 @@ class RootScreen extends _i1.PageRouteInfo {
   static const String name = 'RootScreen';
 }
 
-class LogTab extends _i1.PageRouteInfo {
-  const LogTab({List<_i1.PageRouteInfo> children})
+class HomeTab extends _i1.PageRouteInfo {
+  const HomeTab({List<_i1.PageRouteInfo> children})
       : super(name, path: 'home', initialChildren: children);
 
-  LogTab.fromMatch(_i1.RouteMatch match) : super.fromMatch(match);
+  HomeTab.fromMatch(_i1.RouteMatch match) : super.fromMatch(match);
 
-  static const String name = 'LogTab';
+  static const String name = 'HomeTab';
 }
 
 class SafetyTab extends _i1.PageRouteInfo {
@@ -122,20 +114,12 @@ class SafetyTab extends _i1.PageRouteInfo {
   static const String name = 'SafetyTab';
 }
 
-class EventsScreen extends _i1.PageRouteInfo {
-  const EventsScreen() : super(name, path: '');
+class HomeScreen extends _i1.PageRouteInfo {
+  const HomeScreen() : super(name, path: '');
 
-  EventsScreen.fromMatch(_i1.RouteMatch match) : super.fromMatch(match);
+  HomeScreen.fromMatch(_i1.RouteMatch match) : super.fromMatch(match);
 
-  static const String name = 'EventsScreen';
-}
-
-class UpcomingScreen extends _i1.PageRouteInfo {
-  const UpcomingScreen() : super(name, path: 'upcoming');
-
-  UpcomingScreen.fromMatch(_i1.RouteMatch match) : super.fromMatch(match);
-
-  static const String name = 'UpcomingScreen';
+  static const String name = 'HomeScreen';
 }
 
 class ScanScreenL extends _i1.PageRouteInfo {
