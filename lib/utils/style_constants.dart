@@ -35,6 +35,8 @@ class StyleConstants{
 
   static Color pcYellow = new Color(0xffFBC658);
 
+  static Color shadowColor = new Color(0x11000000);
+
   //thin textstyles
 
   static TextStyle thinSubtitleText = TextStyle(
@@ -114,7 +116,7 @@ class StyleConstants{
   );
 
   static TextStyle boldTextMedium = TextStyle(
-    fontSize: 14.0,
+    fontSize: 16.0,
     fontWeight: FontWeight.w600,
     color: darkGrey,
   );

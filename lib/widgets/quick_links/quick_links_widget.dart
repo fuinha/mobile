@@ -12,7 +12,7 @@ class QuickLinksWidget extends StatelessWidget {
     return Column(
       children: [
         Row(
-          mainAxisAlignment: MainAxisAlignment.spaceAround,
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
             QuickLinkButton(
               name: 'Owner Information',
@@ -36,7 +36,7 @@ class QuickLinksWidget extends StatelessWidget {
           height: height * 0.025,
         ),
         Row(
-          mainAxisAlignment: MainAxisAlignment.spaceAround,
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
             QuickLinkButton(
               name: 'Scan Locations',

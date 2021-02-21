@@ -1,4 +1,5 @@
 import 'package:auto_route/auto_route.dart';
+import 'package:petcode_app/screens/home/events/addevent_screen.dart';
 import 'package:petcode_app/screens/home/events/events_screen.dart';
 import 'package:petcode_app/screens/home/home_screen.dart';
 import 'package:petcode_app/screens/home/upcoming/upcoming_screen.dart';
@@ -19,6 +20,17 @@ import 'package:petcode_app/screens/safety/statistics/statistics_screen.dart';
         children: [
           AutoRoute(path: '', page: HomeScreen),
           AutoRoute(path: 'scans', page: ScansScreen, name: 'ScanScreenL'),
+          AutoRoute(
+            path: 'events',
+            page: EventsScreen,
+            name: 'EventsScreen',
+            children: [
+              AutoRoute(
+                  path: 'addevent',
+                  page: AddEventScreen,
+                  name: 'AddEventScreen'),
+            ],
+          ),
         ],
       ),
       AutoRoute(

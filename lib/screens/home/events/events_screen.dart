@@ -1,6 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:petcode_app/utils/style_constants.dart';
 import 'package:petcode_app/widgets/quick_links/quick_links_widget.dart';
+import 'package:auto_route/auto_route.dart';
+
+import 'addevent_screen.dart';
+
 
 class EventsScreen extends StatelessWidget {
   @override
@@ -11,12 +15,20 @@ class EventsScreen extends StatelessWidget {
     return Scaffold(
       floatingActionButton: FloatingActionButton(
         backgroundColor: StyleConstants.pcBlue,
-        child: Icon(Icons.add, size: 40.0,),
+        child: Icon(
+          Icons.add,
+          size: 40.0,
+        ),
+        onPressed: (){
+          //context.router.pushPath('addevent');
+          Navigator.push(context, new MaterialPageRoute(builder: (_) => AddEventScreen()));
+        },
       ),
       body: Container(
         child: Padding(
-          padding: EdgeInsets.only(
-              left: width * 0.05, right: width * 0.05,),
+          padding: EdgeInsets.symmetric(
+            horizontal: width * 0.05,
+          ),
           child: ListView(
             children: [
               Container(
@@ -55,33 +67,53 @@ class EventsScreen extends StatelessWidget {
                             ),
                             radius: 30.0,
                           ),
-                          SizedBox(width: width * 0.05,),
+                          SizedBox(
+                            width: width * 0.05,
+                          ),
                           Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
                               Text(
                                 'Food with Jason',
-                                style: StyleConstants.boldText
-                                    .copyWith(color: StyleConstants.pcBlue, fontSize: width * 0.04),
+                                style: StyleConstants.boldText.copyWith(
+                                    color: StyleConstants.pcBlue,
+                                    fontSize: width * 0.04),
                               ),
                               Row(
                                 children: [
-                                  Text('Summer', style: StyleConstants.boldSubtitleText.copyWith(fontSize: width * 0.035),),
-                                  Text(' | 4:31 PM', style: StyleConstants.regSubtitleText.copyWith(fontSize: width * 0.035)),
+                                  Text(
+                                    'Summer',
+                                    style: StyleConstants.boldSubtitleText
+                                        .copyWith(fontSize: width * 0.035),
+                                  ),
+                                  Text(' | 4:31 PM',
+                                      style: StyleConstants.regSubtitleText
+                                          .copyWith(fontSize: width * 0.035)),
                                 ],
                               ),
                             ],
                           ),
                           Spacer(),
                           IconButton(
-                            icon: Icon(Icons.edit, color: StyleConstants.pcBlue,),
+                            icon: Icon(
+                              Icons.edit,
+                              color: StyleConstants.pcBlue,
+                            ),
                             onPressed: () {},
                           ),
                         ],
                       ),
-                      SizedBox(height: height * 0.02,),
-                      Text('Fed Summer Today. She was very happy. Yay!', style: StyleConstants.regText.copyWith(fontSize: width * 0.037),),
-                      SizedBox(height: height * 0.02,),
+                      SizedBox(
+                        height: height * 0.02,
+                      ),
+                      Text(
+                        'Fed Summer Today. She was very happy. Yay!',
+                        style: StyleConstants.regText
+                            .copyWith(fontSize: width * 0.037),
+                      ),
+                      SizedBox(
+                        height: height * 0.02,
+                      ),
                       Expanded(
                         child: ClipRRect(
                           borderRadius: BorderRadius.circular(20.0),
@@ -100,7 +132,9 @@ class EventsScreen extends StatelessWidget {
                   ),
                 ),
               ),
-              SizedBox(height: height * 0.03,),
+              SizedBox(
+                height: height * 0.03,
+              ),
               Container(
                 height: height * 0.15,
                 decoration: BoxDecoration(
@@ -137,37 +171,57 @@ class EventsScreen extends StatelessWidget {
                             ),
                             radius: 30.0,
                           ),
-                          SizedBox(width: width * 0.05,),
+                          SizedBox(
+                            width: width * 0.05,
+                          ),
                           Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
                               Text(
                                 'Walk with Jason',
-                                style: StyleConstants.boldText
-                                    .copyWith(color: StyleConstants.green, fontSize: width * 0.04),
+                                style: StyleConstants.boldText.copyWith(
+                                    color: StyleConstants.green,
+                                    fontSize: width * 0.04),
                               ),
                               Row(
                                 children: [
-                                  Text('Summer', style: StyleConstants.boldSubtitleText.copyWith(fontSize: width * 0.035),),
-                                  Text(' | 4:31 PM', style: StyleConstants.regSubtitleText.copyWith(fontSize: width * 0.035)),
+                                  Text(
+                                    'Summer',
+                                    style: StyleConstants.boldSubtitleText
+                                        .copyWith(fontSize: width * 0.035),
+                                  ),
+                                  Text(' | 4:31 PM',
+                                      style: StyleConstants.regSubtitleText
+                                          .copyWith(fontSize: width * 0.035)),
                                 ],
                               ),
                             ],
                           ),
                           Spacer(),
                           IconButton(
-                            icon: Icon(Icons.edit, color: StyleConstants.green,),
+                            icon: Icon(
+                              Icons.edit,
+                              color: StyleConstants.green,
+                            ),
                             onPressed: () {},
                           ),
                         ],
                       ),
-                      SizedBox(height: height * 0.02,),
-                      Text('Fed Summer Today. She was very happy. Yay!', style: StyleConstants.regText.copyWith(fontSize: width * 0.037),),
+                      SizedBox(
+                        height: height * 0.02,
+                      ),
+                      Text(
+                        'Fed Summer Today. She was very happy. Yay!',
+                        style: StyleConstants.regText
+                            .copyWith(fontSize: width * 0.037),
+                      ),
                     ],
                   ),
                 ),
               ),
-              SizedBox(height: height * 0.03,),
+              SizedBox(
+                height: height * 0.03,
+              ),
               Container(
                 height: height * 0.1,
                 decoration: BoxDecoration(
@@ -205,26 +259,38 @@ class EventsScreen extends StatelessWidget {
                             ),
                             radius: 30.0,
                           ),
-                          SizedBox(width: width * 0.05,),
+                          SizedBox(
+                            width: width * 0.05,
+                          ),
                           Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
                               Text(
                                 'Poop with Jason',
-                                style: StyleConstants.boldText
-                                    .copyWith(color: StyleConstants.green, fontSize: width * 0.04),
+                                style: StyleConstants.boldText.copyWith(
+                                    color: StyleConstants.green,
+                                    fontSize: width * 0.04),
                               ),
                               Row(
                                 children: [
-                                  Text('Summer', style: StyleConstants.boldSubtitleText.copyWith(fontSize: width * 0.035),),
-                                  Text(' | 4:31 PM', style: StyleConstants.regSubtitleText.copyWith(fontSize: width * 0.035)),
+                                  Text(
+                                    'Summer',
+                                    style: StyleConstants.boldSubtitleText
+                                        .copyWith(fontSize: width * 0.035),
+                                  ),
+                                  Text(' | 4:31 PM',
+                                      style: StyleConstants.regSubtitleText
+                                          .copyWith(fontSize: width * 0.035)),
                                 ],
                               ),
                             ],
                           ),
                           Spacer(),
                           IconButton(
-                            icon: Icon(Icons.edit, color: StyleConstants.green,),
+                            icon: Icon(
+                              Icons.edit,
+                              color: StyleConstants.green,
+                            ),
                             onPressed: () {},
                           ),
                         ],

@@ -26,15 +26,18 @@ class QuickLinkButton extends StatelessWidget {
           color: Colors.white,
           boxShadow: [
             BoxShadow(
-              color: Colors.black.withOpacity(0.2),
-              blurRadius: 6.0,
-              offset: Offset(0, 3),
+              color: Color(0x11000000),
+              offset: Offset(
+                0,
+                4,
+              ),
+              blurRadius: 20,
             ),
           ],
           borderRadius: BorderRadius.circular(16.0),
         ),
         child: Padding(
-          padding: EdgeInsets.all(width * 0.04),
+          padding: EdgeInsets.symmetric(horizontal: width * 0.04, vertical: height * 0.02),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
@@ -46,7 +49,7 @@ class QuickLinkButton extends StatelessWidget {
                     child: Text(
                       this.name,
                       style:
-                          StyleConstants.regText.copyWith(color: Colors.black),
+                          StyleConstants.boldText,
                     ),
                   ),
                   Expanded(

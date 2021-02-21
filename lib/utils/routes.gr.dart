@@ -6,11 +6,13 @@
 
 import 'package:auto_route/auto_route.dart' as _i1;
 
+import '../screens/home/events/addevent_screen.dart' as _i6;
+import '../screens/home/events/events_screen.dart' as _i5;
 import '../screens/home/home_screen.dart' as _i3;
 import '../screens/root_screen.dart' as _i2;
-import '../screens/safety/dashboard/safety_dashboard_screen.dart' as _i5;
+import '../screens/safety/dashboard/safety_dashboard_screen.dart' as _i7;
 import '../screens/safety/scans/scans_screen.dart' as _i4;
-import '../screens/safety/statistics/statistics_screen.dart' as _i6;
+import '../screens/safety/statistics/statistics_screen.dart' as _i8;
 
 class AppRouter extends _i1.RootStackRouter {
   AppRouter();
@@ -34,12 +36,18 @@ class AppRouter extends _i1.RootStackRouter {
     ScanScreenL.name: (entry) {
       return _i1.MaterialPageX(entry: entry, child: _i4.ScansScreen());
     },
+    EventsScreen.name: (entry) {
+      return _i1.MaterialPageX(entry: entry, child: _i5.EventsScreen());
+    },
+    AddEventScreen.name: (entry) {
+      return _i1.MaterialPageX(entry: entry, child: _i6.AddEventScreen());
+    },
     SafetyDashboardScreen.name: (entry) {
       return _i1.MaterialPageX(
-          entry: entry, child: _i5.SafetyDashboardScreen());
+          entry: entry, child: _i7.SafetyDashboardScreen());
     },
     StatisticsScreen.name: (entry) {
-      return _i1.MaterialPageX(entry: entry, child: _i6.StatisticsScreen());
+      return _i1.MaterialPageX(entry: entry, child: _i8.StatisticsScreen());
     },
     ScanScreenS.name: (entry) {
       return _i1.MaterialPageX(entry: entry, child: _i4.ScansScreen());
@@ -64,7 +72,16 @@ class AppRouter extends _i1.RootStackRouter {
                         routeBuilder: (match) => HomeScreen.fromMatch(match)),
                     _i1.RouteConfig<ScanScreenL>(ScanScreenL.name,
                         path: 'scans',
-                        routeBuilder: (match) => ScanScreenL.fromMatch(match))
+                        routeBuilder: (match) => ScanScreenL.fromMatch(match)),
+                    _i1.RouteConfig<EventsScreen>(EventsScreen.name,
+                        path: 'events',
+                        routeBuilder: (match) => EventsScreen.fromMatch(match),
+                        children: [
+                          _i1.RouteConfig<AddEventScreen>(AddEventScreen.name,
+                              path: 'addevent',
+                              routeBuilder: (match) =>
+                                  AddEventScreen.fromMatch(match))
+                        ])
                   ]),
               _i1.RouteConfig<SafetyTab>(SafetyTab.name,
                   path: 'safety',
@@ -128,6 +145,23 @@ class ScanScreenL extends _i1.PageRouteInfo {
   ScanScreenL.fromMatch(_i1.RouteMatch match) : super.fromMatch(match);
 
   static const String name = 'ScanScreenL';
+}
+
+class EventsScreen extends _i1.PageRouteInfo {
+  const EventsScreen({List<_i1.PageRouteInfo> children})
+      : super(name, path: 'events', initialChildren: children);
+
+  EventsScreen.fromMatch(_i1.RouteMatch match) : super.fromMatch(match);
+
+  static const String name = 'EventsScreen';
+}
+
+class AddEventScreen extends _i1.PageRouteInfo {
+  const AddEventScreen() : super(name, path: 'addevent');
+
+  AddEventScreen.fromMatch(_i1.RouteMatch match) : super.fromMatch(match);
+
+  static const String name = 'AddEventScreen';
 }
 
 class SafetyDashboardScreen extends _i1.PageRouteInfo {
