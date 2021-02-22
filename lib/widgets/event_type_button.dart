@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:petcode_app/screens/home/events/add_normalevent_screen.dart';
 import 'package:petcode_app/utils/style_constants.dart';
 
 class EventTypeButton extends StatelessWidget {
@@ -53,21 +54,26 @@ class EventTypeButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      decoration: BoxDecoration(
-        borderRadius: BorderRadius.circular(10.0),
-        border: Border.all(color: eventColors[index]),
-      ),
-      height: height * 0.14,
-      width: width * 0.23,
-      child: Padding(
-        padding: EdgeInsets.symmetric(horizontal: width * 0.02, vertical: height * 0.02),
-        child: Column(
-          children: [
-            eventIcons[index],
-            SizedBox(height: height * 0.01,),
-            Text(eventNames[index], style: StyleConstants.regText.copyWith(color: eventColors[index]),)
-          ],
+    return GestureDetector(
+      onTap: (){
+        Navigator.push(context, MaterialPageRoute(builder: (_) => AddNormalEventScreen()));
+      },
+      child: Container(
+        decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(10.0),
+          border: Border.all(color: eventColors[index]),
+        ),
+        height: height * 0.14,
+        width: width * 0.23,
+        child: Padding(
+          padding: EdgeInsets.symmetric(horizontal: width * 0.02, vertical: height * 0.02),
+          child: Column(
+            children: [
+              eventIcons[index],
+              SizedBox(height: height * 0.01,),
+              Text(eventNames[index], style: StyleConstants.regText.copyWith(color: eventColors[index]),)
+            ],
+          ),
         ),
       ),
     );
