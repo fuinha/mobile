@@ -220,25 +220,10 @@ class _AddNormalEventScreenState extends State<AddNormalEventScreen> {
                     ],
                   ),
                 ),
-                Container(
-                  height: height * 0.06,
-                  width: width * 0.3,
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(5.0),
-                    border: Border.all(color: StyleConstants.red),
-                  ),
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      Icon(Icons.delete, color: StyleConstants.red,),
-                      SizedBox(width: width * 0.01,),
-                      Text('Delete', style: StyleConstants.boldText.copyWith(color: StyleConstants.red),),
-                    ],
-                  ),
-                ),
               ],
             ),
-          )
+          ),
+
         ],
       ),
     );
