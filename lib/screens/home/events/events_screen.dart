@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:petcode_app/screens/home/events/edit_normalevent_screen.dart';
 import 'package:petcode_app/utils/style_constants.dart';
 import 'package:petcode_app/widgets/quick_links/quick_links_widget.dart';
 import 'package:auto_route/auto_route.dart';
@@ -99,7 +100,9 @@ class EventsScreen extends StatelessWidget {
                               Icons.edit,
                               color: StyleConstants.pcBlue,
                             ),
-                            onPressed: () {},
+                            onPressed: () {
+                              Navigator.push(context, MaterialPageRoute(builder: (_) => EditNormalEventScreen()));
+                            },
                           ),
                         ],
                       ),
