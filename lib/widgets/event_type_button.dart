@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:petcode_app/screens/home/events/add_customevent_screen.dart';
 import 'package:petcode_app/screens/home/events/add_normalevent_screen.dart';
 import 'package:petcode_app/screens/home/events/add_weightevent_screen.dart';
 import 'package:petcode_app/utils/style_constants.dart';
@@ -59,6 +60,9 @@ class EventTypeButton extends StatelessWidget {
       onTap: (){
         if(index == 7){
           Navigator.push(context, MaterialPageRoute(builder: (_) => AddWeightEventScreen()));
+        }
+        else if(index == 8){
+          Navigator.push(context, MaterialPageRoute(builder: (_) => AddCustomEventScreen()));
         }
         else{
           Navigator.push(context, MaterialPageRoute(builder: (_) => AddNormalEventScreen()));
