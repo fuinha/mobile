@@ -1,5 +1,6 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
+import 'package:petcode_app/screens/safety/dashboard/owner_info/owner_info_screen.dart';
 import 'package:petcode_app/utils/style_constants.dart';
 
 class QuickLinkButton extends StatelessWidget {
@@ -16,8 +17,13 @@ class QuickLinkButton extends StatelessWidget {
 
     return InkWell(
       onTap: () {
+        if(name == 'Owner Information'){
+          Navigator.push(context, MaterialPageRoute(builder: (_) => OwnerInfoScreen()));
+        }
+        else{
         context.router.pushPath(this.path);
         context.router.pushPath('scans');
+        }
       },
       borderRadius: BorderRadius.circular(16.0),
       child: Container(

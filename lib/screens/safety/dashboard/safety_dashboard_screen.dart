@@ -65,7 +65,6 @@ class _SafetyDashboardScreenState extends State<SafetyDashboardScreen> {
                   bottomLeft: Radius.circular(42.0),
                   bottomRight: Radius.circular(42.0)),
               child: Container(
-
                 decoration: BoxDecoration(
                   color: Colors.white,
                   borderRadius: BorderRadius.only(
@@ -82,7 +81,7 @@ class _SafetyDashboardScreenState extends State<SafetyDashboardScreen> {
                     ),
                   ],
                 ),
-                height: height * 0.35,
+                height: height * 0.39,
                 child: Stack(
                   children: [
                     Align(
@@ -102,16 +101,16 @@ class _SafetyDashboardScreenState extends State<SafetyDashboardScreen> {
                         child: Column(
                           children: [
                             SizedBox(
-                              height: height * 0.02,
+                              height: height * 0.03,
                             ),
                             ClipRRect(
                               borderRadius: BorderRadius.circular(13.0),
                               child: Container(
+                                width: width * 0.9,
                                 decoration: BoxDecoration(
-                                  color: Colors.red,
                                   borderRadius: BorderRadius.circular(13.0),
                                 ),
-                                height: height * 0.23,
+                                height: height * 0.26,
                                 child: Image.asset('assets/images/placeholders/summer_large.png', fit: BoxFit.cover,),
                               ),
                             ),
@@ -177,20 +176,19 @@ class _SafetyDashboardScreenState extends State<SafetyDashboardScreen> {
               ),
             ),
             SizedBox(
-              height: height * 0.02,
+              height: height * 0.03,
             ),
             Padding(
               padding: EdgeInsets.symmetric(horizontal: width * 0.05),
               child: QuickLinksWidget(),
             ),
             SizedBox(
-              height: height * 0.02,
+              height: height * 0.03,
             ),
-
             Padding(
               padding: EdgeInsets.symmetric(horizontal: width * 0.05),
               child: Container(
-                height: height * 0.057,
+                height: height * 0.07,
                 decoration: BoxDecoration(
                   color: StyleConstants.pcBlue,
                   borderRadius: BorderRadius.circular(14.0),
