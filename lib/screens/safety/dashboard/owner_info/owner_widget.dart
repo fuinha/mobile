@@ -1,13 +1,11 @@
-
 import 'package:circular_check_box/circular_check_box.dart';
 import 'package:flutter/material.dart';
+import 'package:petcode_app/screens/safety/dashboard/owner_info/update_owner_info_screen.dart';
 
 import 'package:petcode_app/utils/style_constants.dart';
 import 'package:provider/provider.dart';
 
-
 class OwnerWidget extends StatefulWidget {
-
   OwnerWidget({
     Key key,
   }) : super(key: key);
@@ -22,7 +20,6 @@ class _OwnerWidgetState extends State<OwnerWidget> {
   bool _ownerPhoneNumberVisible;
   bool _ownerAddressVisible;
 
-
   @override
   void initState() {
     super.initState();
@@ -30,7 +27,6 @@ class _OwnerWidgetState extends State<OwnerWidget> {
 
   @override
   Widget build(BuildContext context) {
-
     double width = StyleConstants.width;
 
     return Container(
@@ -56,18 +52,19 @@ class _OwnerWidgetState extends State<OwnerWidget> {
               children: [
                 Padding(
                   padding: EdgeInsets.only(left: width * 0.04),
-                  child: Text(
-                    'Owner 1',
-                    style: StyleConstants.boldTitleText
-                  ),
+                  child: Text('Owner 1', style: StyleConstants.boldTitleText),
                 ),
                 Padding(
                   padding: EdgeInsets.only(right: width * 0.03),
                   child: IconButton(
-                    icon: Icon(Icons.edit),
-                    iconSize: width * 0.06,
-                    onPressed: () {}
-                  ),
+                      icon: Icon(Icons.edit),
+                      iconSize: width * 0.06,
+                      onPressed: () {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (_) => OwnerInfoEditingScreen()));
+                      }),
                 ),
               ],
             ),
@@ -79,9 +76,7 @@ class _OwnerWidgetState extends State<OwnerWidget> {
               ),
               title: Row(
                 children: [
-                 Text('Cameron Wilson',
-                      style: StyleConstants.boldText)
-
+                  Text('Cameron Wilson', style: StyleConstants.boldText)
                 ],
               ),
               trailing: CircularCheckBox(
@@ -122,9 +117,7 @@ class _OwnerWidgetState extends State<OwnerWidget> {
                 size: width * 0.07,
                 color: StyleConstants.pcBlue,
               ),
-              title: Text('(555) 123 4567',
-                  style: StyleConstants.boldText),
-
+              title: Text('(555) 123 4567', style: StyleConstants.boldText),
               trailing: CircularCheckBox(
                 value: true,
                 onChanged: (bool value) {},
@@ -143,10 +136,8 @@ class _OwnerWidgetState extends State<OwnerWidget> {
                 size: width * 0.07,
                 color: StyleConstants.pcBlue,
               ),
-              title:  Text('123 Main Street, New York, Ny 1003050',
+              title: Text('123 Main Street, New York, Ny 1003050',
                   style: StyleConstants.boldText),
-
-
               trailing: CircularCheckBox(
                 value: true,
                 onChanged: (bool value) {},
