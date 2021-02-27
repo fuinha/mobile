@@ -1,15 +1,13 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:petcode_app/screens/safety/dashboard/pet_info/pet_info_widget.dart';
 
 import 'package:petcode_app/utils/style_constants.dart';
 import 'package:petcode_app/widgets/back_app_bar.dart';
 import 'package:petcode_app/widgets/pet_card.dart';
 
-import 'package:provider/provider.dart';
 
-import 'owner_widget.dart';
-
-class OwnerInfoScreen extends StatelessWidget {
+class PetInfoScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
 
@@ -18,7 +16,7 @@ class OwnerInfoScreen extends StatelessWidget {
 
     return Scaffold(
       appBar: BackAppBar(
-        name: 'Owner Info',
+        name: 'Pet Info',
       ),
       backgroundColor: Colors.white,
       body: Container(
@@ -39,10 +37,8 @@ class OwnerInfoScreen extends StatelessWidget {
                     children: [
                       PetCard(),
                       SizedBox(height: height * 0.03),
-                      OwnerWidget(),
-                      SizedBox(height: height * 0.05),
-                      OwnerWidget(),
-                      SizedBox(height: height * 0.02),
+                      PetInfoWidget(),
+                
                     ],
                   ),
                 ),
