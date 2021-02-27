@@ -35,10 +35,10 @@ class PetInfoScreen extends StatelessWidget {
                   physics: ClampingScrollPhysics(),
                   child: Column(
                     children: [
-                      PetCard(),
+                      PetCard(editable: true,),
                       SizedBox(height: height * 0.03),
                       PetInfoWidget(),
-                
+
                     ],
                   ),
                 ),

@@ -1,10 +1,14 @@
 import 'package:flutter/material.dart';
+import 'package:petcode_app/screens/safety/dashboard/pet_info/pet_info_editing_screen.dart';
 import 'package:petcode_app/utils/style_constants.dart';
 
 class PetCard extends StatelessWidget {
+  final bool editable;
 
   double width = StyleConstants.width;
   double height = StyleConstants.height;
+
+  PetCard({Key key, this.editable}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -34,8 +38,7 @@ class PetCard extends StatelessWidget {
               child: Container(
                 width: width,
                 height: height * 0.1,
-                child: Image.asset(
-                    'assets/images/pawprintbackground.png',
+                child: Image.asset('assets/images/pawprintbackground.png',
                     fit: BoxFit.cover),
               ),
             ),
@@ -70,12 +73,28 @@ class PetCard extends StatelessWidget {
                         ),
                       ],
                     ),
+                    Spacer(),
+                    editable
+                        ? Align(
+                      alignment: Alignment.centerRight,
+                            child: IconButton(
+                              icon: Icon(Icons.edit),
+                              iconSize: 30.0,
+                              onPressed: () {
+                                Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: (_) => PetInfoEditingScreen()),
+                                );
+                              },
+                            ),
+                          )
+                        : SizedBox.shrink(),
                   ],
                 ),
               ),
             ),
           ],
-        )
-    );
+        ));
   }
 }

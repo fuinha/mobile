@@ -37,7 +37,7 @@ class OwnerInfoScreen extends StatelessWidget {
                   physics: ClampingScrollPhysics(),
                   child: Column(
                     children: [
-                      PetCard(),
+                      PetCard(editable: false,),
                       SizedBox(height: height * 0.03),
                       OwnerWidget(),
                       SizedBox(height: height * 0.05),
