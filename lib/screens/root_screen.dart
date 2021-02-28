@@ -13,7 +13,8 @@ class RootScreen extends StatelessWidget {
         ? AutoTabsRouter(
             routes: [
               HomeTab(),
-              SafetyTab()
+              SafetyTab(),
+              DiscoveryTab(),
             ],
             builder: (context, child, animation) {
               var tabsRouter = context.tabsRouter;
@@ -40,6 +41,7 @@ class RootScreen extends StatelessWidget {
       items: [
         BottomNavigationBarItem(icon: Icon(Icons.home_outlined), label: 'Home'),
         BottomNavigationBarItem(icon: Icon(Icons.shield), label: 'Safety'),
+        BottomNavigationBarItem(icon: Icon(Icons.search), label: 'Discovery'),
       ],
     );
   }

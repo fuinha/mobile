@@ -21,7 +21,7 @@
               />
             <meta-data
                 android:name="com.google.android.geo.API_KEY"
-                android:value="@string/google_maps_api_key"
+                android:value="@string/maps_api_key"
                 />
             <!-- Displays an Android View that continues showing the launch screen
                  Drawable until Flutter paints its first frame, then this splash

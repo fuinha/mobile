@@ -1,8 +1,8 @@
 import 'package:auto_route/auto_route.dart';
+import 'package:petcode_app/screens/discovery/discovery_screen.dart';
 import 'package:petcode_app/screens/home/events/addevent_screen.dart';
 import 'package:petcode_app/screens/home/events/events_screen.dart';
 import 'package:petcode_app/screens/home/home_screen.dart';
-import 'package:petcode_app/screens/home/upcoming/upcoming_screen.dart';
 import 'package:petcode_app/screens/root_screen.dart';
 import 'package:petcode_app/screens/safety/dashboard/safety_dashboard_screen.dart';
 import 'package:petcode_app/screens/safety/scans/scans_screen.dart';
@@ -42,6 +42,14 @@ import 'package:petcode_app/screens/safety/statistics/statistics_screen.dart';
           AutoRoute(path: 'statistics', page: StatisticsScreen),
           AutoRoute(path: 'scans', page: ScansScreen, name: 'ScanScreenS'),
         ],
+      ),
+      AutoRoute(
+        path: 'discovery',
+        page: EmptyRouterPage,
+        name: 'DiscoveryTab',
+        children: [
+          AutoRoute(path: '', page: DiscoveryScreen),
+        ]
       ),
     ]),
   ],

@@ -6,6 +6,7 @@
 
 import 'package:auto_route/auto_route.dart' as _i1;
 
+import '../screens/discovery/discovery_screen.dart' as _i9;
 import '../screens/home/events/addevent_screen.dart' as _i6;
 import '../screens/home/events/events_screen.dart' as _i5;
 import '../screens/home/home_screen.dart' as _i3;
@@ -30,6 +31,10 @@ class AppRouter extends _i1.RootStackRouter {
       return _i1.MaterialPageX(
           entry: entry, child: const _i1.EmptyRouterPage());
     },
+    DiscoveryTab.name: (entry) {
+      return _i1.MaterialPageX(
+          entry: entry, child: const _i1.EmptyRouterPage());
+    },
     HomeScreen.name: (entry) {
       return _i1.MaterialPageX(entry: entry, child: _i3.HomeScreen());
     },
@@ -51,6 +56,9 @@ class AppRouter extends _i1.RootStackRouter {
     },
     ScanScreenS.name: (entry) {
       return _i1.MaterialPageX(entry: entry, child: _i4.ScansScreen());
+    },
+    DiscoveryScreen.name: (entry) {
+      return _i1.MaterialPageX(entry: entry, child: _i9.DiscoveryScreen());
     }
   };
 
@@ -99,6 +107,15 @@ class AppRouter extends _i1.RootStackRouter {
                     _i1.RouteConfig<ScanScreenS>(ScanScreenS.name,
                         path: 'scans',
                         routeBuilder: (match) => ScanScreenS.fromMatch(match))
+                  ]),
+              _i1.RouteConfig<DiscoveryTab>(DiscoveryTab.name,
+                  path: 'discovery',
+                  routeBuilder: (match) => DiscoveryTab.fromMatch(match),
+                  children: [
+                    _i1.RouteConfig<DiscoveryScreen>(DiscoveryScreen.name,
+                        path: '',
+                        routeBuilder: (match) =>
+                            DiscoveryScreen.fromMatch(match))
                   ])
             ])
       ];
@@ -129,6 +146,15 @@ class SafetyTab extends _i1.PageRouteInfo {
   SafetyTab.fromMatch(_i1.RouteMatch match) : super.fromMatch(match);
 
   static const String name = 'SafetyTab';
+}
+
+class DiscoveryTab extends _i1.PageRouteInfo {
+  const DiscoveryTab({List<_i1.PageRouteInfo> children})
+      : super(name, path: 'discovery', initialChildren: children);
+
+  DiscoveryTab.fromMatch(_i1.RouteMatch match) : super.fromMatch(match);
+
+  static const String name = 'DiscoveryTab';
 }
 
 class HomeScreen extends _i1.PageRouteInfo {
@@ -187,4 +213,12 @@ class ScanScreenS extends _i1.PageRouteInfo {
   ScanScreenS.fromMatch(_i1.RouteMatch match) : super.fromMatch(match);
 
   static const String name = 'ScanScreenS';
+}
+
+class DiscoveryScreen extends _i1.PageRouteInfo {
+  const DiscoveryScreen() : super(name, path: '');
+
+  DiscoveryScreen.fromMatch(_i1.RouteMatch match) : super.fromMatch(match);
+
+  static const String name = 'DiscoveryScreen';
 }
