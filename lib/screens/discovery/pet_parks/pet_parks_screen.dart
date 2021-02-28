@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:petcode_app/screens/discovery/pet_parks/pet_parks_map.dart';
 import 'package:petcode_app/screens/discovery/pet_parks/pet_parks_sliding_panel.dart';
-import 'package:petcode_app/screens/discovery/pet_parks/pet_parks_sliding_panel_header.dart';
 import 'package:petcode_app/utils/style_constants.dart';
 import 'package:petcode_app/widgets/back_app_bar.dart';
+import 'package:petcode_app/widgets/sliding_panel_header.dart';
 import 'package:sliding_up_panel/sliding_up_panel.dart';
 
 class PetParksScreen extends StatelessWidget {
@@ -22,7 +22,7 @@ class PetParksScreen extends StatelessWidget {
           topRight: Radius.circular(25.0),
           topLeft: Radius.circular(25.0),
         ),
-        header: PetParksSlidingPanelHeader(),
+        header: SlidingPanelHeader(name: 'Nearby Pet Parks',),
         body: ClipRRect(
           borderRadius: BorderRadius.only(
             topLeft: Radius.circular(25.0),
