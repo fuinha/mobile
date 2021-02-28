@@ -2,6 +2,9 @@ import 'dart:async';
 
 import 'package:flutter/material.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
+import 'package:petcode_app/providers/current_location_provider.dart';
+import 'package:petcode_app/utils/style_constants.dart';
+import 'package:provider/provider.dart';
 
 class PetParksMap extends StatefulWidget {
   @override
@@ -13,14 +16,23 @@ class _PetParksMapState extends State<PetParksMap> {
 
   @override
   Widget build(BuildContext context) {
-    return GoogleMap(
-      initialCameraPosition: CameraPosition(
-        target: LatLng(15, 15),
-      ),
-      mapType: MapType.normal,
-      onMapCreated: (GoogleMapController controller) {
-        _controller.complete(controller);
-      },
-    );
+    double height = StyleConstants.height;
+
+    CurrentLocationProvider currentLocationProvider =
+        Provider.of<CurrentLocationProvider>(context);
+
+    return currentLocationProvider.currentLocation != null
+        ? GoogleMap(
+            initialCameraPosition: CameraPosition(
+                target: LatLng(currentLocationProvider.currentLocation.latitude,
+                    currentLocationProvider.currentLocation.longitude),
+                zoom: 11.0),
+            mapType: MapType.normal,
+            onMapCreated: (GoogleMapController controller) {
+              _controller.complete(controller);
+            },
+            padding: EdgeInsets.only(bottom: height * 0.27),
+          )
+        : SizedBox.shrink();
   }
 }
