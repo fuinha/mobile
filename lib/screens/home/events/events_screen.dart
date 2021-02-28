@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:petcode_app/screens/home/events/edit_normalevent_screen.dart';
 import 'package:petcode_app/utils/style_constants.dart';
+import 'package:petcode_app/widgets/event_card_widget.dart';
 import 'package:petcode_app/widgets/quick_links/quick_links_widget.dart';
 import 'package:auto_route/auto_route.dart';
 
@@ -20,7 +22,6 @@ class EventsScreen extends StatelessWidget {
           size: 40.0,
         ),
         onPressed: (){
-          //context.router.pushPath('addevent');
           Navigator.push(context, new MaterialPageRoute(builder: (_) => AddEventScreen()));
         },
       ),
@@ -31,198 +32,35 @@ class EventsScreen extends StatelessWidget {
           ),
           child: ListView(
             children: [
-              Container(
-                height: height * 0.4,
-                decoration: BoxDecoration(
-                  color: Colors.white,
-                  borderRadius: BorderRadius.circular(24.0),
-                  border: Border.all(
-                    color: StyleConstants.pcBlue,
-                  ),
-                  boxShadow: [
-                    BoxShadow(
-                      color: Colors.black.withOpacity(0.16),
-                      offset: Offset(
-                        0,
-                        3,
-                      ),
-                      blurRadius: 6,
-                    ),
-                  ],
-                ),
-                child: Padding(
-                  padding: EdgeInsets.symmetric(
-                      horizontal: width * 0.05, vertical: height * 0.01),
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.center,
-                    children: [
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          CircleAvatar(
-                            child: ClipRRect(
-                              borderRadius: BorderRadius.circular(50.0),
-                              child: Image.asset(
-                                  'assets/images/placeholders/finn.png'),
-                            ),
-                            radius: 30.0,
-                          ),
-                          SizedBox(
-                            width: width * 0.05,
-                          ),
-                          Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              Text(
-                                'Food with Jason',
-                                style: StyleConstants.boldText.copyWith(
-                                    color: StyleConstants.pcBlue,
-                                    fontSize: width * 0.04),
-                              ),
-                              Row(
-                                children: [
-                                  Text(
-                                    'Summer',
-                                    style: StyleConstants.boldSubtitleText
-                                        .copyWith(fontSize: width * 0.035),
-                                  ),
-                                  Text(' | 4:31 PM',
-                                      style: StyleConstants.regSubtitleText
-                                          .copyWith(fontSize: width * 0.035)),
-                                ],
-                              ),
-                            ],
-                          ),
-                          Spacer(),
-                          IconButton(
-                            icon: Icon(
-                              Icons.edit,
-                              color: StyleConstants.pcBlue,
-                            ),
-                            onPressed: () {},
-                          ),
-                        ],
-                      ),
-                      SizedBox(
-                        height: height * 0.02,
-                      ),
-                      Text(
-                        'Fed Summer Today. She was very happy. Yay!',
-                        style: StyleConstants.regText
-                            .copyWith(fontSize: width * 0.037),
-                      ),
-                      SizedBox(
-                        height: height * 0.02,
-                      ),
-                      Expanded(
-                        child: ClipRRect(
-                          borderRadius: BorderRadius.circular(20.0),
-                          child: Container(
-                            decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(20.0),
-                            ),
-                            child: Image.asset(
-                              'assets/images/placeholders/happydogfood.png',
-                              fit: BoxFit.fill,
-                            ),
-                          ),
-                        ),
-                      ),
-                    ],
-                  ),
-                ),
+              SizedBox(height: height * 0.02,),
+              EventCardWidget(
+                name: 'Food with Lucas',
+                height: height,
+                width: width,
+                description: 'Fed Summer Today. She was very happy. Yay!',
+                hasImage: true,
               ),
               SizedBox(
                 height: height * 0.03,
               ),
-              Container(
-                height: height * 0.15,
-                decoration: BoxDecoration(
-                  color: Colors.white,
-                  borderRadius: BorderRadius.circular(24.0),
-                  border: Border.all(
-                    color: StyleConstants.green,
-                  ),
-                  boxShadow: [
-                    BoxShadow(
-                      color: Colors.black.withOpacity(0.16),
-                      offset: Offset(
-                        0,
-                        3,
-                      ),
-                      blurRadius: 6,
-                    ),
-                  ],
-                ),
-                child: Padding(
-                  padding: EdgeInsets.symmetric(
-                      horizontal: width * 0.05, vertical: height * 0.01),
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.center,
-                    children: [
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          CircleAvatar(
-                            child: ClipRRect(
-                              borderRadius: BorderRadius.circular(50.0),
-                              child: Image.asset(
-                                  'assets/images/placeholders/reggie.png'),
-                            ),
-                            radius: 30.0,
-                          ),
-                          SizedBox(
-                            width: width * 0.05,
-                          ),
-                          Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              Text(
-                                'Walk with Jason',
-                                style: StyleConstants.boldText.copyWith(
-                                    color: StyleConstants.green,
-                                    fontSize: width * 0.04),
-                              ),
-                              Row(
-                                children: [
-                                  Text(
-                                    'Summer',
-                                    style: StyleConstants.boldSubtitleText
-                                        .copyWith(fontSize: width * 0.035),
-                                  ),
-                                  Text(' | 4:31 PM',
-                                      style: StyleConstants.regSubtitleText
-                                          .copyWith(fontSize: width * 0.035)),
-                                ],
-                              ),
-                            ],
-                          ),
-                          Spacer(),
-                          IconButton(
-                            icon: Icon(
-                              Icons.edit,
-                              color: StyleConstants.green,
-                            ),
-                            onPressed: () {},
-                          ),
-                        ],
-                      ),
-                      SizedBox(
-                        height: height * 0.02,
-                      ),
-                      Text(
-                        'Fed Summer Today. She was very happy. Yay!',
-                        style: StyleConstants.regText
-                            .copyWith(fontSize: width * 0.037),
-                      ),
-                    ],
-                  ),
-                ),
+              EventCardWidget(
+                name: 'Walk with Lucas',
+                height: height,
+                width: width,
+                hasImage: false,
+                description: 'Fed Summer Today. She was very happy. Yay!',
               ),
               SizedBox(
                 height: height * 0.03,
               ),
-              Container(
+              EventCardWidget(
+                name: 'Poop with Lucas',
+                height: height,
+                width: width,
+                hasImage: false,
+
+              ),
+              /*Container(
                 height: height * 0.1,
                 decoration: BoxDecoration(
                   color: Colors.white,
@@ -298,7 +136,7 @@ class EventsScreen extends StatelessWidget {
                     ],
                   ),
                 ),
-              ),
+              ),*/
             ],
           ),
         ),

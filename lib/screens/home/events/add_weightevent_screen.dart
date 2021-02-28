@@ -2,12 +2,12 @@ import 'package:flutter/material.dart';
 import 'package:petcode_app/utils/style_constants.dart';
 import 'package:petcode_app/widgets/back_app_bar.dart';
 
-class EditNormalEventScreen extends StatefulWidget {
+class AddWeightEventScreen extends StatefulWidget {
   @override
-  _EditNormalEventScreenState createState() => _EditNormalEventScreenState();
+  _AddWeightEventScreenState createState() => _AddWeightEventScreenState();
 }
 
-class _EditNormalEventScreenState extends State<EditNormalEventScreen> {
+class _AddWeightEventScreenState extends State<AddWeightEventScreen> {
   double height = StyleConstants.height;
   double width = StyleConstants.width;
 
@@ -15,7 +15,7 @@ class _EditNormalEventScreenState extends State<EditNormalEventScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: BackAppBar(
-        name: 'Food',
+        name: 'Weight',
       ),
       body: Column(
         children: [
@@ -219,9 +219,9 @@ class _EditNormalEventScreenState extends State<EditNormalEventScreen> {
                   height: height * 0.04,
                   child: Center(
                       child: Text(
-                    '2/14/2021',
-                    style: StyleConstants.regTextLarge,
-                  )),
+                        '2/14/2021',
+                        style: StyleConstants.regTextLarge,
+                      )),
                 ),
                 Container(
                   decoration: BoxDecoration(
@@ -232,12 +232,26 @@ class _EditNormalEventScreenState extends State<EditNormalEventScreen> {
                   height: height * 0.04,
                   child: Center(
                       child: Text(
-                    '1:50 pm',
-                    style: StyleConstants.regTextLarge,
-                  )),
+                        '1:50 pm',
+                        style: StyleConstants.regTextLarge,
+                      )),
                 ),
               ],
             ),
+          ),
+          SizedBox(height: height * 0.03,),
+          Container(
+            decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(5.0),
+              border: Border.all(color: StyleConstants.darkGrey),
+            ),
+            width: width * 0.9,
+            height: height * 0.05,
+            child: Center(
+                child: Text(
+                  '56 pounds',
+                  style: StyleConstants.regTextLarge,
+                )),
           ),
           SizedBox(
             height: height * 0.02,
@@ -251,12 +265,9 @@ class _EditNormalEventScreenState extends State<EditNormalEventScreen> {
             height: height * 0.1,
             child: Center(
                 child: Text(
-              'Fed summer today. She was very happy yay!',
-              style: StyleConstants.regTextLarge,
-            )),
-          ),
-          SizedBox(
-            height: height * 0.02,
+                  'Fed summer today. She was very happy yay!',
+                  style: StyleConstants.regTextLarge,
+                )),
           ),
           SizedBox(
             height: height * 0.03,
@@ -284,7 +295,7 @@ class _EditNormalEventScreenState extends State<EditNormalEventScreen> {
                     width: width * 0.01,
                   ),
                   Text(
-                    'Change Photo',
+                    'Add Photo',
                     style: StyleConstants.boldTitleText
                         .copyWith(color: StyleConstants.pcBlue),
                   ),
@@ -301,14 +312,13 @@ class _EditNormalEventScreenState extends State<EditNormalEventScreen> {
               height: height * 0.06,
               width: width,
               decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(10.0),
-                color: StyleConstants.red,
-              ),
+                  borderRadius: BorderRadius.circular(10.0),
+                  color: StyleConstants.pcBlue),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Text(
-                    'Delete',
+                    'Add Event',
                     style: StyleConstants.boldTitleText
                         .copyWith(color: Colors.white),
                   ),
