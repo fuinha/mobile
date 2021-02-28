@@ -1,4 +1,5 @@
 import 'package:auto_route/auto_route.dart';
+import 'package:petcode_app/screens/health/health_screen.dart';
 import 'package:petcode_app/screens/home/events/addevent_screen.dart';
 import 'package:petcode_app/screens/home/events/events_screen.dart';
 import 'package:petcode_app/screens/home/home_screen.dart';
@@ -41,6 +42,14 @@ import 'package:petcode_app/screens/safety/statistics/statistics_screen.dart';
           AutoRoute(path: '', page: SafetyDashboardScreen),
           AutoRoute(path: 'statistics', page: StatisticsScreen),
           AutoRoute(path: 'scans', page: ScansScreen, name: 'ScanScreenS'),
+        ],
+      ),
+      AutoRoute(
+        path: 'health',
+        page: EmptyRouterPage,
+        name: 'HealthTab',
+        children: [
+          AutoRoute(path: '', page: HealthScreen),
         ],
       ),
     ]),
