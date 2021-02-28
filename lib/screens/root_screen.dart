@@ -9,6 +9,7 @@ class RootScreen extends StatelessWidget {
     bool loggedIn = true;
 
     StyleConstants().init(context);
+
     return loggedIn
         ? AutoTabsRouter(
             routes: [
@@ -20,9 +21,7 @@ class RootScreen extends StatelessWidget {
               var tabsRouter = context.tabsRouter;
 
               return Scaffold(
-                bottomNavigationBar: buildBottomNav(tabsRouter),
-                body: child
-              );
+                  bottomNavigationBar: buildBottomNav(tabsRouter), body: child);
             },
           )
         : Scaffold(

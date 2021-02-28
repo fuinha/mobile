@@ -10,10 +10,10 @@ class PetParksSlidingPanel extends StatelessWidget {
     return Column(
       children: [
         SizedBox(
-          height: height * 0.08,
+          height: height * 0.10,
         ),
         Container(
-          height: height * 0.42,
+          height: height * 0.40,
           child: Padding(
             padding: EdgeInsets.only(
               top: 10.0,

@@ -31,7 +31,7 @@ class _PetParksMapState extends State<PetParksMap> {
             onMapCreated: (GoogleMapController controller) {
               _controller.complete(controller);
             },
-            padding: EdgeInsets.only(bottom: height * 0.27),
+            padding: EdgeInsets.only(bottom: height * 0.34),
           )
         : SizedBox.shrink();
   }
