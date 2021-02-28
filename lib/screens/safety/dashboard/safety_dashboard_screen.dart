@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:petcode_app/screens/safety/dashboard/caretakers/caretakers_screen.dart';
 import 'package:petcode_app/utils/style_constants.dart';
 import 'package:petcode_app/widgets/quick_links/quick_links_widget.dart';
 
@@ -185,16 +186,21 @@ class _SafetyDashboardScreenState extends State<SafetyDashboardScreen> {
             SizedBox(
               height: height * 0.03,
             ),
-            Padding(
-              padding: EdgeInsets.symmetric(horizontal: width * 0.05),
-              child: Container(
-                height: height * 0.07,
-                decoration: BoxDecoration(
-                  color: StyleConstants.pcBlue,
-                  borderRadius: BorderRadius.circular(14.0),
-                ),
-                child: Center(
-                  child: Text('Manage Caretakers', style: StyleConstants.boldTitleText.copyWith(color: Colors.white),),
+            GestureDetector(
+              onTap: (){
+                Navigator.push(context, MaterialPageRoute(builder: (_) => CaretakersScreen()));
+              },
+              child: Padding(
+                padding: EdgeInsets.symmetric(horizontal: width * 0.05),
+                child: Container(
+                  height: height * 0.07,
+                  decoration: BoxDecoration(
+                    color: StyleConstants.pcBlue,
+                    borderRadius: BorderRadius.circular(14.0),
+                  ),
+                  child: Center(
+                    child: Text('Manage Caretakers', style: StyleConstants.boldTitleText.copyWith(color: Colors.white),),
+                  ),
                 ),
               ),
             ),
