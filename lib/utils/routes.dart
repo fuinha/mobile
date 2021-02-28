@@ -1,5 +1,6 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:petcode_app/screens/discovery/discovery_screen.dart';
+import 'package:petcode_app/screens/discovery/pet_parks/pet_parks_screen.dart';
 import 'package:petcode_app/screens/home/events/addevent_screen.dart';
 import 'package:petcode_app/screens/home/events/events_screen.dart';
 import 'package:petcode_app/screens/home/home_screen.dart';
@@ -49,6 +50,7 @@ import 'package:petcode_app/screens/safety/statistics/statistics_screen.dart';
         name: 'DiscoveryTab',
         children: [
           AutoRoute(path: '', page: DiscoveryScreen),
+          AutoRoute(path: 'petParks', page: PetParksScreen),
         ]
       ),
     ]),

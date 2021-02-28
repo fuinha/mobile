@@ -1,5 +1,6 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
+import 'package:petcode_app/utils/routes.gr.dart';
 import 'package:petcode_app/utils/style_constants.dart';
 
 class DiscoveryLink extends StatelessWidget {
@@ -51,11 +52,9 @@ class DiscoveryLink extends StatelessWidget {
                     //color: StyleConstants.blue,
                     borderRadius: BorderRadius.circular(10.0),
                   ),
-                  child: Center(
-                    child: Image.asset(
-                      this.imageLink,
-                      fit: BoxFit.cover,
-                    ),
+                  child: Image.asset(
+                    this.imageLink,
+                    fit: BoxFit.cover,
                   ),
                 ),
               ),
@@ -69,6 +68,7 @@ class DiscoveryLink extends StatelessWidget {
                   children: [
                     Text(
                       this.name,
+                      style: StyleConstants.regTextLarge.copyWith(color: Colors.black),
                     ),
                     SizedBox(
                       height: height * 0.01,
@@ -77,6 +77,7 @@ class DiscoveryLink extends StatelessWidget {
                       this.description,
                       maxLines: 4,
                       overflow: TextOverflow.ellipsis,
+                      style: StyleConstants.regText,
                     ),
                   ],
                 ),

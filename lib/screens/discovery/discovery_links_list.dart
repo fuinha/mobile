@@ -18,6 +18,7 @@ class DiscoveryLinksList extends StatelessWidget {
             name: 'Pet Parks',
             description: 'Get out and about by exploring nearby pet parks',
             imageLink: 'assets/images/pet_parks_img.png',
+            path: 'petParks',
           ),
           SizedBox(
             height: height * 0.03,

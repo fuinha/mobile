@@ -7,6 +7,7 @@
 import 'package:auto_route/auto_route.dart' as _i1;
 
 import '../screens/discovery/discovery_screen.dart' as _i9;
+import '../screens/discovery/pet_parks/pet_parks_screen.dart' as _i10;
 import '../screens/home/events/addevent_screen.dart' as _i6;
 import '../screens/home/events/events_screen.dart' as _i5;
 import '../screens/home/home_screen.dart' as _i3;
@@ -59,6 +60,9 @@ class AppRouter extends _i1.RootStackRouter {
     },
     DiscoveryScreen.name: (entry) {
       return _i1.MaterialPageX(entry: entry, child: _i9.DiscoveryScreen());
+    },
+    PetParksScreen.name: (entry) {
+      return _i1.MaterialPageX(entry: entry, child: _i10.PetParksScreen());
     }
   };
 
@@ -115,7 +119,11 @@ class AppRouter extends _i1.RootStackRouter {
                     _i1.RouteConfig<DiscoveryScreen>(DiscoveryScreen.name,
                         path: '',
                         routeBuilder: (match) =>
-                            DiscoveryScreen.fromMatch(match))
+                            DiscoveryScreen.fromMatch(match)),
+                    _i1.RouteConfig<PetParksScreen>(PetParksScreen.name,
+                        path: 'petParks',
+                        routeBuilder: (match) =>
+                            PetParksScreen.fromMatch(match))
                   ])
             ])
       ];
@@ -221,4 +229,12 @@ class DiscoveryScreen extends _i1.PageRouteInfo {
   DiscoveryScreen.fromMatch(_i1.RouteMatch match) : super.fromMatch(match);
 
   static const String name = 'DiscoveryScreen';
+}
+
+class PetParksScreen extends _i1.PageRouteInfo {
+  const PetParksScreen() : super(name, path: 'petParks');
+
+  PetParksScreen.fromMatch(_i1.RouteMatch match) : super.fromMatch(match);
+
+  static const String name = 'PetParksScreen';
 }
