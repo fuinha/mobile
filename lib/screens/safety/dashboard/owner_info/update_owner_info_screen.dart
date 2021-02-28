@@ -49,8 +49,8 @@ class _OwnerInfoEditingScreenState extends State<OwnerInfoEditingScreen> {
               Navigator.pop(context);
             },
           ),
-          title: Text('Update Pet Info',
-              style: StyleConstants.boldText
+          title: Text('Update Owner Info',
+              style: StyleConstants.boldTitleText
                   .copyWith(color: StyleConstants.pcBlue)),
           actions: [
             TextButton(
@@ -67,13 +67,11 @@ class _OwnerInfoEditingScreenState extends State<OwnerInfoEditingScreen> {
         body: SingleChildScrollView(
           child: Container(
             height: height,
-
             width: width,
             child: Column(
               children: [
                 Expanded(
                   child: Container(
-
                     child: Column(
                       children: [
                         SizedBox(
@@ -86,7 +84,6 @@ class _OwnerInfoEditingScreenState extends State<OwnerInfoEditingScreen> {
                                 EdgeInsets.symmetric(horizontal: width * 0.08),
                             child: Column(
                               children: [
-
                                 SizedBox(
                                   height: height * 0.01,
                                 ),
@@ -101,20 +98,101 @@ class _OwnerInfoEditingScreenState extends State<OwnerInfoEditingScreen> {
                                         style: StyleConstants
                                             .boldText,
                                       ),
+                                      SizedBox(
+                                        height: height * 0.01,
+                                      ),
                                       Container(
-                                        //color: Colors.blue,
-                                        child: SizedBox(
-                                          height: height * 0.07,
+                                        decoration: BoxDecoration(
+                                          color: Colors.white,
+                                          borderRadius: BorderRadius.circular(15.0),
+                                        ),
+                                        height: height * 0.055,
+                                        child: Center(
                                           child: TextFormField(
-                                            controller: _ownerName,
-                                            style: StyleConstants.boldText,
-                                            decoration: InputDecoration(
-                                              //border: OutlineInputBorder(),
-                                              //hintText: 'Name',
-                                              hintStyle:
-                                                  TextStyle(fontSize: 14.0),
-                                            ),
+                                              controller: _ownerName,
+                                              decoration: InputDecoration(
+                                                  border: OutlineInputBorder(
+                                                    borderRadius:
+                                                    BorderRadius.circular(8.0),
+                                                  ),
+                                                  focusedBorder: OutlineInputBorder(
+                                                    borderSide: BorderSide(
+                                                        color: Color(0xff575b5f),
+                                                        //StyleConstants.darkPurpleGrey,
+                                                        width: 2.0),
+                                                  ),
+                                                  enabledBorder: OutlineInputBorder(
+                                                    borderSide: BorderSide(
+                                                      //color: StyleConstants.darkPurpleGrey,
+                                                        color: Color(0xff575b5f),
+                                                        width: 1.5),
+                                                  ),
+                                                  hintText: 'Full Name',
+                                                  hintStyle: TextStyle(
+                                                    fontSize: 15.0,
+                                                    fontWeight: FontWeight.w600,
+                                                    //color: StyleConstants.darkPurpleGrey)),
+                                                    color: Color(0xffbfbfbf),
+                                                  )
+                                              )
+                                          ),
+                                        ),
+                                      ),
+                                    ],
+                                  ),
+                                ),
 
+                                SizedBox(
+                                  height: height * 0.05,
+                                ),
+                                Container(
+                                  width: width * 0.9,
+                                  child: Column(
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.start,
+                                    children: [
+                                      Text(
+                                        'Phone Number',
+                                        style: StyleConstants
+                                            .boldText,
+                                      ),
+                                      SizedBox(
+                                        height: height * 0.01,
+                                      ),
+                                      Container(
+                                        decoration: BoxDecoration(
+                                          color: Colors.white,
+                                          borderRadius: BorderRadius.circular(8.0),
+                                        ),
+                                        height: height * 0.055,
+                                        child: Center(
+                                          child: TextFormField(
+                                              controller: _ownerPhoneNumber,
+                                              decoration: InputDecoration(
+                                                  border: OutlineInputBorder(
+                                                    borderRadius:
+                                                    BorderRadius.circular(8.0),
+                                                  ),
+                                                  focusedBorder: OutlineInputBorder(
+                                                    borderSide: BorderSide(
+                                                        color: Color(0xff575b5f),
+                                                        //StyleConstants.darkPurpleGrey,
+                                                        width: 2.0),
+                                                  ),
+                                                  enabledBorder: OutlineInputBorder(
+                                                    borderSide: BorderSide(
+                                                      //color: StyleConstants.darkPurpleGrey,
+                                                        color: Color(0xff575b5f),
+                                                        width: 1.5),
+                                                  ),
+                                                  hintText: 'Phone Number',
+                                                  hintStyle: TextStyle(
+                                                    fontSize: 15.0,
+                                                    fontWeight: FontWeight.w600,
+                                                    //color: StyleConstants.darkPurpleGrey)),
+                                                    color: Color(0xffbfbfbf),
+                                                  )
+                                              )
                                           ),
                                         ),
                                       ),
@@ -126,37 +204,55 @@ class _OwnerInfoEditingScreenState extends State<OwnerInfoEditingScreen> {
                                 ),
                                 Container(
                                   width: width * 0.9,
-                                  child: Padding(
-                                    padding:
-                                        EdgeInsets.symmetric(horizontal: 8.0),
-                                    child: Column(
-                                      crossAxisAlignment:
-                                          CrossAxisAlignment.start,
-                                      children: [
-                                        Text(
-                                          'Phone Number',
-                                          style: StyleConstants
-                                              .boldText,
+                                  child: Column(
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.start,
+                                    children: [
+                                      Text(
+                                        'Email Address',
+                                        style: StyleConstants.boldText,
+                                      ),
+                                      SizedBox(
+                                        height: height * 0.01,
+                                      ),
+                                      Container(
+                                        decoration: BoxDecoration(
+                                          color: Colors.white,
+                                          borderRadius: BorderRadius.circular(15.0),
                                         ),
-                                        Container(
-                                          //color: Colors.blue,
-                                          child: SizedBox(
-                                            height: height * 0.07,
-                                            child: TextFormField(
-                                              controller: _ownerPhoneNumber,
-                                              style: StyleConstants.boldText,
+                                        height: height * 0.055,
+                                        child: Center(
+                                          child: TextFormField(
+                                              controller: _ownerEmail,
                                               decoration: InputDecoration(
-                                                //border: OutlineInputBorder(),
-                                                //hintText: 'Name',
-                                                hintStyle:
-                                                TextStyle(fontSize: 14.0),
-                                              ),
-
-                                            ),
+                                                  border: OutlineInputBorder(
+                                                    borderRadius:
+                                                    BorderRadius.circular(8.0),
+                                                  ),
+                                                  focusedBorder: OutlineInputBorder(
+                                                    borderSide: BorderSide(
+                                                        color: Color(0xff575b5f),
+                                                        //StyleConstants.darkPurpleGrey,
+                                                        width: 2.0),
+                                                  ),
+                                                  enabledBorder: OutlineInputBorder(
+                                                    borderSide: BorderSide(
+                                                      //color: StyleConstants.darkPurpleGrey,
+                                                        color: Color(0xff575b5f),
+                                                        width: 1.5),
+                                                  ),
+                                                  hintText: 'Email Address',
+                                                  hintStyle: TextStyle(
+                                                    fontSize: 15.0,
+                                                    fontWeight: FontWeight.w600,
+                                                    //color: StyleConstants.darkPurpleGrey)),
+                                                    color: Color(0xffbfbfbf),
+                                                  )
+                                              )
                                           ),
                                         ),
-                                      ],
-                                    ),
+                                      ),
+                                    ],
                                   ),
                                 ),
                                 SizedBox(
@@ -164,68 +260,56 @@ class _OwnerInfoEditingScreenState extends State<OwnerInfoEditingScreen> {
                                 ),
                                 Container(
                                   width: width * 0.9,
-                                  child: Padding(
-                                    padding: const EdgeInsets.symmetric(
-                                        horizontal: 8.0),
-                                    child: Column(
-                                      crossAxisAlignment:
-                                          CrossAxisAlignment.start,
-                                      children: [
-                                        Text(
-                                          'Email Address',
-                                          style: StyleConstants.boldText,
+                                  child: Column(
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.start,
+                                    children: [
+                                      Text(
+                                        'Address',
+                                        style: StyleConstants
+                                            .boldText,
+                                      ),
+                                      SizedBox(
+                                        height: height * 0.01,
+                                      ),
+                                      Container(
+                                        decoration: BoxDecoration(
+                                          color: Colors.white,
+                                          borderRadius: BorderRadius.circular(15.0),
                                         ),
-                                        SizedBox(
-                                          height: 10.0,
-                                        ),
-                                        TextFormField(
-                                          controller: _ownerEmail,
-
-                                          style: StyleConstants.boldText,
-                                          decoration: InputDecoration(
-                                            hintText: 'Email',
-                                            hintStyle:
-                                                TextStyle(fontSize: 14.0),
+                                        height: height * 0.055,
+                                        child: Center(
+                                          child: TextFormField(
+                                              controller: _ownerAddress,
+                                              decoration: InputDecoration(
+                                                  border: OutlineInputBorder(
+                                                    borderRadius:
+                                                    BorderRadius.circular(8.0),
+                                                  ),
+                                                  focusedBorder: OutlineInputBorder(
+                                                    borderSide: BorderSide(
+                                                        color: Color(0xff575b5f),
+                                                        //StyleConstants.darkPurpleGrey,
+                                                        width: 2.0),
+                                                  ),
+                                                  enabledBorder: OutlineInputBorder(
+                                                    borderSide: BorderSide(
+                                                      //color: StyleConstants.darkPurpleGrey,
+                                                        color: Color(0xff575b5f),
+                                                        width: 1.5),
+                                                  ),
+                                                  hintText: 'Street Address',
+                                                  hintStyle: TextStyle(
+                                                    fontSize: 15.0,
+                                                    fontWeight: FontWeight.w600,
+                                                    //color: StyleConstants.darkPurpleGrey)),
+                                                    color: Color(0xffbfbfbf),
+                                                  )
+                                              )
                                           ),
                                         ),
-                                      ],
-                                    ),
-                                  ),
-                                ),
-                                SizedBox(
-                                  height: height * 0.05,
-                                ),
-                                Container(
-                                  width: width * 0.9,
-                                  child: Padding(
-                                    padding: const EdgeInsets.symmetric(
-                                        horizontal: 8.0),
-                                    child: Column(
-                                      crossAxisAlignment:
-                                          CrossAxisAlignment.start,
-                                      children: [
-                                        Text(
-                                          'Address',
-                                          style: StyleConstants
-                                              .boldText,
-                                        ),
-                                        SizedBox(
-                                          height: 10.0,
-                                        ),
-                                        TextFormField(
-
-                                          keyboardType: TextInputType.multiline,
-                                          maxLines: null,
-                                          style: StyleConstants.boldText,
-                                          controller: _ownerAddress,
-                                          decoration: InputDecoration(
-                                            hintText: 'Address',
-                                            hintStyle:
-                                                TextStyle(fontSize: 14.0),
-                                          ),
-                                        ),
-                                      ],
-                                    ),
+                                      ),
+                                    ],
                                   ),
                                 ),
                               ],
