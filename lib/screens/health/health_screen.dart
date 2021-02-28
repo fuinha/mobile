@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:petcode_app/screens/health/reminders/reminders_screen.dart';
 import 'package:petcode_app/screens/health/vaccine_history/vaccine_history_screen.dart';
 import 'package:petcode_app/utils/style_constants.dart';
 
@@ -74,7 +75,7 @@ class _HealthScreenState extends State<HealthScreen> {
                   height: height * 0.05,
                 ),
                 GestureDetector(
-                  onTap: () {},
+                  onTap: () {Navigator.push(context, MaterialPageRoute(builder: (_) => RemindersScreen()));},
                   child: Container(
                       height: height * 0.17,
                       width: width * 0.9,
@@ -150,7 +151,7 @@ class _HealthScreenState extends State<HealthScreen> {
                                 MainAxisAlignment.center,
                                 children: [
                                   Text(
-                                    'Medical Info',
+                                    'Health Reminders',
                                     style: StyleConstants
                                         .boldTitleText,
                                   ),
@@ -158,9 +159,9 @@ class _HealthScreenState extends State<HealthScreen> {
                                     height: height * 0.005,
                                   ),
                                   Text(
-                                    'Specify your pet\'s medical\nhistory to be displayed when\ntheir QR Tag is scanned',
+                                    'Schedule health reminders\nwith PetCode so you never \nforget',
                                     style: StyleConstants
-                                        .boldText,
+                                        .regText,
                                   )
                                 ],
                               )
@@ -261,7 +262,7 @@ class _HealthScreenState extends State<HealthScreen> {
                                   Text(
                                     'Store vaccinations in the\nPetCode app for easy access\nanytime, anywhere',
                                     style: StyleConstants
-                                        .boldText,
+                                        .regText,
                                   )
                                 ],
                               )
@@ -360,7 +361,7 @@ class _HealthScreenState extends State<HealthScreen> {
                                   Text(
                                     'Export and share all records\nwith the tap of a button',
                                     style: StyleConstants
-                                        .boldText,
+                                        .regText,
                                   )
                                 ],
                               )
