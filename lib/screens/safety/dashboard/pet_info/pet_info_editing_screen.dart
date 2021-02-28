@@ -126,17 +126,58 @@ class _PetInfoEditingScreenState extends State<PetInfoEditingScreen> {
                               mainAxisSize: MainAxisSize.min,
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
-                                Text(
-                                  'Pet Full Name',
-                                  style: StyleConstants.regSubtitleText,
-                                ),
-                                TextFormField(
-                                  controller: _nameInputController,
-                                  style: StyleConstants.regSubtitleText,
-                                  decoration: InputDecoration(
-                                    contentPadding:
-                                        EdgeInsets.only(bottom: -height * 0.02),
-                                    hintStyle: TextStyle(fontSize: 14.0),
+                                Container(
+                                  width: width * 0.9,
+                                  child: Column(
+                                    crossAxisAlignment:
+                                    CrossAxisAlignment.start,
+                                    children: [
+                                      Text(
+                                        'Pet Full Name',
+                                        style: StyleConstants
+                                            .boldText,
+                                      ),
+                                      SizedBox(
+                                        height: height * 0.01,
+                                      ),
+                                      Container(
+                                        decoration: BoxDecoration(
+                                          color: Colors.white,
+                                          borderRadius: BorderRadius.circular(15.0),
+                                        ),
+                                        height: height * 0.055,
+                                        child: Center(
+                                          child: TextFormField(
+                                              controller: _nameInputController,
+                                              decoration: InputDecoration(
+                                                  border: OutlineInputBorder(
+                                                    borderRadius:
+                                                    BorderRadius.circular(8.0),
+                                                  ),
+                                                  focusedBorder: OutlineInputBorder(
+                                                    borderSide: BorderSide(
+                                                        color: Color(0xff575b5f),
+                                                        //StyleConstants.darkPurpleGrey,
+                                                        width: 2.0),
+                                                  ),
+                                                  enabledBorder: OutlineInputBorder(
+                                                    borderSide: BorderSide(
+                                                      //color: StyleConstants.darkPurpleGrey,
+                                                        color: Color(0xff575b5f),
+                                                        width: 1.5),
+                                                  ),
+                                                  hintText: 'Full Name',
+                                                  hintStyle: TextStyle(
+                                                    fontSize: 15.0,
+                                                    fontWeight: FontWeight.w600,
+                                                    //color: StyleConstants.darkPurpleGrey)),
+                                                    color: Color(0xffbfbfbf),
+                                                  )
+                                              )
+                                          ),
+                                        ),
+                                      ),
+                                    ],
                                   ),
                                 ),
                               ],
@@ -372,30 +413,60 @@ class _PetInfoEditingScreenState extends State<PetInfoEditingScreen> {
                             child: Column(
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
-                                Text(
-                                  'Breed',
-                                  style: StyleConstants.regSubtitleText,
-                                ),
-                                TextFormField(
-                                  controller: _breedInputController,
-                                  style: StyleConstants.regSubtitleText,
-                                  decoration: InputDecoration(
-                                    contentPadding:
-                                        EdgeInsets.only(bottom: -height * 0.02),
-                                    hintStyle: TextStyle(fontSize: 14.0),
+                                Container(
+                                  width: width * 0.9,
+                                  child: Column(
+                                    crossAxisAlignment:
+                                    CrossAxisAlignment.start,
+                                    children: [
+                                      Text(
+                                        'Pet Breed',
+                                        style: StyleConstants
+                                            .boldText,
+                                      ),
+                                      SizedBox(
+                                        height: height * 0.01,
+                                      ),
+                                      Container(
+                                        decoration: BoxDecoration(
+                                          color: Colors.white,
+                                          borderRadius: BorderRadius.circular(15.0),
+                                        ),
+                                        height: height * 0.055,
+                                        child: Center(
+                                          child: TextFormField(
+                                              controller: _breedInputController,
+                                              decoration: InputDecoration(
+                                                  border: OutlineInputBorder(
+                                                    borderRadius:
+                                                    BorderRadius.circular(8.0),
+                                                  ),
+                                                  focusedBorder: OutlineInputBorder(
+                                                    borderSide: BorderSide(
+                                                        color: Color(0xff575b5f),
+                                                        //StyleConstants.darkPurpleGrey,
+                                                        width: 2.0),
+                                                  ),
+                                                  enabledBorder: OutlineInputBorder(
+                                                    borderSide: BorderSide(
+                                                      //color: StyleConstants.darkPurpleGrey,
+                                                        color: Color(0xff575b5f),
+                                                        width: 1.5),
+                                                  ),
+                                                  hintText: 'Full Name',
+                                                  hintStyle: TextStyle(
+                                                    fontSize: 15.0,
+                                                    fontWeight: FontWeight.w600,
+                                                    //color: StyleConstants.darkPurpleGrey)),
+                                                    color: Color(0xffbfbfbf),
+                                                  )
+                                              )
+                                          ),
+                                        ),
+                                      ),
+                                    ],
                                   ),
                                 ),
-                                /*BreedSearchBar(
-                                  breedInputController: _breedInputController,
-                                  inputDecoration: InputDecoration(
-                                    contentPadding: EdgeInsets.only(
-                                        bottom: -height * 0.02),
-                                    hintText: 'Breed',
-                                    hintStyle: TextStyle(fontSize: 14.0),
-                                  ),
-                                  style: StyleConstants.regSubtitleText,
-                                  species: _petSpecies,
-                                ),*/
                               ],
                             ),
                           ),
@@ -464,23 +535,58 @@ class _PetInfoEditingScreenState extends State<PetInfoEditingScreen> {
                             child: Column(
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
-                                Text(
-                                  'Color',
-                                  style: StyleConstants.regSubtitleText,
-                                ),
-                                TextFormField(
-                                  /*
-                                    validator: (value) =>
-                                      ValidatorHelper.petColorValidator(
-                                          value),
-                                  */
-                                  style: StyleConstants.regSubtitleText,
-                                  controller: _colorInputController,
-                                  decoration: InputDecoration(
-                                    hintText: 'Color',
-                                    contentPadding:
-                                        EdgeInsets.only(bottom: -height * 0.02),
-                                    hintStyle: TextStyle(fontSize: 14.0),
+                                Container(
+                                  width: width * 0.9,
+                                  child: Column(
+                                    crossAxisAlignment:
+                                    CrossAxisAlignment.start,
+                                    children: [
+                                      Text(
+                                        'Color',
+                                        style: StyleConstants
+                                            .boldText,
+                                      ),
+                                      SizedBox(
+                                        height: height * 0.01,
+                                      ),
+                                      Container(
+                                        decoration: BoxDecoration(
+                                          color: Colors.white,
+                                          borderRadius: BorderRadius.circular(15.0),
+                                        ),
+                                        height: height * 0.055,
+                                        child: Center(
+                                          child: TextFormField(
+                                              controller: _colorInputController,
+                                              decoration: InputDecoration(
+                                                  border: OutlineInputBorder(
+                                                    borderRadius:
+                                                    BorderRadius.circular(8.0),
+                                                  ),
+                                                  focusedBorder: OutlineInputBorder(
+                                                    borderSide: BorderSide(
+                                                        color: Color(0xff575b5f),
+                                                        //StyleConstants.darkPurpleGrey,
+                                                        width: 2.0),
+                                                  ),
+                                                  enabledBorder: OutlineInputBorder(
+                                                    borderSide: BorderSide(
+                                                      //color: StyleConstants.darkPurpleGrey,
+                                                        color: Color(0xff575b5f),
+                                                        width: 1.5),
+                                                  ),
+                                                  hintText: 'Full Name',
+                                                  hintStyle: TextStyle(
+                                                    fontSize: 15.0,
+                                                    fontWeight: FontWeight.w600,
+                                                    //color: StyleConstants.darkPurpleGrey)),
+                                                    color: Color(0xffbfbfbf),
+                                                  )
+                                              )
+                                          ),
+                                        ),
+                                      ),
+                                    ],
                                   ),
                                 ),
                               ],
@@ -498,23 +604,58 @@ class _PetInfoEditingScreenState extends State<PetInfoEditingScreen> {
                             child: Column(
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
-                                Text(
-                                  'Temperament',
-                                  style: StyleConstants.regSubtitleText,
-                                ),
-                                TextFormField(
-                                  /*
-                                  validator: (value) =>
-                                      ValidatorHelper.petBreedValidator(
-                                          value),
-                                  */
-                                  style: StyleConstants.regSubtitleText,
-                                  controller: _temperamentInputController,
-                                  decoration: InputDecoration(
-                                    contentPadding:
-                                        EdgeInsets.only(bottom: -height * 0.02),
-                                    hintText: 'Temperament',
-                                    hintStyle: TextStyle(fontSize: 14.0),
+                                Container(
+                                  width: width * 0.9,
+                                  child: Column(
+                                    crossAxisAlignment:
+                                    CrossAxisAlignment.start,
+                                    children: [
+                                      Text(
+                                        'Temperament',
+                                        style: StyleConstants
+                                            .boldText,
+                                      ),
+                                      SizedBox(
+                                        height: height * 0.01,
+                                      ),
+                                      Container(
+                                        decoration: BoxDecoration(
+                                          color: Colors.white,
+                                          borderRadius: BorderRadius.circular(15.0),
+                                        ),
+                                        height: height * 0.055,
+                                        child: Center(
+                                          child: TextFormField(
+                                              controller: _temperamentInputController,
+                                              decoration: InputDecoration(
+                                                  border: OutlineInputBorder(
+                                                    borderRadius:
+                                                    BorderRadius.circular(8.0),
+                                                  ),
+                                                  focusedBorder: OutlineInputBorder(
+                                                    borderSide: BorderSide(
+                                                        color: Color(0xff575b5f),
+                                                        //StyleConstants.darkPurpleGrey,
+                                                        width: 2.0),
+                                                  ),
+                                                  enabledBorder: OutlineInputBorder(
+                                                    borderSide: BorderSide(
+                                                      //color: StyleConstants.darkPurpleGrey,
+                                                        color: Color(0xff575b5f),
+                                                        width: 1.5),
+                                                  ),
+                                                  hintText: 'Full Name',
+                                                  hintStyle: TextStyle(
+                                                    fontSize: 15.0,
+                                                    fontWeight: FontWeight.w600,
+                                                    //color: StyleConstants.darkPurpleGrey)),
+                                                    color: Color(0xffbfbfbf),
+                                                  )
+                                              )
+                                          ),
+                                        ),
+                                      ),
+                                    ],
                                   ),
                                 ),
                               ],
@@ -585,30 +726,64 @@ class _PetInfoEditingScreenState extends State<PetInfoEditingScreen> {
                               child: Column(
                                 crossAxisAlignment: CrossAxisAlignment.start,
                                 children: [
-                                  Text(
-                                    'Additional Info',
-                                    style: StyleConstants.boldText,
-                                  ),
-                                  TextFormField(
-                                    /*
-                                    validator: (value) =>
-                                        ValidatorHelper.petAddInfoValidator(
-                                            value),
-                                    */
-                                    style: StyleConstants.regSubtitleText,
-                                    controller: _additionalInfoInputController,
-                                    maxLines: null,
-                                    keyboardType: TextInputType.multiline,
-                                    decoration: InputDecoration(
-                                      contentPadding: EdgeInsets.only(
-                                          bottom: -height * 0.02),
-                                      hintText: 'Additional Info',
-                                      hintStyle: TextStyle(fontSize: 14.0),
+                                  Container(
+                                    width: width * 0.9,
+                                    child: Column(
+                                      crossAxisAlignment:
+                                      CrossAxisAlignment.start,
+                                      children: [
+                                        Text(
+                                          'Medical Needs',
+                                          style: StyleConstants
+                                              .boldText,
+                                        ),
+                                        SizedBox(
+                                          height: height * 0.01,
+                                        ),
+                                        Container(
+                                          decoration: BoxDecoration(
+                                            color: Colors.white,
+                                            borderRadius: BorderRadius.circular(15.0),
+                                          ),
+                                          height: height * 0.055,
+                                          child: Center(
+                                            child: TextFormField(
+                                                controller: _additionalInfoInputController,
+                                                decoration: InputDecoration(
+                                                    border: OutlineInputBorder(
+                                                      borderRadius:
+                                                      BorderRadius.circular(8.0),
+                                                    ),
+                                                    focusedBorder: OutlineInputBorder(
+                                                      borderSide: BorderSide(
+                                                          color: Color(0xff575b5f),
+                                                          //StyleConstants.darkPurpleGrey,
+                                                          width: 2.0),
+                                                    ),
+                                                    enabledBorder: OutlineInputBorder(
+                                                      borderSide: BorderSide(
+                                                        //color: StyleConstants.darkPurpleGrey,
+                                                          color: Color(0xff575b5f),
+                                                          width: 1.5),
+                                                    ),
+                                                    hintText: 'Full Name',
+                                                    hintStyle: TextStyle(
+                                                      fontSize: 15.0,
+                                                      fontWeight: FontWeight.w600,
+                                                      //color: StyleConstants.darkPurpleGrey)),
+                                                      color: Color(0xffbfbfbf),
+                                                    )
+                                                )
+                                            ),
+                                          ),
+                                        ),
+                                      ],
                                     ),
                                   ),
                                 ],
                               ),
-                            )),
+                            )
+                        ),
                         SizedBox(
                           height: height * 0.05,
                         ),
