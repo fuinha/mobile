@@ -1,8 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:petcode_app/screens/health/vaccine_history/suggested_vaccine_widget.dart';
 import 'package:petcode_app/screens/health/vaccine_history/vaccine_widget.dart';
 import 'package:petcode_app/utils/style_constants.dart';
 import 'package:petcode_app/widgets/back_app_bar.dart';
 import 'package:petcode_app/widgets/pet_card.dart';
+
+import 'add_vaccine_screen.dart';
 
 class VaccineHistoryScreen extends StatefulWidget {
   @override
@@ -18,7 +21,11 @@ class _VaccineHistoryScreenState extends State<VaccineHistoryScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       floatingActionButton: FloatingActionButton(
+        backgroundColor: StyleConstants.pcBlue,
         child: Icon(Icons.add),
+        onPressed: (){
+          Navigator.push(context, MaterialPageRoute(builder: (_) => AddVaccineScreen()));
+        },
       ),
       appBar: BackAppBar(
         name: 'Vaccinations',
@@ -47,6 +54,8 @@ class _VaccineHistoryScreenState extends State<VaccineHistoryScreen> {
                       VaccineWidget(),
                       SizedBox(height: height * 0.02,),
                       VaccineWidget(),
+                      SizedBox(height: height * 0.02,),
+                      SuggestedVaccineWidget(),
                     ],
                   ),
                 ),
