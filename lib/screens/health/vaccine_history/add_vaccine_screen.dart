@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:petcode_app/screens/health/vaccine_history/add_custom_vaccine_screen.dart';
 import 'package:petcode_app/screens/health/vaccine_history/suggested_vaccine_widget.dart';
 import 'package:petcode_app/utils/style_constants.dart';
 import 'package:petcode_app/widgets/back_app_bar.dart';
@@ -42,7 +43,9 @@ class _AddVaccineScreenState extends State<AddVaccineScreen> {
                 height: height * 0.02,
               ),
               GestureDetector(
-                onTap: () {},
+                onTap: () {
+                  Navigator.push(context, MaterialPageRoute(builder: (_) => AddCustomVaccine()));
+                },
                 child: Container(
                   decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(30.0),
