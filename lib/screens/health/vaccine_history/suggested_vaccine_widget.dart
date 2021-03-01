@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:petcode_app/screens/home/events/add_vaccine_2_screen.dart';
 
 import 'package:petcode_app/utils/style_constants.dart';
 import 'package:provider/provider.dart';
@@ -25,7 +26,9 @@ class _SuggestedVaccineWidgetState extends State<SuggestedVaccineWidget> {
     _width = StyleConstants.width;
 
     return GestureDetector(
-      onTap: () {},
+      onTap: () {
+        Navigator.push(context, MaterialPageRoute(builder: (_) => AddVaccineScreen2()));
+      },
       child: Container(
         decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(30.0),
