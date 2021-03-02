@@ -3,24 +3,13 @@ import 'package:flutter/material.dart';
 import 'package:petcode_app/utils/style_constants.dart';
 import 'package:provider/provider.dart';
 
-class VaccineWidget extends StatefulWidget {
 
-
-  @override
-  _VaccineWidgetState createState() => _VaccineWidgetState();
-}
-
-class _VaccineWidgetState extends State<VaccineWidget> {
+class VaccineWidget extends StatelessWidget {
   double _height;
   double _width;
 
   bool _tapped;
 
-  @override
-  void initState() {
-
-    super.initState();
-  }
 
   @override
   Widget build(BuildContext context) {
@@ -30,7 +19,6 @@ class _VaccineWidgetState extends State<VaccineWidget> {
 
     return GestureDetector(
       onTap: () {
-
       },
       child: Container(
         decoration: BoxDecoration(

@@ -6,14 +6,18 @@
 
 import 'package:auto_route/auto_route.dart' as _i1;
 
-import '../screens/health/health_screen.dart' as _i9;
+import '../screens/health/health_screen.dart' as _i12;
 import '../screens/home/events/addevent_screen.dart' as _i6;
 import '../screens/home/events/events_screen.dart' as _i5;
 import '../screens/home/home_screen.dart' as _i3;
 import '../screens/root_screen.dart' as _i2;
+import '../screens/safety/dashboard/lost_poster/create_lost_poster_screen.dart'
+    as _i10;
+import '../screens/safety/dashboard/owner_info/owner_info_screen.dart' as _i8;
+import '../screens/safety/dashboard/pet_info/pet_info_screen.dart' as _i9;
 import '../screens/safety/dashboard/safety_dashboard_screen.dart' as _i7;
 import '../screens/safety/scans/scans_screen.dart' as _i4;
-import '../screens/safety/statistics/statistics_screen.dart' as _i8;
+import '../screens/safety/statistics/statistics_screen.dart' as _i11;
 
 class AppRouter extends _i1.RootStackRouter {
   AppRouter();
@@ -51,14 +55,24 @@ class AppRouter extends _i1.RootStackRouter {
       return _i1.MaterialPageX(
           entry: entry, child: _i7.SafetyDashboardScreen());
     },
+    OwnerInfoS.name: (entry) {
+      return _i1.MaterialPageX(entry: entry, child: _i8.OwnerInfoScreen());
+    },
+    PetInfoS.name: (entry) {
+      return _i1.MaterialPageX(entry: entry, child: _i9.PetInfoScreen());
+    },
+    CreateLostPosterS.name: (entry) {
+      return _i1.MaterialPageX(
+          entry: entry, child: _i10.CreateLostPosterScreen());
+    },
     StatisticsScreen.name: (entry) {
-      return _i1.MaterialPageX(entry: entry, child: _i8.StatisticsScreen());
+      return _i1.MaterialPageX(entry: entry, child: _i11.StatisticsScreen());
     },
     ScanScreenS.name: (entry) {
       return _i1.MaterialPageX(entry: entry, child: _i4.ScansScreen());
     },
     HealthScreen.name: (entry) {
-      return _i1.MaterialPageX(entry: entry, child: _i9.HealthScreen());
+      return _i1.MaterialPageX(entry: entry, child: _i12.HealthScreen());
     }
   };
 
@@ -86,7 +100,7 @@ class AppRouter extends _i1.RootStackRouter {
                         routeBuilder: (match) => EventsScreen.fromMatch(match),
                         children: [
                           _i1.RouteConfig<AddEventScreen>(AddEventScreen.name,
-                              path: 'addevent',
+                              path: 'addEvent',
                               routeBuilder: (match) =>
                                   AddEventScreen.fromMatch(match))
                         ])
@@ -100,12 +114,22 @@ class AppRouter extends _i1.RootStackRouter {
                         path: '',
                         routeBuilder: (match) =>
                             SafetyDashboardScreen.fromMatch(match)),
+                    _i1.RouteConfig<OwnerInfoS>(OwnerInfoS.name,
+                        path: 'ownerInfo',
+                        routeBuilder: (match) => OwnerInfoS.fromMatch(match)),
+                    _i1.RouteConfig<PetInfoS>(PetInfoS.name,
+                        path: 'petInfo',
+                        routeBuilder: (match) => PetInfoS.fromMatch(match)),
+                    _i1.RouteConfig<CreateLostPosterS>(CreateLostPosterS.name,
+                        path: 'createLostPoster',
+                        routeBuilder: (match) =>
+                            CreateLostPosterS.fromMatch(match)),
                     _i1.RouteConfig<StatisticsScreen>(StatisticsScreen.name,
                         path: 'statistics',
                         routeBuilder: (match) =>
                             StatisticsScreen.fromMatch(match)),
                     _i1.RouteConfig<ScanScreenS>(ScanScreenS.name,
-                        path: 'scans',
+                        path: 'scanLocations',
                         routeBuilder: (match) => ScanScreenS.fromMatch(match))
                   ]),
               _i1.RouteConfig<HealthTab>(HealthTab.name,
@@ -182,7 +206,7 @@ class EventsScreen extends _i1.PageRouteInfo {
 }
 
 class AddEventScreen extends _i1.PageRouteInfo {
-  const AddEventScreen() : super(name, path: 'addevent');
+  const AddEventScreen() : super(name, path: 'addEvent');
 
   AddEventScreen.fromMatch(_i1.RouteMatch match) : super.fromMatch(match);
 
@@ -198,6 +222,30 @@ class SafetyDashboardScreen extends _i1.PageRouteInfo {
   static const String name = 'SafetyDashboardScreen';
 }
 
+class OwnerInfoS extends _i1.PageRouteInfo {
+  const OwnerInfoS() : super(name, path: 'ownerInfo');
+
+  OwnerInfoS.fromMatch(_i1.RouteMatch match) : super.fromMatch(match);
+
+  static const String name = 'OwnerInfoS';
+}
+
+class PetInfoS extends _i1.PageRouteInfo {
+  const PetInfoS() : super(name, path: 'petInfo');
+
+  PetInfoS.fromMatch(_i1.RouteMatch match) : super.fromMatch(match);
+
+  static const String name = 'PetInfoS';
+}
+
+class CreateLostPosterS extends _i1.PageRouteInfo {
+  const CreateLostPosterS() : super(name, path: 'createLostPoster');
+
+  CreateLostPosterS.fromMatch(_i1.RouteMatch match) : super.fromMatch(match);
+
+  static const String name = 'CreateLostPosterS';
+}
+
 class StatisticsScreen extends _i1.PageRouteInfo {
   const StatisticsScreen() : super(name, path: 'statistics');
 
@@ -207,7 +255,7 @@ class StatisticsScreen extends _i1.PageRouteInfo {
 }
 
 class ScanScreenS extends _i1.PageRouteInfo {
-  const ScanScreenS() : super(name, path: 'scans');
+  const ScanScreenS() : super(name, path: 'scanLocations');
 
   ScanScreenS.fromMatch(_i1.RouteMatch match) : super.fromMatch(match);
 
