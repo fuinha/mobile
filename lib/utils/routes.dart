@@ -1,5 +1,7 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:petcode_app/screens/health/health_screen.dart';
+import 'package:petcode_app/screens/health/reminders/reminders_screen.dart';
+import 'package:petcode_app/screens/health/vaccine_history/vaccine_history_screen.dart';
 import 'package:petcode_app/screens/home/events/addevent_screen.dart';
 import 'package:petcode_app/screens/home/events/events_screen.dart';
 import 'package:petcode_app/screens/home/home_screen.dart';
@@ -57,6 +59,9 @@ import 'package:petcode_app/screens/safety/statistics/statistics_screen.dart';
         name: 'HealthTab',
         children: [
           AutoRoute(path: '', page: HealthScreen),
+          AutoRoute(path: 'remindersScreen', page: RemindersScreen),
+          AutoRoute(path: 'vaccineHistory', page: VaccineHistoryScreen),
+
         ],
       ),
     ]),

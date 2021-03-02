@@ -40,22 +40,9 @@ class _AddCustomVaccineState extends State<AddCustomVaccine> {
                         child: TextFormField(
                             //controller: _ownerPhoneNumber,
                             decoration: InputDecoration(
-                                border: OutlineInputBorder(
-                                  borderRadius:
-                                  BorderRadius.circular(8.0),
-                                ),
-                                focusedBorder: OutlineInputBorder(
-                                  borderSide: BorderSide(
-                                      color: Color(0xff575b5f),
-                                      //StyleConstants.darkPurpleGrey,
-                                      width: 2.0),
-                                ),
-                                enabledBorder: OutlineInputBorder(
-                                  borderSide: BorderSide(
-                                    //color: StyleConstants.darkPurpleGrey,
-                                      color: Color(0xff575b5f),
-                                      width: 1.5),
-                                ),
+                                border: StyleConstants.textBoxBorder,
+                                focusedBorder: StyleConstants.textBoxBorderFocused,
+                                enabledBorder: StyleConstants.textBoxBorderEnabled,
                                 hintText: 'Vaccine Name',
                                 hintStyle: TextStyle(
                                   fontSize: 15.0,
@@ -89,22 +76,9 @@ class _AddCustomVaccineState extends State<AddCustomVaccine> {
                           maxLines: 5,
                           //controller: _ownerPhoneNumber,
                             decoration: InputDecoration(
-                                border: OutlineInputBorder(
-                                  borderRadius:
-                                  BorderRadius.circular(8.0),
-                                ),
-                                focusedBorder: OutlineInputBorder(
-                                  borderSide: BorderSide(
-                                      color: Color(0xff575b5f),
-                                      //StyleConstants.darkPurpleGrey,
-                                      width: 2.0),
-                                ),
-                                enabledBorder: OutlineInputBorder(
-                                  borderSide: BorderSide(
-                                    //color: StyleConstants.darkPurpleGrey,
-                                      color: Color(0xff575b5f),
-                                      width: 1.5),
-                                ),
+                                border: StyleConstants.textBoxBorder,
+                                focusedBorder: StyleConstants.textBoxBorderFocused,
+                                enabledBorder: StyleConstants.textBoxBorderEnabled,
                                 hintText: 'Description',
                                 hintStyle: TextStyle(
                                   fontSize: 15.0,
@@ -136,22 +110,9 @@ class _AddCustomVaccineState extends State<AddCustomVaccine> {
                         child: TextFormField(
                           //controller: _ownerPhoneNumber,
                             decoration: InputDecoration(
-                                border: OutlineInputBorder(
-                                  borderRadius:
-                                  BorderRadius.circular(8.0),
-                                ),
-                                focusedBorder: OutlineInputBorder(
-                                  borderSide: BorderSide(
-                                      color: Color(0xff575b5f),
-                                      //StyleConstants.darkPurpleGrey,
-                                      width: 2.0),
-                                ),
-                                enabledBorder: OutlineInputBorder(
-                                  borderSide: BorderSide(
-                                    //color: StyleConstants.darkPurpleGrey,
-                                      color: Color(0xff575b5f),
-                                      width: 1.5),
-                                ),
+                                border: StyleConstants.textBoxBorder,
+                                focusedBorder: StyleConstants.textBoxBorderFocused,
+                                enabledBorder: StyleConstants.textBoxBorderEnabled,
                                 hintText: 'Expiration Date',
                                 hintStyle: TextStyle(
                                   fontSize: 15.0,

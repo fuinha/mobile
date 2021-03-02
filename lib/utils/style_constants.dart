@@ -133,5 +133,28 @@ class StyleConstants{
     color: darkGrey,
   );
 
+  static OutlineInputBorder textBoxBorder = OutlineInputBorder(
+    borderRadius:
+    BorderRadius.circular(8.0),
+  );
+
+  static OutlineInputBorder textBoxBorderFocused = OutlineInputBorder(
+    borderSide: BorderSide(
+        color: Color(0xff575b5f),
+        //StyleConstants.darkPurpleGrey,
+        width: 2.0),
+  );
+
+  static OutlineInputBorder textBoxBorderEnabled = OutlineInputBorder(
+    borderSide: BorderSide(
+      //color: StyleConstants.darkPurpleGrey,
+        color: Color(0xff575b5f),
+        width: 1.5),
+  );
+
+
+
+
+
 
 }

@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:petcode_app/screens/health/reminders/reminders_screen.dart';
 import 'package:petcode_app/screens/health/vaccine_history/vaccine_history_screen.dart';
 import 'package:petcode_app/utils/style_constants.dart';
+import 'package:auto_route/auto_route.dart';
 
 class HealthScreen extends StatefulWidget {
   @override
@@ -75,7 +76,9 @@ class _HealthScreenState extends State<HealthScreen> {
                   height: height * 0.05,
                 ),
                 GestureDetector(
-                  onTap: () {Navigator.push(context, MaterialPageRoute(builder: (_) => RemindersScreen()));},
+                  onTap: () {
+                    context.router.pushPath('remindersScreen');
+                  },
                   child: Container(
                       height: height * 0.17,
                       width: width * 0.9,
@@ -175,7 +178,7 @@ class _HealthScreenState extends State<HealthScreen> {
                 ),
                 GestureDetector(
                   onTap: () {
-                    Navigator.push(context, MaterialPageRoute(builder: (_) => VaccineHistoryScreen()));
+                    context.router.pushPath('vaccineHistory');
                   },
                   child: Container(
                       height: height * 0.17,

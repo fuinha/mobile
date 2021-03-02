@@ -7,6 +7,8 @@
 import 'package:auto_route/auto_route.dart' as _i1;
 
 import '../screens/health/health_screen.dart' as _i12;
+import '../screens/health/reminders/reminders_screen.dart' as _i13;
+import '../screens/health/vaccine_history/vaccine_history_screen.dart' as _i14;
 import '../screens/home/events/addevent_screen.dart' as _i6;
 import '../screens/home/events/events_screen.dart' as _i5;
 import '../screens/home/home_screen.dart' as _i3;
@@ -73,6 +75,13 @@ class AppRouter extends _i1.RootStackRouter {
     },
     HealthScreen.name: (entry) {
       return _i1.MaterialPageX(entry: entry, child: _i12.HealthScreen());
+    },
+    RemindersScreen.name: (entry) {
+      return _i1.MaterialPageX(entry: entry, child: _i13.RemindersScreen());
+    },
+    VaccineHistoryScreen.name: (entry) {
+      return _i1.MaterialPageX(
+          entry: entry, child: _i14.VaccineHistoryScreen());
     }
   };
 
@@ -138,7 +147,16 @@ class AppRouter extends _i1.RootStackRouter {
                   children: [
                     _i1.RouteConfig<HealthScreen>(HealthScreen.name,
                         path: '',
-                        routeBuilder: (match) => HealthScreen.fromMatch(match))
+                        routeBuilder: (match) => HealthScreen.fromMatch(match)),
+                    _i1.RouteConfig<RemindersScreen>(RemindersScreen.name,
+                        path: 'remindersScreen',
+                        routeBuilder: (match) =>
+                            RemindersScreen.fromMatch(match)),
+                    _i1.RouteConfig<VaccineHistoryScreen>(
+                        VaccineHistoryScreen.name,
+                        path: 'vaccineHistory',
+                        routeBuilder: (match) =>
+                            VaccineHistoryScreen.fromMatch(match))
                   ])
             ])
       ];
@@ -268,4 +286,20 @@ class HealthScreen extends _i1.PageRouteInfo {
   HealthScreen.fromMatch(_i1.RouteMatch match) : super.fromMatch(match);
 
   static const String name = 'HealthScreen';
+}
+
+class RemindersScreen extends _i1.PageRouteInfo {
+  const RemindersScreen() : super(name, path: 'remindersScreen');
+
+  RemindersScreen.fromMatch(_i1.RouteMatch match) : super.fromMatch(match);
+
+  static const String name = 'RemindersScreen';
+}
+
+class VaccineHistoryScreen extends _i1.PageRouteInfo {
+  const VaccineHistoryScreen() : super(name, path: 'vaccineHistory');
+
+  VaccineHistoryScreen.fromMatch(_i1.RouteMatch match) : super.fromMatch(match);
+
+  static const String name = 'VaccineHistoryScreen';
 }
