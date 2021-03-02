@@ -74,12 +74,7 @@ class _AddVaccineScreen2State extends State<AddVaccineScreen2> {
                                       width: 1.5),
                                 ),
                                 hintText: 'Expiration Date',
-                                hintStyle: TextStyle(
-                                  fontSize: 15.0,
-                                  fontWeight: FontWeight.w600,
-                                  //color: StyleConstants.darkPurpleGrey)),
-                                  color: Color(0xffbfbfbf),
-                                )
+                                hintStyle: StyleConstants.boldSubtitleText,
                             )
                         ),
                       ),

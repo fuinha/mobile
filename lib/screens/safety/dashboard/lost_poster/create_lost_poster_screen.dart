@@ -59,12 +59,7 @@ class _CreateLostPosterScreenState extends State<CreateLostPosterScreen> {
                                     width: 1.5),
                               ),
                               hintText: 'Last Known Location',
-                              hintStyle: TextStyle(
-                                fontSize: 15.0,
-                                fontWeight: FontWeight.w600,
-                                //color: StyleConstants.darkPurpleGrey)),
-                                color: Color(0xffbfbfbf),
-                              )
+                              hintStyle: StyleConstants.boldText.copyWith(color: StyleConstants.lightGrey),
                           )
                       ),
                     ),
@@ -120,12 +115,7 @@ class _CreateLostPosterScreenState extends State<CreateLostPosterScreen> {
                                     width: 1.5),
                               ),
                               hintText: 'Amount',
-                              hintStyle: TextStyle(
-                                fontSize: 15.0,
-                                fontWeight: FontWeight.w600,
-                                //color: StyleConstants.darkPurpleGrey)),
-                                color: Color(0xffbfbfbf),
-                              )
+                              hintStyle: StyleConstants.boldText.copyWith(color: StyleConstants.lightGrey),
                           )
                       ),
                     ),
@@ -168,12 +158,7 @@ class _CreateLostPosterScreenState extends State<CreateLostPosterScreen> {
                                   width: 1.5),
                             ),
                             hintText: 'Special Message',
-                            hintStyle: TextStyle(
-                              fontSize: 15.0,
-                              fontWeight: FontWeight.w600,
-                              //color: StyleConstants.darkPurpleGrey)),
-                              color: Color(0xffbfbfbf),
-                            )
+                            hintStyle: StyleConstants.boldText.copyWith(color: StyleConstants.lightGrey),
                         )
                     ),
                   ),
