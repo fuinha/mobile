@@ -26,6 +26,9 @@ class EventsScreen extends StatelessWidget {
         },
       ),
       body: Container(
+        decoration: BoxDecoration(
+          gradient: StyleConstants.homePageGradientBackground,
+        ),
         child: Padding(
           padding: EdgeInsets.symmetric(
             horizontal: width * 0.05,
@@ -60,83 +63,6 @@ class EventsScreen extends StatelessWidget {
                 hasImage: false,
 
               ),
-              /*Container(
-                height: height * 0.1,
-                decoration: BoxDecoration(
-                  color: Colors.white,
-                  borderRadius: BorderRadius.circular(24.0),
-                  border: Border.all(
-                    color: StyleConstants.green,
-                  ),
-                  boxShadow: [
-                    BoxShadow(
-                      color: Colors.black.withOpacity(0.16),
-                      offset: Offset(
-                        0,
-                        3,
-                      ),
-                      blurRadius: 6,
-                    ),
-                  ],
-                ),
-                child: Padding(
-                  padding: EdgeInsets.symmetric(
-                      horizontal: width * 0.05, vertical: height * 0.01),
-                  child: Column(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    crossAxisAlignment: CrossAxisAlignment.center,
-                    children: [
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          CircleAvatar(
-                            child: ClipRRect(
-                              borderRadius: BorderRadius.circular(50.0),
-                              child: Image.asset(
-                                  'assets/images/placeholders/reggie.png'),
-                            ),
-                            radius: 30.0,
-                          ),
-                          SizedBox(
-                            width: width * 0.05,
-                          ),
-                          Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              Text(
-                                'Poop with Jason',
-                                style: StyleConstants.boldText.copyWith(
-                                    color: StyleConstants.green,
-                                    fontSize: width * 0.04),
-                              ),
-                              Row(
-                                children: [
-                                  Text(
-                                    'Summer',
-                                    style: StyleConstants.boldSubtitleText
-                                        .copyWith(fontSize: width * 0.035),
-                                  ),
-                                  Text(' | 4:31 PM',
-                                      style: StyleConstants.regSubtitleText
-                                          .copyWith(fontSize: width * 0.035)),
-                                ],
-                              ),
-                            ],
-                          ),
-                          Spacer(),
-                          IconButton(
-                            icon: Icon(
-                              Icons.edit,
-                              color: StyleConstants.green,
-                            ),
-                            onPressed: () {},
-                          ),
-                        ],
-                      ),
-                    ],
-                  ),
-                ),
-              ),*/
             ],
           ),
         ),

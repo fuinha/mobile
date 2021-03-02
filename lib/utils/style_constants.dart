@@ -152,6 +152,15 @@ class StyleConstants{
         width: 1.5),
   );
 
+  static LinearGradient homePageGradientBackground = LinearGradient(
+    begin: Alignment.bottomRight,
+    end: Alignment(0.6, 0.6),
+    colors: [
+      Color(0xffC5F2FF),
+      Colors.white,
+    ],
+  );
+
 
 
 
