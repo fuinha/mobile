@@ -29,15 +29,26 @@ class PetCard extends StatelessWidget {
               blurRadius: 20,
             ),
           ],
+          gradient: LinearGradient(
+            begin: Alignment.bottomCenter,
+            end: Alignment.topCenter,
+            colors: [
+              Color(0xffC5F2FF).withOpacity(0.5),
+              Colors.white
+            ],
+            stops: [
+              0.1, 0.9
+            ]
+          ),
         ),
-        height: height * 0.2,
+        height: height * 0.12,
         child: Stack(
           children: [
             Align(
               alignment: Alignment.bottomCenter,
               child: Container(
                 width: width,
-                height: height * 0.1,
+                height: height * 0.11,
                 child: Image.asset('assets/images/pawprintbackground.png',
                     fit: BoxFit.cover),
               ),

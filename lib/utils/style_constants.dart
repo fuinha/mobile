@@ -156,7 +156,7 @@ class StyleConstants{
     begin: Alignment.bottomRight,
     end: Alignment(0.6, 0.6),
     colors: [
-      Color(0xffC5F2FF),
+      Color(0xffC5F2FF).withOpacity(0.75),
       Colors.white,
     ],
   );
