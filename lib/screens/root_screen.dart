@@ -16,6 +16,7 @@ class RootScreen extends StatelessWidget {
               HomeTab(),
               SafetyTab(),
               HealthTab(),
+              DiscoveryTab(),
             ],
             builder: (context, child, animation) {
               var tabsRouter = context.tabsRouter;
@@ -35,14 +36,20 @@ class RootScreen extends StatelessWidget {
 
   BottomNavigationBar buildBottomNav(TabsRouter tabsRouter) {
     return BottomNavigationBar(
+      backgroundColor: Colors.white,
+      selectedItemColor: StyleConstants.pcBlue,
       currentIndex: tabsRouter.activeIndex,
+      showUnselectedLabels: true,
+      unselectedItemColor: StyleConstants.darkGrey,
+      
       onTap: (int index) {
         tabsRouter.setActiveIndex(index);
       },
       items: [
-        BottomNavigationBarItem(icon: Icon(Icons.home_outlined), label: 'Home'),
-        BottomNavigationBarItem(icon: Icon(Icons.shield), label: 'Safety'),
-        BottomNavigationBarItem(icon: FaIcon(FontAwesomeIcons.heartbeat), label: 'Health'),
+        BottomNavigationBarItem(icon: Icon(Icons.home_outlined,), label: 'Home',),
+        BottomNavigationBarItem(icon: Icon(Icons.shield, ), label: 'Safety'),
+        BottomNavigationBarItem(icon: FaIcon(FontAwesomeIcons.heartbeat, ), label: 'Health'),
+        BottomNavigationBarItem(icon: Icon(Icons.search,), label: 'Discovery'),
       ],
     );
   }

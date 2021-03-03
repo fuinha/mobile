@@ -1,4 +1,5 @@
 import 'package:auto_route/auto_route.dart';
+import 'package:petcode_app/screens/discovery_screen.dart';
 import 'package:petcode_app/screens/health/health_screen.dart';
 import 'package:petcode_app/screens/health/reminders/reminders_screen.dart';
 import 'package:petcode_app/screens/health/vaccine_history/vaccine_history_screen.dart';
@@ -61,6 +62,15 @@ import 'package:petcode_app/screens/safety/statistics/statistics_screen.dart';
           AutoRoute(path: '', page: HealthScreen),
           AutoRoute(path: 'remindersScreen', page: RemindersScreen),
           AutoRoute(path: 'vaccineHistory', page: VaccineHistoryScreen),
+
+        ],
+      ),
+      AutoRoute(
+        path: 'discovery',
+        page: EmptyRouterPage,
+        name: 'DiscoveryTab',
+        children: [
+          AutoRoute(path: '', page: DiscoveryScreen),
 
         ],
       ),

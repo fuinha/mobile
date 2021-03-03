@@ -10,7 +10,10 @@ class _DiscoveryScreenState extends State<DiscoveryScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Center(
-        child: Text('Disocvery Screen'),
+        child: IconButton(
+          icon: Icon(Icons.settings),
+          onPressed: (){},
+        )
       ),
     );
   }
