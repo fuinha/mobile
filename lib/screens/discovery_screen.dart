@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:petcode_app/screens/settings/settings_screen.dart';
 
 class DiscoveryScreen extends StatefulWidget {
   @override
@@ -12,7 +13,9 @@ class _DiscoveryScreenState extends State<DiscoveryScreen> {
       body: Center(
         child: IconButton(
           icon: Icon(Icons.settings),
-          onPressed: (){},
+          onPressed: (){
+            Navigator.push(context, MaterialPageRoute(builder: (_) => SettingsScreen()));
+          },
         )
       ),
     );
