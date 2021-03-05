@@ -168,4 +168,12 @@ class StyleConstants {
       Color(0xff51BCDA),
     ],
   );
+  static LinearGradient redButtonGradient = LinearGradient(
+    begin: Alignment.centerRight,
+    end: Alignment.centerLeft,
+    colors: [
+      Color(0xffFE8C8C),
+      Color(0xffD64A4A),
+    ],
+  );
 }

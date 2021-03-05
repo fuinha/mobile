@@ -303,12 +303,13 @@ class _EditNormalEventScreenState extends State<EditNormalEventScreen> {
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(10.0),
                 color: StyleConstants.red,
+                gradient: StyleConstants.redButtonGradient,
               ),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Text(
-                    'Delete',
+                    'Remove Event',
                     style: StyleConstants.boldTitleText
                         .copyWith(color: Colors.white),
                   ),
