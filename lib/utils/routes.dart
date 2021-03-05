@@ -39,6 +39,17 @@ import 'package:petcode_app/screens/safety/statistics/statistics_screen.dart';
                   name: 'AddEventScreen'),
             ],
           ),
+          AutoRoute(
+            path: 'upcoming',
+            page: EventsScreen,
+            name: 'UpcomingScreen',
+            children: [
+              AutoRoute(path: 'ownerInfo', page: OwnerInfoScreen, name: 'OwnerInfoU'),
+              AutoRoute(path: 'petInfo', page: PetInfoScreen, name: 'PetInfoU'),
+              AutoRoute(path: 'createLostPoster', page: CreateLostPosterScreen, name: 'CreateLostPosterU'),
+              AutoRoute(path: 'scanLocations', page: ScansScreen, name: 'ScanScreenU'),
+            ],
+          ),
         ],
       ),
       AutoRoute(

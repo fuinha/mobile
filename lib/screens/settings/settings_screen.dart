@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:petcode_app/utils/style_constants.dart';
 import 'package:petcode_app/widgets/back_app_bar.dart';
 
+import 'notifications_screen.dart';
+
 class SettingsScreen extends StatefulWidget {
   @override
   _SettingsScreenState createState() => _SettingsScreenState();
@@ -26,11 +28,15 @@ class _SettingsScreenState extends State<SettingsScreen> {
               ),
               Divider(),
               ListTile(
+
                 title: Text('Account Information', style: StyleConstants.regTextMedium,),
                 trailing: Icon(Icons.chevron_right, color: StyleConstants.pcBlue, size: 30.0,),
               ),
               Divider(),
               ListTile(
+                onTap: (){
+                  Navigator.push(context, MaterialPageRoute(builder: (_) => NotificationsScreen()));
+                },
                 title: Text('Notification Preferences', style: StyleConstants.regTextMedium,),
                 trailing: Icon(Icons.chevron_right, color: StyleConstants.pcBlue, size: 30.0,),
               ),

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-class StyleConstants{
+class StyleConstants {
   static MediaQueryData _mediaQueryData;
 
   //for iPhone SE2 - 647.0 and 375.0
@@ -134,8 +134,7 @@ class StyleConstants{
   );
 
   static OutlineInputBorder textBoxBorder = OutlineInputBorder(
-    borderRadius:
-    BorderRadius.circular(8.0),
+    borderRadius: BorderRadius.circular(8.0),
   );
 
   static OutlineInputBorder textBoxBorderFocused = OutlineInputBorder(
@@ -147,7 +146,7 @@ class StyleConstants{
 
   static OutlineInputBorder textBoxBorderEnabled = OutlineInputBorder(
     borderSide: BorderSide(
-      //color: StyleConstants.darkPurpleGrey,
+        //color: StyleConstants.darkPurpleGrey,
         color: Color(0xff575b5f),
         width: 1.5),
   );
@@ -161,9 +160,12 @@ class StyleConstants{
     ],
   );
 
-
-
-
-
-
+  static LinearGradient blueButtonGradient = LinearGradient(
+    begin: Alignment.centerRight,
+    end: Alignment.centerLeft,
+    colors: [
+      Color(0xff87D4EA),
+      Color(0xff51BCDA),
+    ],
+  );
 }

@@ -15,10 +15,10 @@ import '../screens/home/events/events_screen.dart' as _i5;
 import '../screens/home/home_screen.dart' as _i3;
 import '../screens/root_screen.dart' as _i2;
 import '../screens/safety/dashboard/lost_poster/create_lost_poster_screen.dart'
-    as _i10;
-import '../screens/safety/dashboard/owner_info/owner_info_screen.dart' as _i8;
-import '../screens/safety/dashboard/pet_info/pet_info_screen.dart' as _i9;
-import '../screens/safety/dashboard/safety_dashboard_screen.dart' as _i7;
+    as _i9;
+import '../screens/safety/dashboard/owner_info/owner_info_screen.dart' as _i7;
+import '../screens/safety/dashboard/pet_info/pet_info_screen.dart' as _i8;
+import '../screens/safety/dashboard/safety_dashboard_screen.dart' as _i10;
 import '../screens/safety/scans/scans_screen.dart' as _i4;
 import '../screens/safety/statistics/statistics_screen.dart' as _i11;
 
@@ -55,22 +55,38 @@ class AppRouter extends _i1.RootStackRouter {
     EventsScreen.name: (entry) {
       return _i1.MaterialPageX(entry: entry, child: _i5.EventsScreen());
     },
+    UpcomingScreen.name: (entry) {
+      return _i1.MaterialPageX(entry: entry, child: _i5.EventsScreen());
+    },
     AddEventScreen.name: (entry) {
       return _i1.MaterialPageX(entry: entry, child: _i6.AddEventScreen());
     },
+    OwnerInfoU.name: (entry) {
+      return _i1.MaterialPageX(entry: entry, child: _i7.OwnerInfoScreen());
+    },
+    PetInfoU.name: (entry) {
+      return _i1.MaterialPageX(entry: entry, child: _i8.PetInfoScreen());
+    },
+    CreateLostPosterU.name: (entry) {
+      return _i1.MaterialPageX(
+          entry: entry, child: _i9.CreateLostPosterScreen());
+    },
+    ScanScreenU.name: (entry) {
+      return _i1.MaterialPageX(entry: entry, child: _i4.ScansScreen());
+    },
     SafetyDashboardScreen.name: (entry) {
       return _i1.MaterialPageX(
-          entry: entry, child: _i7.SafetyDashboardScreen());
+          entry: entry, child: _i10.SafetyDashboardScreen());
     },
     OwnerInfoS.name: (entry) {
-      return _i1.MaterialPageX(entry: entry, child: _i8.OwnerInfoScreen());
+      return _i1.MaterialPageX(entry: entry, child: _i7.OwnerInfoScreen());
     },
     PetInfoS.name: (entry) {
-      return _i1.MaterialPageX(entry: entry, child: _i9.PetInfoScreen());
+      return _i1.MaterialPageX(entry: entry, child: _i8.PetInfoScreen());
     },
     CreateLostPosterS.name: (entry) {
       return _i1.MaterialPageX(
-          entry: entry, child: _i10.CreateLostPosterScreen());
+          entry: entry, child: _i9.CreateLostPosterScreen());
     },
     StatisticsScreen.name: (entry) {
       return _i1.MaterialPageX(entry: entry, child: _i11.StatisticsScreen());
@@ -120,6 +136,29 @@ class AppRouter extends _i1.RootStackRouter {
                               path: 'addEvent',
                               routeBuilder: (match) =>
                                   AddEventScreen.fromMatch(match))
+                        ]),
+                    _i1.RouteConfig<UpcomingScreen>(UpcomingScreen.name,
+                        path: 'upcoming',
+                        routeBuilder: (match) =>
+                            UpcomingScreen.fromMatch(match),
+                        children: [
+                          _i1.RouteConfig<OwnerInfoU>(OwnerInfoU.name,
+                              path: 'ownerInfo',
+                              routeBuilder: (match) =>
+                                  OwnerInfoU.fromMatch(match)),
+                          _i1.RouteConfig<PetInfoU>(PetInfoU.name,
+                              path: 'petInfo',
+                              routeBuilder: (match) =>
+                                  PetInfoU.fromMatch(match)),
+                          _i1.RouteConfig<CreateLostPosterU>(
+                              CreateLostPosterU.name,
+                              path: 'createLostPoster',
+                              routeBuilder: (match) =>
+                                  CreateLostPosterU.fromMatch(match)),
+                          _i1.RouteConfig<ScanScreenU>(ScanScreenU.name,
+                              path: 'scanLocations',
+                              routeBuilder: (match) =>
+                                  ScanScreenU.fromMatch(match))
                         ])
                   ]),
               _i1.RouteConfig<SafetyTab>(SafetyTab.name,
@@ -249,12 +288,53 @@ class EventsScreen extends _i1.PageRouteInfo {
   static const String name = 'EventsScreen';
 }
 
+class UpcomingScreen extends _i1.PageRouteInfo {
+  const UpcomingScreen({List<_i1.PageRouteInfo> children})
+      : super(name, path: 'upcoming', initialChildren: children);
+
+  UpcomingScreen.fromMatch(_i1.RouteMatch match) : super.fromMatch(match);
+
+  static const String name = 'UpcomingScreen';
+}
+
 class AddEventScreen extends _i1.PageRouteInfo {
   const AddEventScreen() : super(name, path: 'addEvent');
 
   AddEventScreen.fromMatch(_i1.RouteMatch match) : super.fromMatch(match);
 
   static const String name = 'AddEventScreen';
+}
+
+class OwnerInfoU extends _i1.PageRouteInfo {
+  const OwnerInfoU() : super(name, path: 'ownerInfo');
+
+  OwnerInfoU.fromMatch(_i1.RouteMatch match) : super.fromMatch(match);
+
+  static const String name = 'OwnerInfoU';
+}
+
+class PetInfoU extends _i1.PageRouteInfo {
+  const PetInfoU() : super(name, path: 'petInfo');
+
+  PetInfoU.fromMatch(_i1.RouteMatch match) : super.fromMatch(match);
+
+  static const String name = 'PetInfoU';
+}
+
+class CreateLostPosterU extends _i1.PageRouteInfo {
+  const CreateLostPosterU() : super(name, path: 'createLostPoster');
+
+  CreateLostPosterU.fromMatch(_i1.RouteMatch match) : super.fromMatch(match);
+
+  static const String name = 'CreateLostPosterU';
+}
+
+class ScanScreenU extends _i1.PageRouteInfo {
+  const ScanScreenU() : super(name, path: 'scanLocations');
+
+  ScanScreenU.fromMatch(_i1.RouteMatch match) : super.fromMatch(match);
+
+  static const String name = 'ScanScreenU';
 }
 
 class SafetyDashboardScreen extends _i1.PageRouteInfo {
