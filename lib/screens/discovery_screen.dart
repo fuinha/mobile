@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:petcode_app/screens/onboarding/splash_screen.dart';
 import 'package:petcode_app/screens/settings/settings_screen.dart';
 
 class DiscoveryScreen extends StatefulWidget {
@@ -14,7 +15,7 @@ class _DiscoveryScreenState extends State<DiscoveryScreen> {
         child: IconButton(
           icon: Icon(Icons.settings),
           onPressed: (){
-            Navigator.push(context, MaterialPageRoute(builder: (_) => SettingsScreen()));
+            Navigator.push(context, MaterialPageRoute(builder: (_) => SplashScreen()));
           },
         )
       ),
