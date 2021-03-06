@@ -1,5 +1,6 @@
 import 'package:dots_indicator/dots_indicator.dart';
 import 'package:flutter/material.dart';
+import 'package:petcode_app/screens/onboarding/create_account_screen.dart';
 import 'package:petcode_app/utils/style_constants.dart';
 import 'package:provider/provider.dart';
 
@@ -256,7 +257,7 @@ class _LandingScreenState extends State<LandingScreen> {
               ),
               SizedBox(height: height * 0.02,),
               GestureDetector(
-                //onTap: () => Navigator.push(context, MaterialPageRoute(builder: (_) => SignupScreen())),
+                onTap: () => Navigator.push(context, MaterialPageRoute(builder: (_) => CreateAccountScreen())),
 
                 child: Container(
 

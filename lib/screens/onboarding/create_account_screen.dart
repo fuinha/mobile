@@ -2,8 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:petcode_app/utils/style_constants.dart';
 
-
 import 'package:provider/provider.dart';
+
+import 'create_account_screen2.dart';
 
 class CreateAccountScreen extends StatefulWidget {
   @override
@@ -16,7 +17,6 @@ class _CreateAccountScreenState extends State<CreateAccountScreen> {
   TextEditingController _confirmPasswordInputController;
   TextEditingController _nameInputController;
   TextEditingController _phoneNumberInputController;
-  
 
   GlobalKey<FormState> _signupFormKey = GlobalKey<FormState>();
 
@@ -33,7 +33,6 @@ class _CreateAccountScreenState extends State<CreateAccountScreen> {
 
   @override
   Widget build(BuildContext context) {
-
     double height = StyleConstants.height;
     double width = StyleConstants.width;
 
@@ -45,12 +44,15 @@ class _CreateAccountScreenState extends State<CreateAccountScreen> {
         child: Stack(
           alignment: Alignment.center,
           children: [
-
             Positioned(
               top: height * 0.1,
               left: width * 0.08,
               child: IconButton(
-                icon: Icon(Icons.arrow_back_ios, color: StyleConstants.pcBlue, size: width * 0.08,),
+                icon: Icon(
+                  Icons.arrow_back_ios,
+                  color: StyleConstants.pcBlue,
+                  size: width * 0.08,
+                ),
                 onPressed: () => Navigator.pop(context),
               ),
             ),
@@ -59,24 +61,34 @@ class _CreateAccountScreenState extends State<CreateAccountScreen> {
               child: Column(
                 children: [
                   Container(
-                      child: Image.asset('assets/images/petcodelogo.png', fit: BoxFit.cover,)
+                    child: Image.asset(
+                      'assets/images/petcode_logo_main.png',
+                      fit: BoxFit.cover,
+                    ),
                   ),
-                  Text('Now...', style: TextStyle(
-                    fontSize: 25.0,
-                    color: StyleConstants.pcBlue,
-                  ),),
-                  Text('Let\'s create a PetCode account', style: TextStyle(
-                    fontSize: 20.0,
-                    fontWeight: FontWeight.w400,
-                    color: Color(0xffA0AEC0),
+                  SizedBox(
+                    height: height * 0.02,
                   ),
+                  Text(
+                    'Welcome...',
+                    style: StyleConstants.boldTitleText
+                        .copyWith(color: StyleConstants.pcBlue),
+                  ),
+                  SizedBox(
+                    height: height * 0.01,
+                  ),
+                  Text(
+                    'Let\'s create a PetCode account',
+                    style: StyleConstants.regTextLarge
+                        .copyWith(color: StyleConstants.grey),
                   ),
                 ],
               ),
             ),
             Align(
               alignment: Alignment.bottomCenter,
-              child: Image.asset('assets/images/pawprintbackground.png', fit: BoxFit.cover),
+              child: Image.asset('assets/images/pawprintbackground.png',
+                  fit: BoxFit.cover),
             ),
             Positioned(
               bottom: height * 0.05,
@@ -97,8 +109,7 @@ class _CreateAccountScreenState extends State<CreateAccountScreen> {
                             controller: _emailInputController,
                             decoration: InputDecoration(
                                 border: OutlineInputBorder(
-                                  borderRadius:
-                                  BorderRadius.circular(15.0),
+                                  borderRadius: BorderRadius.circular(15.0),
                                 ),
                                 focusedBorder: OutlineInputBorder(
                                   borderSide: BorderSide(
@@ -108,7 +119,7 @@ class _CreateAccountScreenState extends State<CreateAccountScreen> {
                                 ),
                                 enabledBorder: OutlineInputBorder(
                                   borderSide: BorderSide(
-                                    //color: StyleConstants.darkPurpleGrey,
+                                      //color: StyleConstants.darkPurpleGrey,
                                       color: Color(0xff575b5f),
                                       width: 1.5),
                                 ),
@@ -118,12 +129,9 @@ class _CreateAccountScreenState extends State<CreateAccountScreen> {
                                   fontWeight: FontWeight.w600,
                                   //color: StyleConstants.darkPurpleGrey)),
                                   color: Color(0xffbfbfbf),
-                                )
-                            )
-                        ),
+                                ))),
                       ),
                     ),
-
                     SizedBox(
                       height: height * 0.02,
                     ),
@@ -139,18 +147,17 @@ class _CreateAccountScreenState extends State<CreateAccountScreen> {
                           controller: _passwordInputController,
                           decoration: InputDecoration(
                               border: OutlineInputBorder(
-                                borderRadius:
-                                BorderRadius.circular(15.0),
+                                borderRadius: BorderRadius.circular(15.0),
                               ),
                               focusedBorder: OutlineInputBorder(
                                 borderSide: BorderSide(
-                                  //color: StyleConstants.darkPurpleGrey,
+                                    //color: StyleConstants.darkPurpleGrey,
                                     color: Color(0xff575b5f),
                                     width: 2.0),
                               ),
                               enabledBorder: OutlineInputBorder(
                                 borderSide: BorderSide(
-                                  //color: StyleConstants.darkPurpleGrey,
+                                    //color: StyleConstants.darkPurpleGrey,
                                     color: Color(0xff575b5f),
                                     width: 1.5),
                               ),
@@ -159,8 +166,7 @@ class _CreateAccountScreenState extends State<CreateAccountScreen> {
                                   fontSize: 15.0,
                                   fontWeight: FontWeight.w600,
                                   //color: StyleConstants.darkPurpleGrey)
-                                  color: Color(0xffbfbfbf))
-                          ),
+                                  color: Color(0xffbfbfbf))),
                           obscureText: true,
                         ),
                       ),
@@ -180,18 +186,17 @@ class _CreateAccountScreenState extends State<CreateAccountScreen> {
                           controller: _passwordInputController,
                           decoration: InputDecoration(
                               border: OutlineInputBorder(
-                                borderRadius:
-                                BorderRadius.circular(15.0),
+                                borderRadius: BorderRadius.circular(15.0),
                               ),
                               focusedBorder: OutlineInputBorder(
                                 borderSide: BorderSide(
-                                  //color: StyleConstants.darkPurpleGrey,
+                                    //color: StyleConstants.darkPurpleGrey,
                                     color: Color(0xff575b5f),
                                     width: 2.0),
                               ),
                               enabledBorder: OutlineInputBorder(
                                 borderSide: BorderSide(
-                                  //color: StyleConstants.darkPurpleGrey,
+                                    //color: StyleConstants.darkPurpleGrey,
                                     color: Color(0xff575b5f),
                                     width: 1.5),
                               ),
@@ -200,8 +205,7 @@ class _CreateAccountScreenState extends State<CreateAccountScreen> {
                                   fontSize: 15.0,
                                   fontWeight: FontWeight.w600,
                                   //color: StyleConstants.darkPurpleGrey)
-                                  color: Color(0xffbfbfbf))
-                          ),
+                                  color: Color(0xffbfbfbf))),
                           obscureText: true,
                         ),
                       ),
@@ -221,8 +225,7 @@ class _CreateAccountScreenState extends State<CreateAccountScreen> {
                             controller: _phoneNumberInputController,
                             decoration: InputDecoration(
                                 border: OutlineInputBorder(
-                                  borderRadius:
-                                  BorderRadius.circular(15.0),
+                                  borderRadius: BorderRadius.circular(15.0),
                                 ),
                                 focusedBorder: OutlineInputBorder(
                                   borderSide: BorderSide(
@@ -232,7 +235,7 @@ class _CreateAccountScreenState extends State<CreateAccountScreen> {
                                 ),
                                 enabledBorder: OutlineInputBorder(
                                   borderSide: BorderSide(
-                                    //color: StyleConstants.darkPurpleGrey,
+                                      //color: StyleConstants.darkPurpleGrey,
                                       color: Color(0xff575b5f),
                                       width: 1.5),
                                 ),
@@ -242,37 +245,32 @@ class _CreateAccountScreenState extends State<CreateAccountScreen> {
                                   fontWeight: FontWeight.w600,
                                   //color: StyleConstants.darkPurpleGrey)),
                                   color: Color(0xffbfbfbf),
-                                )
-                            )
-                        ),
+                                ))),
                       ),
                     ),
                     SizedBox(
                       height: height * 0.02,
                     ),
                     GestureDetector(
-                      onTap: () async {
-                        //signUpWithForm();
-                        //Navigator.push(context, new MaterialPageRoute(builder: (_) => CreateAccountScreen2()));
-                      },
-                      child: Container(
-                        decoration:
-                        BoxDecoration(
-                          color: StyleConstants.yellow,
-                          borderRadius: BorderRadius.circular(14.0),
-                        ),
-                        width: 250,
-                        height: height * 0.06,
-                        child: Center(
-                          child: Text(
-                            'Next',
-                            style: StyleConstants.boldTitleText.copyWith(color: Colors.white),
-
+                        onTap: () async {
+                          //signUpWithForm();
+                          Navigator.push(context, new MaterialPageRoute(builder: (_) => CreateAccountScreen2()));
+                        },
+                        child: Container(
+                          decoration: BoxDecoration(
+                            color: StyleConstants.yellow,
+                            borderRadius: BorderRadius.circular(14.0),
                           ),
-                        ),
-                      )
-
-                    ),
+                          width: 250,
+                          height: height * 0.06,
+                          child: Center(
+                            child: Text(
+                              'Next',
+                              style: StyleConstants.boldTitleText
+                                  .copyWith(color: Colors.white),
+                            ),
+                          ),
+                        )),
                     SizedBox(
                       height: height * 0.02,
                     ),
@@ -321,12 +319,11 @@ class _CreateAccountScreenState extends State<CreateAccountScreen> {
                               blurRadius: 20.0,
                               offset: Offset(0, 1),
                             )
-                          ]
-                      ),
+                          ]),
                       child: Padding(
                         padding: EdgeInsets.symmetric(horizontal: width * 0.05),
                         child: GestureDetector(
-                          onTap: (){
+                          onTap: () {
                             signUpWithGoogle();
                           },
                           child: Stack(
@@ -351,14 +348,15 @@ class _CreateAccountScreenState extends State<CreateAccountScreen> {
                                       fontWeight: FontWeight.w500,
                                       fontFamily: "Roboto",
                                     ),
-                                  )
-                              ),
+                                  )),
                             ],
                           ),
                         ),
                       ),
                     ),
-                    SizedBox(height: height * 0.02,),
+                    SizedBox(
+                      height: height * 0.02,
+                    ),
                     Container(
                       width: width * 0.7,
                       height: height * 0.05,
@@ -371,12 +369,11 @@ class _CreateAccountScreenState extends State<CreateAccountScreen> {
                               blurRadius: 20.0,
                               offset: Offset(0, 1),
                             )
-                          ]
-                      ),
+                          ]),
                       child: Padding(
                         padding: EdgeInsets.symmetric(horizontal: width * 0.05),
                         child: GestureDetector(
-                          onTap: (){
+                          onTap: () {
                             print('Sign up with Apple');
                           },
                           child: Stack(
@@ -401,14 +398,12 @@ class _CreateAccountScreenState extends State<CreateAccountScreen> {
                                       fontWeight: FontWeight.w500,
                                       fontFamily: "Roboto",
                                     ),
-                                  )
-                              ),
+                                  )),
                             ],
                           ),
                         ),
                       ),
                     ),
-
                   ],
                 ),
               ),
@@ -419,13 +414,9 @@ class _CreateAccountScreenState extends State<CreateAccountScreen> {
     );
   }
 
-  void signUpWithForm() async {
+  void signUpWithForm() async {}
 
-  }
-
-  void signUpWithGoogle() async {
-
-  }
+  void signUpWithGoogle() async {}
 
   void clearAllControllers() {
     _emailInputController.clear();
