@@ -1,37 +1,22 @@
 import 'dart:io';
 
 import 'package:flutter/material.dart';
-import 'package:petcode_app/screens/onboarding/stp_ownerinfo_screen.dart';
+import 'package:petcode_app/screens/onboarding/stp_vaccination_screen.dart';
 import 'package:petcode_app/utils/custom_icons/petcode_icons.dart';
 
 import 'package:petcode_app/utils/style_constants.dart';
 import 'package:petcode_app/utils/validator_helper.dart';
 
-class StpPetInfoPfpScreen extends StatefulWidget {
-
+class StpOwnerInfoScreen extends StatefulWidget {
   @override
-  _StpPetInfoPfpScreenState createState() => _StpPetInfoPfpScreenState();
+  _StpOwnerInfoScreenState createState() => _StpOwnerInfoScreenState();
 }
 
-class _StpPetInfoPfpScreenState extends State<StpPetInfoPfpScreen> {
-  TextEditingController _petNameInputController;
-  TextEditingController _breedInputController;
-  TextEditingController _colorInputController;
-  TextEditingController _petBirthdayController;
-  bool _isServiceAnimal;
-
-  DateTime _petBirthday;
-
-
+class _StpOwnerInfoScreenState extends State<StpOwnerInfoScreen> {
   GlobalKey<FormState> _formKey = GlobalKey<FormState>();
 
   @override
   void initState() {
-    _petNameInputController = new TextEditingController();
-    _breedInputController = new TextEditingController();
-    _colorInputController = new TextEditingController();
-    _isServiceAnimal = false;
-
     super.initState();
   }
 
@@ -55,7 +40,11 @@ class _StpPetInfoPfpScreenState extends State<StpPetInfoPfpScreen> {
               top: height * 0.03,
               left: width * 0.08,
               child: IconButton(
-                icon: Icon(Icons.arrow_back_ios, color: StyleConstants.pcBlue, size: width * 0.07,),
+                icon: Icon(
+                  Icons.arrow_back_ios,
+                  color: StyleConstants.pcBlue,
+                  size: width * 0.07,
+                ),
                 onPressed: () => Navigator.pop(context),
               ),
             ),
@@ -82,7 +71,7 @@ class _StpPetInfoPfpScreenState extends State<StpPetInfoPfpScreen> {
                                 fit: BoxFit.cover,
                               )),
                           Text(
-                            '1/6',
+                            '2/6',
                             style: TextStyle(
                                 color: StyleConstants.pcBlue, fontSize: 20.0),
                           ),
@@ -91,66 +80,65 @@ class _StpPetInfoPfpScreenState extends State<StpPetInfoPfpScreen> {
                       SizedBox(
                         height: height * 0.02,
                       ),
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.start,
-                        children: [
-                          Text(
-                            'Pet Information',
-                            style: StyleConstants.boldTitleText,
-                          ),
-                        ],
+                      Align(
+                        alignment: Alignment.centerLeft,
+                        child: Text(
+                          'Owner Information',
+                          style: StyleConstants.boldTitleText,
+                        ),
                       ),
                       SizedBox(
                         height: height * 0.03,
                       ),
-
-                      Container(
-                        width: width * 0.6,
-                        height: width * 0.6,
-                        child: Stack(
-                          children: [
-                            ClipOval(
-                              child: Container(
-                                width: width * 0.7,
-                                height: width * 0.7,
-                                color: StyleConstants.grey,
-                                child: Icon(PetCodeIcons.addphoto, size: 150.0, color: Colors.white,),
-                              ),
-                            ),
-                            Align(
-                              alignment: Alignment.bottomRight,
-                              child: ClipOval(
-                                child: Container(
-                                  width: width * 0.15,
-                                  height: width * 0.15,
-                                  color: StyleConstants.pcBlue,
-                                  child: Icon(Icons.add, size: 50.0, color: Colors.white,),
-                                ),
-                              )
-                            ),
-                          ],
+                      Align(
+                        alignment: Alignment.centerLeft,
+                        child: Text(
+                          'Important information to be displayed when your\npet\'s code is scanned',
+                          style: StyleConstants.regText,
                         ),
                       ),
-                      SizedBox(height: height * 0.02,),
-                      Text('Add Pet Profile Photo', style: StyleConstants.boldText,),
                       SizedBox(
                         height: height * 0.05,
                       ),
                       GestureDetector(
                         onTap: () {
-                          Navigator.push(context, MaterialPageRoute(builder: (_) => StpOwnerInfoScreen()));
-
+                          //Navigator.push(context, MaterialPageRoute(builder: (_) => StpOwnerInfoScreen()));
+                        },
+                        child: Container(
+                          height: height * 0.06,
+                          decoration: BoxDecoration(
+                            color: StyleConstants.pcBlue,
+                            gradient: StyleConstants.blueButtonGradient,
+                            borderRadius: BorderRadius.circular(10.0),
+                          ),
+                          child: Center(
+                            child: Text(
+                              'Add Owner',
+                              style: StyleConstants.boldTitleText
+                                  .copyWith(color: Colors.white),
+                            ),
+                          ),
+                        ),
+                      ),
+                      SizedBox(
+                        height: height * 0.02,
+                      ),
+                      GestureDetector(
+                        onTap: () {
+                          Navigator.push(context, MaterialPageRoute(builder: (_) => StpVaccinationScreen()));
                         },
                         child: Container(
                           height: height * 0.06,
                           decoration: BoxDecoration(
                             color: StyleConstants.yellow,
+                            gradient: StyleConstants.yellowButtonGradient,
                             borderRadius: BorderRadius.circular(10.0),
                           ),
                           child: Center(
                             child: Text(
                               'Next',
-                              style: StyleConstants.boldTitleText.copyWith(color: Colors.white),
+                              style: StyleConstants.boldTitleText
+                                  .copyWith(color: Colors.white),
                             ),
                           ),
                         ),
@@ -166,7 +154,6 @@ class _StpPetInfoPfpScreenState extends State<StpPetInfoPfpScreen> {
                           fontWeight: FontWeight.w600,
                         ),
                       ),
-
                     ],
                   ),
                 ),
@@ -178,7 +165,5 @@ class _StpPetInfoPfpScreenState extends State<StpPetInfoPfpScreen> {
     );
   }
 
-  void _pickBirthday() async {
-
-  }
+  void _pickBirthday() async {}
 }
