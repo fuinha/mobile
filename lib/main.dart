@@ -11,21 +11,25 @@ void main() {
 class MyApp extends StatelessWidget {
   final AppRouter _appRouter = AppRouter();
 
+
   @override
   Widget build(BuildContext context) {
-    return MultiProvider(
-      providers: [
-        ChangeNotifierProvider<CurrentLocationProvider>(
-          create: (_) => CurrentLocationProvider(),
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      home: MultiProvider(
+        providers: [
+          ChangeNotifierProvider<CurrentLocationProvider>(
+            create: (_) => CurrentLocationProvider(),
+          ),
+          ChangeNotifierProvider<ScansMapProvider>(
+            create: (_) => ScansMapProvider(),
+          ),
+        ],
+        child: MaterialApp.router(
+          title: 'PetCode',
+          routerDelegate: _appRouter.delegate(),
+          routeInformationParser: _appRouter.defaultRouteParser(),
         ),
-        ChangeNotifierProvider<ScansMapProvider>(
-          create: (_) => ScansMapProvider(),
-        ),
-      ],
-      child: MaterialApp.router(
-        title: 'PetCode',
-        routerDelegate: _appRouter.delegate(),
-        routeInformationParser: _appRouter.defaultRouteParser(),
       ),
     );
   }
