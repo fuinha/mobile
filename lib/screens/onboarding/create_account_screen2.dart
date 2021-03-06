@@ -4,6 +4,8 @@ import 'package:petcode_app/utils/style_constants.dart';
 
 import 'package:provider/provider.dart';
 
+import 'create_account_screen3.dart';
+
 class CreateAccountScreen2 extends StatefulWidget {
   @override
   _CreateAccountScreen2State createState() => _CreateAccountScreen2State();
@@ -17,7 +19,6 @@ class _CreateAccountScreen2State extends State<CreateAccountScreen2> {
   TextEditingController _firstNameInputController;
   TextEditingController _lastNameInputController;
   TextEditingController _phoneNumberInputController;
-
 
   GlobalKey<FormState> _signupFormKey = GlobalKey<FormState>();
 
@@ -34,7 +35,6 @@ class _CreateAccountScreen2State extends State<CreateAccountScreen2> {
 
   @override
   Widget build(BuildContext context) {
-
     double height = StyleConstants.height;
     double width = StyleConstants.width;
 
@@ -46,12 +46,15 @@ class _CreateAccountScreen2State extends State<CreateAccountScreen2> {
         child: Stack(
           alignment: Alignment.center,
           children: [
-
             Positioned(
               top: height * 0.1,
               left: width * 0.08,
               child: IconButton(
-                icon: Icon(Icons.arrow_back_ios, color: StyleConstants.pcBlue, size: width * 0.08,),
+                icon: Icon(
+                  Icons.arrow_back_ios,
+                  color: StyleConstants.pcBlue,
+                  size: width * 0.08,
+                ),
                 onPressed: () => Navigator.pop(context),
               ),
             ),
@@ -60,19 +63,30 @@ class _CreateAccountScreen2State extends State<CreateAccountScreen2> {
               child: Column(
                 children: [
                   Container(
-                      child: Image.asset('assets/images/petcodelogo.png', fit: BoxFit.cover,)
+                    height: height * 0.06,
+                      child: Image.asset(
+                    'assets/images/petcode_logo_main.png',
+                    fit: BoxFit.cover,
+                  )),
+                  SizedBox(
+                    height: height * 0.02,
                   ),
-                  Text('Now...', style: TextStyle(
-                    fontSize: 25.0,
-                    color: StyleConstants.pcBlue,
-                  ),),
-                  Text('Let\'s create a PetCode account', style: TextStyle(
-                    fontSize: 20.0,
-                    fontWeight: FontWeight.w400,
-                    color: Color(0xffA0AEC0),
+                  Text(
+                    'Welcome...',
+                    style: StyleConstants.boldTitleText
+                        .copyWith(color: StyleConstants.pcBlue),
                   ),
+                  SizedBox(
+                    height: height * 0.01,
                   ),
-                  SizedBox(height: height * 0.1,),
+                  Text(
+                    'Let\'s create a PetCode account',
+                    style: StyleConstants.regTextLarge
+                        .copyWith(color: StyleConstants.grey),
+                  ),
+                  SizedBox(
+                    height: height * 0.03,
+                  ),
                   Container(
                     width: width * 0.7,
                     child: Column(
@@ -90,8 +104,7 @@ class _CreateAccountScreen2State extends State<CreateAccountScreen2> {
                                 controller: _emailInputController,
                                 decoration: InputDecoration(
                                     border: OutlineInputBorder(
-                                      borderRadius:
-                                      BorderRadius.circular(15.0),
+                                      borderRadius: BorderRadius.circular(15.0),
                                     ),
                                     focusedBorder: OutlineInputBorder(
                                       borderSide: BorderSide(
@@ -101,7 +114,7 @@ class _CreateAccountScreen2State extends State<CreateAccountScreen2> {
                                     ),
                                     enabledBorder: OutlineInputBorder(
                                       borderSide: BorderSide(
-                                        //color: StyleConstants.darkPurpleGrey,
+                                          //color: StyleConstants.darkPurpleGrey,
                                           color: Color(0xff575b5f),
                                           width: 1.5),
                                     ),
@@ -111,12 +124,9 @@ class _CreateAccountScreen2State extends State<CreateAccountScreen2> {
                                       fontWeight: FontWeight.w600,
                                       //color: StyleConstants.darkPurpleGrey)),
                                       color: Color(0xffbfbfbf),
-                                    )
-                                )
-                            ),
+                                    ))),
                           ),
                         ),
-
                         SizedBox(
                           height: height * 0.02,
                         ),
@@ -132,8 +142,7 @@ class _CreateAccountScreen2State extends State<CreateAccountScreen2> {
                                 controller: _phoneNumberInputController,
                                 decoration: InputDecoration(
                                     border: OutlineInputBorder(
-                                      borderRadius:
-                                      BorderRadius.circular(15.0),
+                                      borderRadius: BorderRadius.circular(15.0),
                                     ),
                                     focusedBorder: OutlineInputBorder(
                                       borderSide: BorderSide(
@@ -143,7 +152,7 @@ class _CreateAccountScreen2State extends State<CreateAccountScreen2> {
                                     ),
                                     enabledBorder: OutlineInputBorder(
                                       borderSide: BorderSide(
-                                        //color: StyleConstants.darkPurpleGrey,
+                                          //color: StyleConstants.darkPurpleGrey,
                                           color: Color(0xff575b5f),
                                           width: 1.5),
                                     ),
@@ -153,9 +162,7 @@ class _CreateAccountScreen2State extends State<CreateAccountScreen2> {
                                       fontWeight: FontWeight.w600,
                                       //color: StyleConstants.darkPurpleGrey)),
                                       color: Color(0xffbfbfbf),
-                                    )
-                                )
-                            ),
+                                    ))),
                           ),
                         ),
                         SizedBox(
@@ -164,11 +171,10 @@ class _CreateAccountScreen2State extends State<CreateAccountScreen2> {
                         GestureDetector(
                             onTap: () async {
                               //signUpWithForm();
-                              //Navigator.push(context, new MaterialPageRoute(builder: (_) => StpConnectTagScreen()));
+                              Navigator.push(context, new MaterialPageRoute(builder: (_) => CreateAccountScreen3()));
                             },
                             child: Container(
-                              decoration:
-                              BoxDecoration(
+                              decoration: BoxDecoration(
                                 color: StyleConstants.yellow,
                                 borderRadius: BorderRadius.circular(14.0),
                               ),
@@ -178,14 +184,10 @@ class _CreateAccountScreen2State extends State<CreateAccountScreen2> {
                                 child: Text(
                                   'Create Account',
                                   style: StyleConstants.boldTitleText
-                                      .copyWith(color: StyleConstants.grey),
+                                      .copyWith(color: Colors.white),
                                 ),
                               ),
-                            )
-
-                        ),
-
-
+                            )),
                       ],
                     ),
                   ),
@@ -194,22 +196,18 @@ class _CreateAccountScreen2State extends State<CreateAccountScreen2> {
             ),
             Align(
               alignment: Alignment.bottomCenter,
-              child: Image.asset('assets/images/pawprintbackground.png', fit: BoxFit.cover),
+              child: Image.asset('assets/images/pawprintbackground.png',
+                  fit: BoxFit.cover),
             ),
-
           ],
         ),
       ),
     );
   }
 
-  void signUpWithForm() async {
+  void signUpWithForm() async {}
 
-  }
-
-  void signUpWithGoogle() async {
-
-  }
+  void signUpWithGoogle() async {}
 
   void clearAllControllers() {
     _emailInputController.clear();

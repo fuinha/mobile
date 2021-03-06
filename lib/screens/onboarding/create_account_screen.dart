@@ -61,6 +61,7 @@ class _CreateAccountScreenState extends State<CreateAccountScreen> {
               child: Column(
                 children: [
                   Container(
+                    height: height * 0.06,
                     child: Image.asset(
                       'assets/images/petcode_logo_main.png',
                       fit: BoxFit.cover,

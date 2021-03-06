@@ -182,4 +182,13 @@ class StyleConstants {
       Color(0xffD64A4A),
     ],
   );
+
+  static LinearGradient yellowButtonGradient = LinearGradient(
+    begin: Alignment.centerRight,
+    end: Alignment.centerLeft,
+    colors: [
+      Color(0xffF9DDA5),
+      Color(0xffFBC658),
+    ],
+  );
 }

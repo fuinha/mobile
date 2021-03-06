@@ -22,6 +22,7 @@ dependencies:
   dots_indicator: ^1.2.0
   font_awesome_flutter: ^8.11.0
   circular_check_box: ^1.0.4
+  pin_code_fields: ^6.1.0
 
 dev_dependencies:
   flutter_test:

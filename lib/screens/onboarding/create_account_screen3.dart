@@ -1,17 +1,18 @@
 import 'package:dots_indicator/dots_indicator.dart';
 import 'package:flutter/material.dart';
 import 'package:petcode_app/screens/onboarding/create_account_screen.dart';
+import 'package:petcode_app/screens/onboarding/stp_petid_screen.dart';
 import 'package:petcode_app/utils/style_constants.dart';
 import 'package:provider/provider.dart';
 
 import 'login_screen.dart';
 
-class LandingScreen extends StatefulWidget {
+class CreateAccountScreen3 extends StatefulWidget {
   @override
-  _LandingScreenState createState() => _LandingScreenState();
+  _CreateAccountScreen3State createState() => _CreateAccountScreen3State();
 }
 
-class _LandingScreenState extends State<LandingScreen> {
+class _CreateAccountScreen3State extends State<CreateAccountScreen3> {
   double height = StyleConstants.height;
   double width = StyleConstants.width;
 
@@ -61,7 +62,7 @@ class _LandingScreenState extends State<LandingScreen> {
                           SizedBox(
                             height: height * 0.03,
                           ),
-                          Text('One Code',
+                          Text('Joining as a Caretaker',
                               style: TextStyle(
                                 color: StyleConstants.pcBlue,
                                 fontSize: 25.0,
@@ -101,58 +102,13 @@ class _LandingScreenState extends State<LandingScreen> {
                             height: height * 0.5,
                             width: width,
                             child: Image.asset(
-                                'assets/images/onboarding/onboarding_2.png',
-                                fit: BoxFit.cover),
-                          ),
-                          SizedBox(
-                            height: height * 0.03,
-                          ),
-                          Text('Peace of Mind',
-                              style: TextStyle(
-                                color: StyleConstants.pcBlue,
-                                fontSize: 25.0,
-                                fontWeight: FontWeight.w600,
-                              )),
-                          SizedBox(
-                            height: height * 0.02,
-                          ),
-                          Text(
-                            'Keep your pet safe and secure',
-                            style: TextStyle(
-                              fontWeight: FontWeight.w500,
-                              fontSize: 14.0,
-                            ),
-                          ),
-                          Text(
-                            'with PetCode\'s QR tag system',
-                            style: TextStyle(
-                              fontWeight: FontWeight.w500,
-                              fontSize: 14.0,
-                            ),
-                          ),
-                        ],
-                      ),
-                    ),
-                  ),
-                  Container(
-                    child: Center(
-                      //child: Text('Text Description of the app 3'),
-                      child: Column(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        crossAxisAlignment: CrossAxisAlignment.center,
-                        children: [
-                          Container(
-                            //height: height * 0.5,
-                            height: height * 0.5,
-                            width: width,
-                            child: Image.asset(
                                 'assets/images/onboarding/onboarding_3.png',
                                 fit: BoxFit.cover),
                           ),
                           SizedBox(
                             height: height * 0.03,
                           ),
-                          Text('Stay Up to Date',
+                          Text('Adding a New pet',
                               style: TextStyle(
                                 color: StyleConstants.pcBlue,
                                 fontSize: 25.0,
@@ -179,47 +135,6 @@ class _LandingScreenState extends State<LandingScreen> {
                       ),
                     ),
                   ),
-                  Container(
-                    child: Column(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      crossAxisAlignment: CrossAxisAlignment.center,
-                      children: [
-                        Container(
-                          //height: height * 0.5,
-                          width: width,
-                          child: Image.asset(
-                              'assets/images/onboarding/onboarding_4.png',
-                              fit: BoxFit.cover),
-                        ),
-                        SizedBox(
-                          height: height * 0.03,
-                        ),
-                        Text('Discover Fun',
-                            style: TextStyle(
-                              color: StyleConstants.pcBlue,
-                              fontSize: 25.0,
-                              fontWeight: FontWeight.w600,
-                            )),
-                        Text(
-                          'Explore nearby pet parks, events, and pet',
-                          style: TextStyle(
-                            fontWeight: FontWeight.w500,
-                            fontSize: 14.0,
-                          ),
-                        ),
-                        SizedBox(
-                          height: height * 0.02,
-                        ),
-                        Text(
-                          'perks with PetCode\'s discover system',
-                          style: TextStyle(
-                            fontWeight: FontWeight.w500,
-                            fontSize: 14.0,
-                          ),
-                        ),
-                      ],
-                    ),
-                  ),
                 ],
               ),
             ),
@@ -228,7 +143,7 @@ class _LandingScreenState extends State<LandingScreen> {
             height: height * 0.02,
           ),
           DotsIndicator(
-            dotsCount: 4,
+            dotsCount: 2,
             decorator: DotsDecorator(
               size: Size.square(7.0),
               activeSize: Size.square(9.0),
@@ -242,36 +157,25 @@ class _LandingScreenState extends State<LandingScreen> {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               GestureDetector(
-                //onTap: () => Navigator.push(context, MaterialPageRoute(builder: (_) => LoginScreen())),
-
-                onTap: () => Navigator.of(context).push(PageRouteBuilder(
-                  pageBuilder: (context, animation, secondaryAnimation) {
-                    return ListenableProvider(
-                      create: (context) => animation,
-                      child: LoginScreen(),
-                    );
-                  },
-                  transitionDuration: Duration(seconds: 1),
-                )),
-
+                onTap: () => Navigator.push(context, MaterialPageRoute(builder: (_) => StpPetIDScreen())),
                 child: Container(
                   decoration: BoxDecoration(
-                      color: StyleConstants.yellow,
-                      borderRadius: BorderRadius.circular(10.0),
-                      boxShadow: [
-                        BoxShadow(
-                          color: Colors.black.withOpacity(0.2),
-                          offset: Offset(0, 3),
-                          blurRadius: 6.0,
-                        ),
-                      ],
-                      gradient: StyleConstants.yellowButtonGradient,
+                    color: StyleConstants.yellow,
+                    borderRadius: BorderRadius.circular(10.0),
+                    boxShadow: [
+                      BoxShadow(
+                        color: Colors.black.withOpacity(0.2),
+                        offset: Offset(0, 3),
+                        blurRadius: 6.0,
+                      ),
+                    ],
+                    gradient: StyleConstants.blueButtonGradient,
                   ),
                   width: width * 0.55,
                   height: height * 0.055,
                   child: Center(
                     child: Text(
-                      'Login',
+                      'Add a New Pet',
                       style: StyleConstants.boldTitleText
                           .copyWith(color: Colors.white),
                     ),
@@ -295,13 +199,13 @@ class _LandingScreenState extends State<LandingScreen> {
                         blurRadius: 8.0,
                       ),
                     ],
-                    gradient: StyleConstants.blueButtonGradient,
+                    gradient: StyleConstants.yellowButtonGradient,
                   ),
                   width: width * 0.55,
                   height: height * 0.055,
                   child: Center(
                     child: Text(
-                      'Activate',
+                      'Join as a Caretaker',
                       style: StyleConstants.boldTitleText
                           .copyWith(color: Colors.white),
                     ),
