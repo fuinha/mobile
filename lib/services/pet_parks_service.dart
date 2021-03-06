@@ -21,7 +21,7 @@ class PetParksService {
 
   Future<List<PetPark>> getNearbyParks(LatLng location, double zoom) async {
     if (apiKey == null) {
-      apiKey = await FlutterSecureStorage().read(key: 'google_maps_key');
+      apiKey = await FlutterSecureStorage().read(key: 'maps_key');
     }
 
     String baseUrl =

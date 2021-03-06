@@ -18,12 +18,14 @@ class PetParksProvider extends ChangeNotifier {
   }
 
   Future<void> getNearbyParks(LatLng location, double zoom) async {
+    print('get');
     if (providerState != ProviderState.Busy) {
       _providerState = ProviderState.Busy;
       notifyListeners();
     }
     _petParks = await _petParksService.getNearbyParks(location, zoom);
     _providerState = ProviderState.Idle;
+
     notifyListeners();
     return;
   }

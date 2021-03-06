@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:petcode_app/providers/current_location_provider.dart';
 import 'package:petcode_app/providers/pet_parks_map_provider.dart';
+import 'package:petcode_app/providers/pet_parks_panel_provider.dart';
 import 'package:petcode_app/providers/pet_parks_provider.dart';
 import 'package:petcode_app/providers/scans_map_provider.dart';
 import 'package:petcode_app/set_up_keys.dart';
@@ -30,8 +31,15 @@ class MyApp extends StatelessWidget {
         ChangeNotifierProvider<PetParksProvider>(
           create: (_) => PetParksProvider()..setUpProvider(),
         ),
-        ChangeNotifierProvider<PetParksMapProvider>(
+        ChangeNotifierProxyProvider<PetParksProvider, PetParksMapProvider>(
           create: (_) => PetParksMapProvider(),
+          update: (BuildContext context, PetParksProvider petParksProvider,
+              PetParksMapProvider petParksMapProvider) {
+            return petParksMapProvider..setParks(petParksProvider.petParks);
+          },
+        ),
+        ChangeNotifierProvider<PetParksPanelProvider>(
+          create: (_) => PetParksPanelProvider(),
         ),
       ],
       child: MaterialApp.router(
