@@ -14,7 +14,8 @@ class RootScreen extends StatelessWidget {
         ? AutoTabsRouter(
             routes: [
               HomeTab(),
-              SafetyTab()
+              SafetyTab(),
+              HealthTab(),
             ],
             builder: (context, child, animation) {
               var tabsRouter = context.tabsRouter;

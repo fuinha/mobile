@@ -19,19 +19,7 @@ class QuickLinkButton extends StatelessWidget {
 
     return InkWell(
       onTap: () {
-        if(name == 'Owner Information'){
-          Navigator.push(context, MaterialPageRoute(builder: (_) => OwnerInfoScreen()));
-        }
-        if(name == 'Pet Information'){
-          Navigator.push(context, MaterialPageRoute(builder: (_) => PetInfoScreen()));
-        }
-        if(name == 'Create Lost Poster'){
-          Navigator.push(context, MaterialPageRoute(builder: (_) => CreateLostPosterScreen()));
-        }
-        else{
         context.router.pushPath(this.path);
-        context.router.pushPath('scans');
-        }
       },
       borderRadius: BorderRadius.circular(16.0),
       child: Container(
