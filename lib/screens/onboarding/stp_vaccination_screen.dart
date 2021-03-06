@@ -1,6 +1,7 @@
 import 'dart:io';
 
 import 'package:flutter/material.dart';
+import 'package:petcode_app/screens/health/vaccine_history/add_vaccine_screen.dart';
 import 'package:petcode_app/screens/onboarding/stp_reminder_screen.dart';
 import 'package:petcode_app/utils/custom_icons/petcode_icons.dart';
 
@@ -113,7 +114,7 @@ class _StpVaccinationScreenState extends State<StpVaccinationScreen> {
                       ),
                       GestureDetector(
                         onTap: () {
-                          //Navigator.push(context, MaterialPageRoute(builder: (_) => StpVaccinationScreen()));
+                          Navigator.push(context, MaterialPageRoute(builder: (_) => AddVaccineScreen()));
                         },
                         child: Container(
                           height: height * 0.06,
@@ -124,7 +125,7 @@ class _StpVaccinationScreenState extends State<StpVaccinationScreen> {
                           ),
                           child: Center(
                             child: Text(
-                              'Add Owner',
+                              'Add Vaccination',
                               style: StyleConstants.boldTitleText
                                   .copyWith(color: Colors.white),
                             ),

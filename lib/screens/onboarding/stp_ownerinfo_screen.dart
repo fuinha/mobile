@@ -2,6 +2,7 @@ import 'dart:io';
 
 import 'package:flutter/material.dart';
 import 'package:petcode_app/screens/onboarding/stp_vaccination_screen.dart';
+import 'package:petcode_app/screens/safety/dashboard/owner_info/add_owner_screen.dart';
 import 'package:petcode_app/utils/custom_icons/petcode_icons.dart';
 
 import 'package:petcode_app/utils/style_constants.dart';
@@ -102,7 +103,7 @@ class _StpOwnerInfoScreenState extends State<StpOwnerInfoScreen> {
                       ),
                       GestureDetector(
                         onTap: () {
-                          //Navigator.push(context, MaterialPageRoute(builder: (_) => StpOwnerInfoScreen()));
+                          Navigator.push(context, MaterialPageRoute(builder: (_) => AddOwnerScreen()));
                         },
                         child: Container(
                           height: height * 0.06,
