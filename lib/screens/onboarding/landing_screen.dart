@@ -1,6 +1,9 @@
 import 'package:dots_indicator/dots_indicator.dart';
 import 'package:flutter/material.dart';
 import 'package:petcode_app/utils/style_constants.dart';
+import 'package:provider/provider.dart';
+
+import 'login_screen.dart';
 
 class LandingScreen extends StatefulWidget {
   @override
@@ -220,11 +223,16 @@ class _LandingScreenState extends State<LandingScreen> {
             children: [
               GestureDetector(
                 //onTap: () => Navigator.push(context, MaterialPageRoute(builder: (_) => LoginScreen())),
-                onTap: () => Navigator.of(context).push(PageRouteBuilder(pageBuilder: (context, animation, secondaryAnimation){
 
+                onTap: () => Navigator.of(context).push(PageRouteBuilder(pageBuilder: (context, animation, secondaryAnimation){
+                  return ListenableProvider(
+                    create: (context) => animation,
+                    child: LoginScreen(),
+                  );
                 },
                   transitionDuration: Duration(seconds:1),
                 )),
+
                 child: Container(
                   decoration: BoxDecoration(
                       color: StyleConstants.yellow,

@@ -133,6 +133,12 @@ class StyleConstants {
     color: darkGrey,
   );
 
+  static TextStyle boldTitleTextLarge = TextStyle(
+    fontSize: 25.0,
+    fontWeight: FontWeight.w600,
+    color: darkGrey,
+  );
+
   static OutlineInputBorder textBoxBorder = OutlineInputBorder(
     borderRadius: BorderRadius.circular(8.0),
   );
