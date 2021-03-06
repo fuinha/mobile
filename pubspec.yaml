@@ -36,3 +36,7 @@ flutter:
     - assets/images/
     - assets/images/placeholders/
     - assets/navigation_images/
+  fonts:
+    - family: PetCodeIcons
+      fonts:
+        - asset: assets/fonts/PetCodeIcons.ttf
