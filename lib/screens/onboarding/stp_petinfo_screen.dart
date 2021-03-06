@@ -1,6 +1,7 @@
 import 'dart:io';
 
 import 'package:flutter/material.dart';
+import 'package:petcode_app/screens/onboarding/stp_petinfo_pfp_screen.dart';
 
 import 'package:petcode_app/utils/style_constants.dart';
 import 'package:petcode_app/utils/validator_helper.dart';
@@ -346,7 +347,7 @@ class _StpPetInfoScreenState extends State<StpPetInfoScreen> {
                                   border: StyleConstants.textBoxBorder,
                                   focusedBorder: StyleConstants.textBoxBorderFocused,
                                   enabledBorder: StyleConstants.textBoxBorderEnabled,
-                                  hintText: 'Temperament',
+                                  hintText: 'Medical Needs',
                                   hintStyle: TextStyle(
                                     fontSize: 15.0,
                                     fontWeight: FontWeight.w600,
@@ -360,7 +361,7 @@ class _StpPetInfoScreenState extends State<StpPetInfoScreen> {
                       ),
                       GestureDetector(
                         onTap: () {
-                          //Navigator.push(context, MaterialPageRoute(builder: (_) => StpOwnerInfoScreen()));
+                          Navigator.push(context, MaterialPageRoute(builder: (_) => StpPetInfoPfpScreen()));
 
                         },
                         child: Container(
