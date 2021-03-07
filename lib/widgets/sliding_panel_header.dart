@@ -2,6 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:petcode_app/utils/style_constants.dart';
 
 class SlidingPanelHeader extends StatelessWidget {
+  SlidingPanelHeader({Key key, this.name}) : super(key: key);
+
+  final String name;
+
   @override
   Widget build(BuildContext context) {
     double height = StyleConstants.height;
@@ -25,7 +29,7 @@ class SlidingPanelHeader extends StatelessWidget {
               SizedBox(
                 height: height * 0.01,
               ),
-              Text('View Scan Locations',
+              Text(this.name,
                   style: StyleConstants.regTextLarge
                       .copyWith(color: Colors.black)),
             ],

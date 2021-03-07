@@ -14,14 +14,20 @@ dependencies:
 
   cupertino_icons: ^1.0.0
   auto_route: ^1.0.0-beta.10
-  geolocator: ^6.2.0
-  google_maps_flutter: ^1.2.0
-  http: ^0.12.2
-  provider: ^4.3.3
+  cached_network_image: ^3.0.0-nullsafety
+  circular_check_box: ^1.0.4
+  dio: ^4.0.0-beta5
+  flutter_secure_storage: ^4.0.0
+  font_awesome_flutter: ^9.0.0-nullsafety
+  geolocator: ^7.0.1
+  google_maps_flutter: ^2.0.1
+  html: ^0.15.0
+  http: ^0.13.0
+  intl: ^0.17.0
+  provider: ^5.0.0
   sliding_up_panel: ^1.0.2
   dots_indicator: ^1.2.0
-  font_awesome_flutter: ^8.11.0
-  circular_check_box: ^1.0.4
+  url_launcher: ^6.0.2
   pin_code_fields: ^6.1.0
 
 dev_dependencies:
@@ -38,6 +44,7 @@ flutter:
     - assets/images/placeholders/
     - assets/navigation_images/
     - assets/images/onboarding/
+    - assets/icons/
   fonts:
     - family: PetCodeIcons
       fonts:

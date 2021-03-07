@@ -33,7 +33,7 @@ class ScansMapProvider extends ChangeNotifier {
   }
 
   Set<Marker> getMarkers(BuildContext context) {
-    return _mapService.createMarkers(_bitmapDescriptors, context);
+    return _mapService.createScansMarkers(_bitmapDescriptors, context);
   }
 
   bool markersSet() {
