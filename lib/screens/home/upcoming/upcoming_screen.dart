@@ -14,7 +14,9 @@ class UpcomingScreen extends StatelessWidget {
       backgroundColor: Colors.white,
       body: SingleChildScrollView(
         child: Container(
-          
+          decoration: BoxDecoration(
+            gradient: StyleConstants.homePageGradientBackground,
+          ),
           child: Padding(
             padding: EdgeInsets.symmetric(horizontal: width * 0.05),
             child: Column(

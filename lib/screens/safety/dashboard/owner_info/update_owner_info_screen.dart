@@ -128,12 +128,7 @@ class _OwnerInfoEditingScreenState extends State<OwnerInfoEditingScreen> {
                                                         width: 1.5),
                                                   ),
                                                   hintText: 'Full Name',
-                                                  hintStyle: TextStyle(
-                                                    fontSize: 15.0,
-                                                    fontWeight: FontWeight.w600,
-                                                    //color: StyleConstants.darkPurpleGrey)),
-                                                    color: Color(0xffbfbfbf),
-                                                  )
+                                                  hintStyle: StyleConstants.boldText.copyWith(color: StyleConstants.lightGrey),
                                               )
                                           ),
                                         ),
@@ -186,12 +181,7 @@ class _OwnerInfoEditingScreenState extends State<OwnerInfoEditingScreen> {
                                                         width: 1.5),
                                                   ),
                                                   hintText: 'Phone Number',
-                                                  hintStyle: TextStyle(
-                                                    fontSize: 15.0,
-                                                    fontWeight: FontWeight.w600,
-                                                    //color: StyleConstants.darkPurpleGrey)),
-                                                    color: Color(0xffbfbfbf),
-                                                  )
+                                                  hintStyle: StyleConstants.boldText.copyWith(color: StyleConstants.lightGrey),
                                               )
                                           ),
                                         ),
@@ -242,12 +232,7 @@ class _OwnerInfoEditingScreenState extends State<OwnerInfoEditingScreen> {
                                                         width: 1.5),
                                                   ),
                                                   hintText: 'Email Address',
-                                                  hintStyle: TextStyle(
-                                                    fontSize: 15.0,
-                                                    fontWeight: FontWeight.w600,
-                                                    //color: StyleConstants.darkPurpleGrey)),
-                                                    color: Color(0xffbfbfbf),
-                                                  )
+                                                  hintStyle: StyleConstants.boldText.copyWith(color: StyleConstants.lightGrey),
                                               )
                                           ),
                                         ),
@@ -299,12 +284,7 @@ class _OwnerInfoEditingScreenState extends State<OwnerInfoEditingScreen> {
                                                         width: 1.5),
                                                   ),
                                                   hintText: 'Street Address',
-                                                  hintStyle: TextStyle(
-                                                    fontSize: 15.0,
-                                                    fontWeight: FontWeight.w600,
-                                                    //color: StyleConstants.darkPurpleGrey)),
-                                                    color: Color(0xffbfbfbf),
-                                                  )
+                                                  hintStyle: StyleConstants.boldText.copyWith(color: StyleConstants.lightGrey),
                                               )
                                           ),
                                         ),

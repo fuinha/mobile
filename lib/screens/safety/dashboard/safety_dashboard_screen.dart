@@ -197,6 +197,7 @@ class _SafetyDashboardScreenState extends State<SafetyDashboardScreen> {
                   decoration: BoxDecoration(
                     color: StyleConstants.pcBlue,
                     borderRadius: BorderRadius.circular(14.0),
+                    gradient: StyleConstants.blueButtonGradient,
                   ),
                   child: Center(
                     child: Text('Manage Caretakers', style: StyleConstants.boldTitleText.copyWith(color: Colors.white),),

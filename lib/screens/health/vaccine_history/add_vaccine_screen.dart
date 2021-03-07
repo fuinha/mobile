@@ -27,12 +27,25 @@ class _AddVaccineScreenState extends State<AddVaccineScreen> {
             children: [
               Container(
                 height: height * 0.05,
-                child: Center(
-                  child: Text('Search'),
+                child: Padding(
+                  padding:  EdgeInsets.symmetric(horizontal: width * 0.05),
+                  child: Row(
+                    children: [
+                      Icon(Icons.search, color: StyleConstants.lightGrey,),
+                      Text('Search', style: StyleConstants.boldText.copyWith(color: StyleConstants.lightGrey),),
+                    ],
+                  ),
                 ),
                 decoration: BoxDecoration(
+                  border: Border.all(color: StyleConstants.lightGrey),
+                  color: Colors.white,
                   borderRadius: BorderRadius.circular(20.0),
-                  color: Colors.blue,
+                  boxShadow: [
+                    BoxShadow(
+                      color: StyleConstants.shadowColor,
+                      blurRadius: 6.0,
+                    ),
+                  ],
                 ),
               ),
               SizedBox(
@@ -44,7 +57,8 @@ class _AddVaccineScreenState extends State<AddVaccineScreen> {
               ),
               GestureDetector(
                 onTap: () {
-                  Navigator.push(context, MaterialPageRoute(builder: (_) => AddCustomVaccine()));
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (_) => AddCustomVaccine()));
                 },
                 child: Container(
                   decoration: BoxDecoration(
