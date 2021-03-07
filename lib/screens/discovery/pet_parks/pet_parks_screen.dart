@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:petcode_app/providers/pet_parks_map_provider.dart';
 import 'package:petcode_app/providers/pet_parks_panel_provider.dart';
+import 'package:petcode_app/screens/discovery/pet_parks/pet_park_info.dart';
 import 'package:petcode_app/screens/discovery/pet_parks/pet_parks_map.dart';
 import 'package:petcode_app/screens/discovery/pet_parks/pet_parks_sliding_panel.dart';
 import 'package:petcode_app/screens/discovery/pet_parks/search_area_widget.dart';
@@ -45,6 +46,17 @@ class PetParksScreen extends StatelessWidget {
               child: PetParksMap(),
             ),
             mapProvider.mapMoved ? SearchAreaWidget() : SizedBox.shrink(),
+            mapProvider.selectedPark != null
+                ? Align(
+                    alignment: Alignment.bottomCenter,
+                    child: Padding(
+                      padding: EdgeInsets.only(bottom: height * 0.25),
+                      child: PetParkInfo(
+                        shownPark: mapProvider.selectedPark,
+                      ),
+                    ),
+                  )
+                : SizedBox.shrink(),
           ],
         ),
         panel: PetParksSlidingPanel(),

@@ -1,7 +1,13 @@
 import 'package:flutter/material.dart';
+import 'package:petcode_app/models/PetPark.dart';
 import 'package:petcode_app/utils/style_constants.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class PetParkInfo extends StatelessWidget {
+  PetParkInfo({Key key, this.shownPark}) : super(key: key);
+
+  final PetPark shownPark;
+
   @override
   Widget build(BuildContext context) {
     double height = StyleConstants.height;
@@ -28,7 +34,7 @@ class PetParkInfo extends StatelessWidget {
               height: height * 0.19,
               child: ListView.builder(
                   scrollDirection: Axis.horizontal,
-                  itemCount: 5,
+                  itemCount: shownPark.placePhotos.length,
                   itemBuilder: (BuildContext context, int index) {
                     return Padding(
                       padding: EdgeInsets.fromLTRB(width * 0.03, height * 0.03,
@@ -38,8 +44,7 @@ class PetParkInfo extends StatelessWidget {
                           ClipRRect(
                             borderRadius: BorderRadius.circular(16.0),
                             child: Image(
-                              image:
-                                  AssetImage('assets/images/pet_parks_img.png'),
+                              image: shownPark.placePhotos[index].photo,
                               height: height * 0.15,
                               width: width * 0.4,
                               fit: BoxFit.cover,
@@ -104,7 +109,7 @@ class PetParkInfo extends StatelessWidget {
                             children: [
                               Flexible(
                                 child: Text(
-                                  'Park Name',
+                                  shownPark.name,
                                   style: StyleConstants.regTextLarge
                                       .copyWith(color: Colors.black),
                                   maxLines: 2,
@@ -115,7 +120,7 @@ class PetParkInfo extends StatelessWidget {
                               ),
                               Flexible(
                                 child: Text(
-                                  'Address',
+                                  shownPark.address,
                                   style: StyleConstants.regSubtitleText
                                       .copyWith(color: Colors.black),
                                   maxLines: 2,
@@ -129,7 +134,15 @@ class PetParkInfo extends StatelessWidget {
                           child: Padding(
                             padding: EdgeInsets.only(right: 15.0),
                             child: GestureDetector(
-                                onTap: () async {},
+                                onTap: () async {
+                                  String mapsUrl =
+                                      'https://www.google.com/maps/dir/?api=1&destination=${shownPark.location.latitude},${shownPark.location.longitude}';
+                                  if (await canLaunch(mapsUrl)) {
+                                    launch(mapsUrl);
+                                  } else {
+                                    print('Can\'t launch');
+                                  }
+                                },
                                 child: Container(
                                   decoration: BoxDecoration(
                                     shape: BoxShape.circle,

@@ -33,7 +33,7 @@ class PetParksMapProvider extends ChangeNotifier {
 
   void setUpPin() async {
     _petParksPin = await BitmapDescriptor.fromAssetImage(
-        ImageConfiguration(devicePixelRatio: 2.5),
+        ImageConfiguration(devicePixelRatio: 5),
         'assets/icons/pet_parks_pin.png');
     notifyListeners();
   }
@@ -65,6 +65,6 @@ class PetParksMapProvider extends ChangeNotifier {
       return _mapService.createPetParksMarkers(
           _petParksPin, context, _petParks);
     }
-    return null;
+    return new Set();
   }
 }

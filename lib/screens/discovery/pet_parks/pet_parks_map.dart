@@ -30,8 +30,6 @@ class _PetParksMapState extends State<PetParksMap> {
     PetParksPanelProvider petParksPanelProvider =
         Provider.of<PetParksPanelProvider>(context, listen: false);
 
-    print(petParksMapProvider.getMarkers(context));
-
     if (petParksMapProvider.cameraPosition == null &&
         currentLocationProvider.currentLocation != null) {
       petParksMapProvider.setCameraPosition(
