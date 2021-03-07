@@ -8,7 +8,7 @@ import 'package:google_maps_flutter/google_maps_flutter.dart';
 class ImageMarkerService {
   Future<ui.Image> getImageFromUrl(String imageUrl) async {
     http.Response response = await http.get(
-      imageUrl,
+      Uri(path: imageUrl),
     );
     Uint8List imageBytes = response.bodyBytes;
 

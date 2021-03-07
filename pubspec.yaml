@@ -14,15 +14,16 @@ dependencies:
 
   cupertino_icons: ^1.0.0
   auto_route: ^1.0.0-beta.10
-  cached_network_image: ^2.5.0
-  dio: ^3.0.10
-  flutter_secure_storage: ^3.3.5
-  font_awesome_flutter: ^8.11.0
-  geolocator: ^6.2.0
-  google_maps_flutter: ^1.2.0
-  html: ^0.14.0+4
-  http: ^0.12.2
-  provider: ^4.3.3
+  cached_network_image: ^3.0.0-nullsafety
+  dio: ^4.0.0-beta5
+  flutter_secure_storage: ^4.0.0
+  font_awesome_flutter: ^9.0.0-nullsafety
+  geolocator: ^7.0.1
+  google_maps_flutter: ^2.0.1
+  html: ^0.15.0
+  http: ^0.13.0
+  intl: ^0.17.0
+  provider: ^5.0.0
   sliding_up_panel: ^1.0.2
 
 dev_dependencies:
