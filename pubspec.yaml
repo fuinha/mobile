@@ -14,14 +14,19 @@ dependencies:
 
   cupertino_icons: ^1.0.0
   auto_route: ^1.0.0-beta.10
-  geolocator: ^6.2.0
-  google_maps_flutter: ^1.2.0
-  http: ^0.12.2
-  provider: ^4.3.3
-  sliding_up_panel: ^1.0.2
-
-  font_awesome_flutter: ^8.11.0
+  cached_network_image: ^3.0.0-nullsafety
   circular_check_box: ^1.0.4
+  dio: ^4.0.0-beta5
+  flutter_secure_storage: ^4.0.0
+  font_awesome_flutter: ^9.0.0-nullsafety
+  geolocator: ^7.0.1
+  google_maps_flutter: ^2.0.1
+  html: ^0.15.0
+  http: ^0.13.0
+  intl: ^0.17.0
+  provider: ^5.0.0
+  sliding_up_panel: ^1.0.2
+  url_launcher: ^6.0.2
 
 dev_dependencies:
   flutter_test:
@@ -36,3 +41,4 @@ flutter:
     - assets/images/
     - assets/images/placeholders/
     - assets/navigation_images/
+    - assets/icons/

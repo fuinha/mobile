@@ -10,20 +10,20 @@ class RootScreen extends StatelessWidget {
     bool loggedIn = true;
 
     StyleConstants().init(context);
+
     return loggedIn
         ? AutoTabsRouter(
             routes: [
               HomeTab(),
               SafetyTab(),
               HealthTab(),
+              DiscoveryTab(),
             ],
             builder: (context, child, animation) {
               var tabsRouter = context.tabsRouter;
 
               return Scaffold(
-                bottomNavigationBar: buildBottomNav(tabsRouter),
-                body: child
-              );
+                  bottomNavigationBar: buildBottomNav(tabsRouter), body: child);
             },
           )
         : Scaffold(
@@ -43,6 +43,7 @@ class RootScreen extends StatelessWidget {
         BottomNavigationBarItem(icon: Icon(Icons.home_outlined), label: 'Home'),
         BottomNavigationBarItem(icon: Icon(Icons.shield), label: 'Safety'),
         BottomNavigationBarItem(icon: FaIcon(FontAwesomeIcons.heartbeat), label: 'Health'),
+        BottomNavigationBarItem(icon: Icon(Icons.search), label: 'Discovery'),
       ],
     );
   }

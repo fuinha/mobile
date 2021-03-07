@@ -6,6 +6,8 @@
 
 import 'package:auto_route/auto_route.dart' as _i1;
 
+import '../screens/discovery/discovery_screen.dart' as _i15;
+import '../screens/discovery/pet_parks/pet_parks_screen.dart' as _i16;
 import '../screens/health/health_screen.dart' as _i12;
 import '../screens/health/reminders/reminders_screen.dart' as _i13;
 import '../screens/health/vaccine_history/vaccine_history_screen.dart' as _i14;
@@ -38,6 +40,10 @@ class AppRouter extends _i1.RootStackRouter {
           entry: entry, child: const _i1.EmptyRouterPage());
     },
     HealthTab.name: (entry) {
+      return _i1.MaterialPageX(
+          entry: entry, child: const _i1.EmptyRouterPage());
+    },
+    DiscoveryTab.name: (entry) {
       return _i1.MaterialPageX(
           entry: entry, child: const _i1.EmptyRouterPage());
     },
@@ -82,6 +88,12 @@ class AppRouter extends _i1.RootStackRouter {
     VaccineHistoryScreen.name: (entry) {
       return _i1.MaterialPageX(
           entry: entry, child: _i14.VaccineHistoryScreen());
+    },
+    DiscoveryScreen.name: (entry) {
+      return _i1.MaterialPageX(entry: entry, child: _i15.DiscoveryScreen());
+    },
+    PetParksScreen.name: (entry) {
+      return _i1.MaterialPageX(entry: entry, child: _i16.PetParksScreen());
     }
   };
 
@@ -157,6 +169,19 @@ class AppRouter extends _i1.RootStackRouter {
                         path: 'vaccineHistory',
                         routeBuilder: (match) =>
                             VaccineHistoryScreen.fromMatch(match))
+                  ]),
+              _i1.RouteConfig<DiscoveryTab>(DiscoveryTab.name,
+                  path: 'discovery',
+                  routeBuilder: (match) => DiscoveryTab.fromMatch(match),
+                  children: [
+                    _i1.RouteConfig<DiscoveryScreen>(DiscoveryScreen.name,
+                        path: '',
+                        routeBuilder: (match) =>
+                            DiscoveryScreen.fromMatch(match)),
+                    _i1.RouteConfig<PetParksScreen>(PetParksScreen.name,
+                        path: 'petParks',
+                        routeBuilder: (match) =>
+                            PetParksScreen.fromMatch(match))
                   ])
             ])
       ];
@@ -196,6 +221,15 @@ class HealthTab extends _i1.PageRouteInfo {
   HealthTab.fromMatch(_i1.RouteMatch match) : super.fromMatch(match);
 
   static const String name = 'HealthTab';
+}
+
+class DiscoveryTab extends _i1.PageRouteInfo {
+  const DiscoveryTab({List<_i1.PageRouteInfo> children})
+      : super(name, path: 'discovery', initialChildren: children);
+
+  DiscoveryTab.fromMatch(_i1.RouteMatch match) : super.fromMatch(match);
+
+  static const String name = 'DiscoveryTab';
 }
 
 class HomeScreen extends _i1.PageRouteInfo {
@@ -302,4 +336,20 @@ class VaccineHistoryScreen extends _i1.PageRouteInfo {
   VaccineHistoryScreen.fromMatch(_i1.RouteMatch match) : super.fromMatch(match);
 
   static const String name = 'VaccineHistoryScreen';
+}
+
+class DiscoveryScreen extends _i1.PageRouteInfo {
+  const DiscoveryScreen() : super(name, path: '');
+
+  DiscoveryScreen.fromMatch(_i1.RouteMatch match) : super.fromMatch(match);
+
+  static const String name = 'DiscoveryScreen';
+}
+
+class PetParksScreen extends _i1.PageRouteInfo {
+  const PetParksScreen() : super(name, path: 'petParks');
+
+  PetParksScreen.fromMatch(_i1.RouteMatch match) : super.fromMatch(match);
+
+  static const String name = 'PetParksScreen';
 }

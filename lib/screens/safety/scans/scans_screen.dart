@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:petcode_app/screens/safety/scans/scans_map.dart';
 import 'package:petcode_app/screens/safety/scans/scans_sliding_panel.dart';
-import 'package:petcode_app/screens/safety/scans/sliding_panel_header.dart';
+import 'package:petcode_app/widgets/sliding_panel_header.dart';
 import 'package:petcode_app/utils/style_constants.dart';
 import 'package:petcode_app/widgets/back_app_bar.dart';
 import 'package:sliding_up_panel/sliding_up_panel.dart';
@@ -20,7 +20,7 @@ class ScansScreen extends StatelessWidget {
         maxHeight: height * 0.5,
         borderRadius: BorderRadius.only(
             topLeft: Radius.circular(25.0), topRight: Radius.circular(25.0)),
-        header: SlidingPanelHeader(),
+        header: SlidingPanelHeader(name: 'View Scan Locations',),
         body: ClipRRect(
             borderRadius: BorderRadius.only(
                 topLeft: Radius.circular(25.0),
