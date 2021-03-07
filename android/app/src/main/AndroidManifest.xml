@@ -1,9 +1,11 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.petcodeusa.petcode_app">
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.INTERNET" />
    <application
-        android:label="petcode_app_2"
-        android:icon="@mipmap/ic_launcher">
+        android:label="petcode_app"
+        android:icon="@mipmap/ic_launcher"
+        android:usesCleartextTraffic="true">
 
        <meta-data android:name="com.google.android.geo.API_KEY"
            android:value="@string/maps_api_key" />

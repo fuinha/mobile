@@ -1,4 +1,4 @@
-package com.petcodeusa.petcode_app_2
+package com.petcodeusa.petcode_app
 
 import io.flutter.embedding.android.FlutterActivity
 

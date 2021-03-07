@@ -1,6 +1,5 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
-import 'package:petcode_app/utils/routes.gr.dart';
 import 'package:petcode_app/utils/style_constants.dart';
 
 class DiscoveryLink extends StatelessWidget {

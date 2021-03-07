@@ -1,6 +1,6 @@
 {
-    "name": "petcode_app_2",
-    "short_name": "petcode_app_2",
+    "name": "petcode_app",
+    "short_name": "petcode_app",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",

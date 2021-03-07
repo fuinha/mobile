@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:petcode_app/services/auth_service.dart';
 
 import 'package:petcode_app/utils/style_constants.dart';
 
@@ -12,24 +13,15 @@ class CreateAccountScreen2 extends StatefulWidget {
 }
 
 class _CreateAccountScreen2State extends State<CreateAccountScreen2> {
-  TextEditingController _emailInputController;
-  TextEditingController _passwordInputController;
-  TextEditingController _confirmPasswordInputController;
-  TextEditingController _nameInputController;
   TextEditingController _firstNameInputController;
   TextEditingController _lastNameInputController;
-  TextEditingController _phoneNumberInputController;
 
   GlobalKey<FormState> _signupFormKey = GlobalKey<FormState>();
 
   @override
   void initState() {
-    _emailInputController = new TextEditingController();
-    _passwordInputController = new TextEditingController();
-    _confirmPasswordInputController = new TextEditingController();
-    _nameInputController = new TextEditingController();
-
-    _phoneNumberInputController = new TextEditingController();
+    _firstNameInputController = new TextEditingController();
+    _lastNameInputController = new TextEditingController();
     super.initState();
   }
 
@@ -63,11 +55,11 @@ class _CreateAccountScreen2State extends State<CreateAccountScreen2> {
               child: Column(
                 children: [
                   Container(
-                    height: height * 0.06,
+                      height: height * 0.06,
                       child: Image.asset(
-                    'assets/images/petcode_logo_main.png',
-                    fit: BoxFit.cover,
-                  )),
+                        'assets/images/petcode_logo_main.png',
+                        fit: BoxFit.cover,
+                      )),
                   SizedBox(
                     height: height * 0.02,
                   ),
@@ -101,7 +93,7 @@ class _CreateAccountScreen2State extends State<CreateAccountScreen2> {
                           width: width * 0.7,
                           child: Center(
                             child: TextFormField(
-                                controller: _emailInputController,
+                                controller: _firstNameInputController,
                                 decoration: InputDecoration(
                                     border: OutlineInputBorder(
                                       borderRadius: BorderRadius.circular(15.0),
@@ -139,7 +131,7 @@ class _CreateAccountScreen2State extends State<CreateAccountScreen2> {
                           width: width * 0.7,
                           child: Center(
                             child: TextFormField(
-                                controller: _phoneNumberInputController,
+                                controller: _lastNameInputController,
                                 decoration: InputDecoration(
                                     border: OutlineInputBorder(
                                       borderRadius: BorderRadius.circular(15.0),
@@ -156,7 +148,7 @@ class _CreateAccountScreen2State extends State<CreateAccountScreen2> {
                                           color: Color(0xff575b5f),
                                           width: 1.5),
                                     ),
-                                    hintText: 'Phone Number',
+                                    hintText: 'Last Name',
                                     hintStyle: TextStyle(
                                       fontSize: 15.0,
                                       fontWeight: FontWeight.w600,
@@ -170,8 +162,13 @@ class _CreateAccountScreen2State extends State<CreateAccountScreen2> {
                         ),
                         GestureDetector(
                             onTap: () async {
-                              //signUpWithForm();
-                              Navigator.push(context, new MaterialPageRoute(builder: (_) => CreateAccountScreen3()));
+                              AuthService().createUserWithEmailAndPassword(
+                                  _firstNameInputController.text.trim(),
+                                  _lastNameInputController.text.trim());
+                              Navigator.push(
+                                  context,
+                                  new MaterialPageRoute(
+                                      builder: (_) => CreateAccountScreen3()));
                             },
                             child: Container(
                               decoration: BoxDecoration(
@@ -205,15 +202,10 @@ class _CreateAccountScreen2State extends State<CreateAccountScreen2> {
     );
   }
 
-  void signUpWithForm() async {}
-
   void signUpWithGoogle() async {}
 
   void clearAllControllers() {
-    _emailInputController.clear();
-    _passwordInputController.clear();
-    _confirmPasswordInputController.clear();
-    _nameInputController.clear();
-    _phoneNumberInputController.clear();
+    _firstNameInputController.clear();
+    _lastNameInputController.clear();
   }
 }

@@ -15,7 +15,7 @@ dependencies:
   cupertino_icons: ^1.0.0
   auto_route: ^1.0.0-beta.10
   cached_network_image: ^3.0.0-nullsafety
-  circular_check_box: ^1.0.4
+  dots_indicator: ^1.2.0
   dio: ^4.0.0-beta5
   firebase_auth: ^1.0.0
   firebase_core: ^1.0.0
@@ -24,21 +24,23 @@ dependencies:
   font_awesome_flutter: ^9.0.0-nullsafety
   geolocator: ^7.0.1
   google_maps_flutter: ^2.0.1
+  graphql: ^5.0.0-nullsafety.1+readmefix
   html: ^0.15.0
   http: ^0.13.0
   intl: ^0.17.0
+  pin_code_fields: ^6.1.0
   provider: ^5.0.0
   sliding_up_panel: ^1.0.2
-  dots_indicator: ^1.2.0
   url_launcher: ^6.0.2
-  pin_code_fields: ^6.1.0
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
   auto_route_generator: ^1.0.0-beta.11
-  build_runner:
 
+dependency_overrides:
+  build_runner: ^1.11.5
+  web_socket_channel: ^2.0.0
 
 flutter:
   uses-material-design: true

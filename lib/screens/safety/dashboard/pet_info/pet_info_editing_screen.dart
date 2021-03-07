@@ -1,7 +1,5 @@
 import 'dart:io';
 
-import 'package:circular_check_box/circular_check_box.dart';
-
 import 'package:flutter/material.dart';
 
 import 'package:petcode_app/utils/style_constants.dart';
@@ -130,12 +128,11 @@ class _PetInfoEditingScreenState extends State<PetInfoEditingScreen> {
                                   width: width * 0.9,
                                   child: Column(
                                     crossAxisAlignment:
-                                    CrossAxisAlignment.start,
+                                        CrossAxisAlignment.start,
                                     children: [
                                       Text(
                                         'Pet Full Name',
-                                        style: StyleConstants
-                                            .boldText,
+                                        style: StyleConstants.boldText,
                                       ),
                                       SizedBox(
                                         height: height * 0.01,
@@ -143,33 +140,40 @@ class _PetInfoEditingScreenState extends State<PetInfoEditingScreen> {
                                       Container(
                                         decoration: BoxDecoration(
                                           color: Colors.white,
-                                          borderRadius: BorderRadius.circular(15.0),
+                                          borderRadius:
+                                              BorderRadius.circular(15.0),
                                         ),
                                         height: height * 0.055,
                                         child: Center(
                                           child: TextFormField(
                                               controller: _nameInputController,
                                               decoration: InputDecoration(
-                                                  border: OutlineInputBorder(
-                                                    borderRadius:
-                                                    BorderRadius.circular(8.0),
-                                                  ),
-                                                  focusedBorder: OutlineInputBorder(
-                                                    borderSide: BorderSide(
-                                                        color: Color(0xff575b5f),
-                                                        //StyleConstants.darkPurpleGrey,
-                                                        width: 2.0),
-                                                  ),
-                                                  enabledBorder: OutlineInputBorder(
-                                                    borderSide: BorderSide(
+                                                border: OutlineInputBorder(
+                                                  borderRadius:
+                                                      BorderRadius.circular(
+                                                          8.0),
+                                                ),
+                                                focusedBorder:
+                                                    OutlineInputBorder(
+                                                  borderSide: BorderSide(
+                                                      color: Color(0xff575b5f),
+                                                      //StyleConstants.darkPurpleGrey,
+                                                      width: 2.0),
+                                                ),
+                                                enabledBorder:
+                                                    OutlineInputBorder(
+                                                  borderSide: BorderSide(
                                                       //color: StyleConstants.darkPurpleGrey,
-                                                        color: Color(0xff575b5f),
-                                                        width: 1.5),
-                                                  ),
-                                                  hintText: 'Full Name',
-                                                  hintStyle: StyleConstants.boldText.copyWith(color: StyleConstants.lightGrey),
-                                              )
-                                          ),
+                                                      color: Color(0xff575b5f),
+                                                      width: 1.5),
+                                                ),
+                                                hintText: 'Full Name',
+                                                hintStyle: StyleConstants
+                                                    .boldText
+                                                    .copyWith(
+                                                        color: StyleConstants
+                                                            .lightGrey),
+                                              )),
                                         ),
                                       ),
                                     ],
@@ -412,12 +416,11 @@ class _PetInfoEditingScreenState extends State<PetInfoEditingScreen> {
                                   width: width * 0.9,
                                   child: Column(
                                     crossAxisAlignment:
-                                    CrossAxisAlignment.start,
+                                        CrossAxisAlignment.start,
                                     children: [
                                       Text(
                                         'Pet Breed',
-                                        style: StyleConstants
-                                            .boldText,
+                                        style: StyleConstants.boldText,
                                       ),
                                       SizedBox(
                                         height: height * 0.01,
@@ -425,20 +428,27 @@ class _PetInfoEditingScreenState extends State<PetInfoEditingScreen> {
                                       Container(
                                         decoration: BoxDecoration(
                                           color: Colors.white,
-                                          borderRadius: BorderRadius.circular(15.0),
+                                          borderRadius:
+                                              BorderRadius.circular(15.0),
                                         ),
                                         height: height * 0.055,
                                         child: Center(
                                           child: TextFormField(
                                               controller: _breedInputController,
                                               decoration: InputDecoration(
-                                                  border: StyleConstants.textBoxBorder,
-                                                  focusedBorder: StyleConstants.textBoxBorderFocused,
-                                                  enabledBorder: StyleConstants.textBoxBorderEnabled,
-                                                  hintText: 'Full Name',
-                                                  hintStyle: StyleConstants.boldText.copyWith(color: StyleConstants.lightGrey),
-                                              )
-                                          ),
+                                                border: StyleConstants
+                                                    .textBoxBorder,
+                                                focusedBorder: StyleConstants
+                                                    .textBoxBorderFocused,
+                                                enabledBorder: StyleConstants
+                                                    .textBoxBorderEnabled,
+                                                hintText: 'Full Name',
+                                                hintStyle: StyleConstants
+                                                    .boldText
+                                                    .copyWith(
+                                                        color: StyleConstants
+                                                            .lightGrey),
+                                              )),
                                         ),
                                       ),
                                     ],
@@ -516,12 +526,11 @@ class _PetInfoEditingScreenState extends State<PetInfoEditingScreen> {
                                   width: width * 0.9,
                                   child: Column(
                                     crossAxisAlignment:
-                                    CrossAxisAlignment.start,
+                                        CrossAxisAlignment.start,
                                     children: [
                                       Text(
                                         'Color',
-                                        style: StyleConstants
-                                            .boldText,
+                                        style: StyleConstants.boldText,
                                       ),
                                       SizedBox(
                                         height: height * 0.01,
@@ -529,33 +538,40 @@ class _PetInfoEditingScreenState extends State<PetInfoEditingScreen> {
                                       Container(
                                         decoration: BoxDecoration(
                                           color: Colors.white,
-                                          borderRadius: BorderRadius.circular(15.0),
+                                          borderRadius:
+                                              BorderRadius.circular(15.0),
                                         ),
                                         height: height * 0.055,
                                         child: Center(
                                           child: TextFormField(
                                               controller: _colorInputController,
                                               decoration: InputDecoration(
-                                                  border: OutlineInputBorder(
-                                                    borderRadius:
-                                                    BorderRadius.circular(8.0),
-                                                  ),
-                                                  focusedBorder: OutlineInputBorder(
-                                                    borderSide: BorderSide(
-                                                        color: Color(0xff575b5f),
-                                                        //StyleConstants.darkPurpleGrey,
-                                                        width: 2.0),
-                                                  ),
-                                                  enabledBorder: OutlineInputBorder(
-                                                    borderSide: BorderSide(
+                                                border: OutlineInputBorder(
+                                                  borderRadius:
+                                                      BorderRadius.circular(
+                                                          8.0),
+                                                ),
+                                                focusedBorder:
+                                                    OutlineInputBorder(
+                                                  borderSide: BorderSide(
+                                                      color: Color(0xff575b5f),
+                                                      //StyleConstants.darkPurpleGrey,
+                                                      width: 2.0),
+                                                ),
+                                                enabledBorder:
+                                                    OutlineInputBorder(
+                                                  borderSide: BorderSide(
                                                       //color: StyleConstants.darkPurpleGrey,
-                                                        color: Color(0xff575b5f),
-                                                        width: 1.5),
-                                                  ),
-                                                  hintText: 'Full Name',
-                                                  hintStyle: StyleConstants.boldText.copyWith(color: StyleConstants.lightGrey),
-                                              )
-                                          ),
+                                                      color: Color(0xff575b5f),
+                                                      width: 1.5),
+                                                ),
+                                                hintText: 'Full Name',
+                                                hintStyle: StyleConstants
+                                                    .boldText
+                                                    .copyWith(
+                                                        color: StyleConstants
+                                                            .lightGrey),
+                                              )),
                                         ),
                                       ),
                                     ],
@@ -580,12 +596,11 @@ class _PetInfoEditingScreenState extends State<PetInfoEditingScreen> {
                                   width: width * 0.9,
                                   child: Column(
                                     crossAxisAlignment:
-                                    CrossAxisAlignment.start,
+                                        CrossAxisAlignment.start,
                                     children: [
                                       Text(
                                         'Temperament',
-                                        style: StyleConstants
-                                            .boldText,
+                                        style: StyleConstants.boldText,
                                       ),
                                       SizedBox(
                                         height: height * 0.01,
@@ -593,20 +608,28 @@ class _PetInfoEditingScreenState extends State<PetInfoEditingScreen> {
                                       Container(
                                         decoration: BoxDecoration(
                                           color: Colors.white,
-                                          borderRadius: BorderRadius.circular(15.0),
+                                          borderRadius:
+                                              BorderRadius.circular(15.0),
                                         ),
                                         height: height * 0.055,
                                         child: Center(
                                           child: TextFormField(
-                                              controller: _temperamentInputController,
+                                              controller:
+                                                  _temperamentInputController,
                                               decoration: InputDecoration(
-                                                  border: StyleConstants.textBoxBorder,
-                                                  focusedBorder: StyleConstants.textBoxBorderFocused,
-                                                  enabledBorder: StyleConstants.textBoxBorderEnabled,
-                                                  hintText: 'Full Name',
-                                                  hintStyle: StyleConstants.boldText.copyWith(color: StyleConstants.lightGrey),
-                                              )
-                                          ),
+                                                border: StyleConstants
+                                                    .textBoxBorder,
+                                                focusedBorder: StyleConstants
+                                                    .textBoxBorderFocused,
+                                                enabledBorder: StyleConstants
+                                                    .textBoxBorderEnabled,
+                                                hintText: 'Full Name',
+                                                hintStyle: StyleConstants
+                                                    .boldText
+                                                    .copyWith(
+                                                        color: StyleConstants
+                                                            .lightGrey),
+                                              )),
                                         ),
                                       ),
                                     ],
@@ -656,7 +679,7 @@ class _PetInfoEditingScreenState extends State<PetInfoEditingScreen> {
                                   'Service Animal',
                                   style: StyleConstants.regSubtitleText,
                                 ),
-                                CircularCheckBox(
+                                Checkbox(
                                     tristate: false,
                                     activeColor: StyleConstants.yellow,
                                     value: true,
@@ -684,12 +707,11 @@ class _PetInfoEditingScreenState extends State<PetInfoEditingScreen> {
                                     width: width * 0.9,
                                     child: Column(
                                       crossAxisAlignment:
-                                      CrossAxisAlignment.start,
+                                          CrossAxisAlignment.start,
                                       children: [
                                         Text(
                                           'Medical Needs',
-                                          style: StyleConstants
-                                              .boldText,
+                                          style: StyleConstants.boldText,
                                         ),
                                         SizedBox(
                                           height: height * 0.01,
@@ -697,20 +719,28 @@ class _PetInfoEditingScreenState extends State<PetInfoEditingScreen> {
                                         Container(
                                           decoration: BoxDecoration(
                                             color: Colors.white,
-                                            borderRadius: BorderRadius.circular(15.0),
+                                            borderRadius:
+                                                BorderRadius.circular(15.0),
                                           ),
                                           height: height * 0.055,
                                           child: Center(
                                             child: TextFormField(
-                                                controller: _additionalInfoInputController,
+                                                controller:
+                                                    _additionalInfoInputController,
                                                 decoration: InputDecoration(
-                                                    border: StyleConstants.textBoxBorder,
-                                                    focusedBorder: StyleConstants.textBoxBorderFocused,
-                                                    enabledBorder: StyleConstants.textBoxBorderEnabled,
-                                                    hintText: 'Full Name',
-                                                    hintStyle: StyleConstants.boldText.copyWith(color: StyleConstants.lightGrey),
-                                                )
-                                            ),
+                                                  border: StyleConstants
+                                                      .textBoxBorder,
+                                                  focusedBorder: StyleConstants
+                                                      .textBoxBorderFocused,
+                                                  enabledBorder: StyleConstants
+                                                      .textBoxBorderEnabled,
+                                                  hintText: 'Full Name',
+                                                  hintStyle: StyleConstants
+                                                      .boldText
+                                                      .copyWith(
+                                                          color: StyleConstants
+                                                              .lightGrey),
+                                                )),
                                           ),
                                         ),
                                       ],
@@ -718,8 +748,7 @@ class _PetInfoEditingScreenState extends State<PetInfoEditingScreen> {
                                   ),
                                 ],
                               ),
-                            )
-                        ),
+                            )),
                         SizedBox(
                           height: height * 0.05,
                         ),

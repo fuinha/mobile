@@ -1,4 +1,3 @@
-import 'package:circular_check_box/circular_check_box.dart';
 import 'package:flutter/material.dart';
 import 'package:petcode_app/screens/safety/dashboard/owner_info/update_owner_info_screen.dart';
 
@@ -79,7 +78,7 @@ class _OwnerWidgetState extends State<OwnerWidget> {
                   Text('Cameron Wilson', style: StyleConstants.boldText)
                 ],
               ),
-              trailing: CircularCheckBox(
+              trailing: Checkbox(
                 value: true,
                 onChanged: (bool value) {},
                 activeColor: StyleConstants.yellow,
@@ -99,7 +98,7 @@ class _OwnerWidgetState extends State<OwnerWidget> {
               ),
               title: Text('cameronwilson@gmail.com',
                   style: StyleConstants.boldText),
-              trailing: CircularCheckBox(
+              trailing: Checkbox(
                 value: true,
                 onChanged: (bool value) {},
                 activeColor: StyleConstants.yellow,
@@ -118,7 +117,7 @@ class _OwnerWidgetState extends State<OwnerWidget> {
                 color: StyleConstants.pcBlue,
               ),
               title: Text('(555) 123 4567', style: StyleConstants.boldText),
-              trailing: CircularCheckBox(
+              trailing: Checkbox(
                 value: true,
                 onChanged: (bool value) {},
                 activeColor: StyleConstants.yellow,
@@ -138,7 +137,7 @@ class _OwnerWidgetState extends State<OwnerWidget> {
               ),
               title: Text('123 Main Street, New York, Ny 1003050',
                   style: StyleConstants.boldText),
-              trailing: CircularCheckBox(
+              trailing: Checkbox(
                 value: true,
                 onChanged: (bool value) {},
                 activeColor: StyleConstants.yellow,
