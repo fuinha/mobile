@@ -31,7 +31,7 @@ class BackAppBar extends StatelessWidget implements PreferredSize {
         },
       ),
       centerTitle: true,
-      elevation: 0,
+      elevation: 1.0,
     );
   }
 

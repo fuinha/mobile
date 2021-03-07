@@ -44,7 +44,7 @@ class QuickLinksWidget extends StatelessWidget {
                 Icons.location_pin,
                 color: StyleConstants.pcBlue,
               ),
-              path: 'scans',
+              path: 'scanLocations',
             ),
             QuickLinkButton(
               name: 'Create Lost Poster',
@@ -52,7 +52,7 @@ class QuickLinksWidget extends StatelessWidget {
                 Icons.photo,
                 color: StyleConstants.pcBlue,
               ),
-              path: 'lostPoster',
+              path: 'createLostPoster',
             ),
           ],
         ),

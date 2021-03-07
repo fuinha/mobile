@@ -19,6 +19,7 @@ class _HomeScreenState extends State<HomeScreen> {
       length: 2,
       child: Scaffold(
           appBar: AppBar(
+            titleSpacing: 0.0,
             toolbarHeight: height * 0.15,
             backgroundColor: Colors.white,
             //centerTitle: true,
@@ -33,19 +34,22 @@ class _HomeScreenState extends State<HomeScreen> {
                           SizedBox(
                             height: height * 0.02,
                           ),
-                          Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                            children: [
-                              Container(
-                                height: height * 0.045,
-                                child: Image.asset(
-                                  'assets/images/petcode_logo_main.png',
-                                  fit: BoxFit.cover,
+                          Padding(
+                            padding: EdgeInsets.symmetric(horizontal: width * 0.05),
+                            child: Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              children: [
+                                Container(
+                                  height: height * 0.045,
+                                  child: Image.asset(
+                                    'assets/images/petcode_logo_main.png',
+                                    fit: BoxFit.cover,
+                                  ),
                                 ),
-                              ),
-                              IconButton(
-                                  icon: Icon(Icons.menu), onPressed: null)
-                            ],
+                                IconButton(
+                                    icon: Icon(Icons.menu), onPressed: null)
+                              ],
+                            ),
                           ),
                         ],
                       ),
