@@ -1,6 +1,6 @@
 import 'package:auto_route/auto_route.dart';
-import 'package:petcode_app/screens/discovery/discovery_screen.dart';
 import 'package:petcode_app/screens/discovery/pet_parks/pet_parks_screen.dart';
+import 'package:petcode_app/screens/discovery/discovery_screen.dart';
 import 'package:petcode_app/screens/health/health_screen.dart';
 import 'package:petcode_app/screens/health/reminders/reminders_screen.dart';
 import 'package:petcode_app/screens/health/vaccine_history/vaccine_history_screen.dart';
@@ -38,6 +38,17 @@ import 'package:petcode_app/screens/safety/statistics/statistics_screen.dart';
                   name: 'AddEventScreen'),
             ],
           ),
+          AutoRoute(
+            path: 'upcoming',
+            page: EventsScreen,
+            name: 'UpcomingScreen',
+            children: [
+              AutoRoute(path: 'ownerInfo', page: OwnerInfoScreen, name: 'OwnerInfoU'),
+              AutoRoute(path: 'petInfo', page: PetInfoScreen, name: 'PetInfoU'),
+              AutoRoute(path: 'createLostPoster', page: CreateLostPosterScreen, name: 'CreateLostPosterU'),
+              AutoRoute(path: 'scanLocations', page: ScansScreen, name: 'ScanScreenU'),
+            ],
+          ),
         ],
       ),
       AutoRoute(
@@ -65,13 +76,13 @@ import 'package:petcode_app/screens/safety/statistics/statistics_screen.dart';
         ],
       ),
       AutoRoute(
-        path: 'discovery',
-        page: EmptyRouterPage,
-        name: 'DiscoveryTab',
-        children: [
-          AutoRoute(path: '', page: DiscoveryScreen),
-          AutoRoute(path: 'petParks', page: PetParksScreen),
-        ]
+          path: 'discovery',
+          page: EmptyRouterPage,
+          name: 'DiscoveryTab',
+          children: [
+            AutoRoute(path: '', page: DiscoveryScreen),
+            AutoRoute(path: 'petParks', page: PetParksScreen),
+          ]
       ),
     ]),
   ],

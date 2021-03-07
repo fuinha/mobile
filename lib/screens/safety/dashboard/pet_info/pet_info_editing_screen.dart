@@ -167,12 +167,7 @@ class _PetInfoEditingScreenState extends State<PetInfoEditingScreen> {
                                                         width: 1.5),
                                                   ),
                                                   hintText: 'Full Name',
-                                                  hintStyle: TextStyle(
-                                                    fontSize: 15.0,
-                                                    fontWeight: FontWeight.w600,
-                                                    //color: StyleConstants.darkPurpleGrey)),
-                                                    color: Color(0xffbfbfbf),
-                                                  )
+                                                  hintStyle: StyleConstants.boldText.copyWith(color: StyleConstants.lightGrey),
                                               )
                                           ),
                                         ),
@@ -437,29 +432,11 @@ class _PetInfoEditingScreenState extends State<PetInfoEditingScreen> {
                                           child: TextFormField(
                                               controller: _breedInputController,
                                               decoration: InputDecoration(
-                                                  border: OutlineInputBorder(
-                                                    borderRadius:
-                                                    BorderRadius.circular(8.0),
-                                                  ),
-                                                  focusedBorder: OutlineInputBorder(
-                                                    borderSide: BorderSide(
-                                                        color: Color(0xff575b5f),
-                                                        //StyleConstants.darkPurpleGrey,
-                                                        width: 2.0),
-                                                  ),
-                                                  enabledBorder: OutlineInputBorder(
-                                                    borderSide: BorderSide(
-                                                      //color: StyleConstants.darkPurpleGrey,
-                                                        color: Color(0xff575b5f),
-                                                        width: 1.5),
-                                                  ),
+                                                  border: StyleConstants.textBoxBorder,
+                                                  focusedBorder: StyleConstants.textBoxBorderFocused,
+                                                  enabledBorder: StyleConstants.textBoxBorderEnabled,
                                                   hintText: 'Full Name',
-                                                  hintStyle: TextStyle(
-                                                    fontSize: 15.0,
-                                                    fontWeight: FontWeight.w600,
-                                                    //color: StyleConstants.darkPurpleGrey)),
-                                                    color: Color(0xffbfbfbf),
-                                                  )
+                                                  hintStyle: StyleConstants.boldText.copyWith(color: StyleConstants.lightGrey),
                                               )
                                           ),
                                         ),
@@ -576,12 +553,7 @@ class _PetInfoEditingScreenState extends State<PetInfoEditingScreen> {
                                                         width: 1.5),
                                                   ),
                                                   hintText: 'Full Name',
-                                                  hintStyle: TextStyle(
-                                                    fontSize: 15.0,
-                                                    fontWeight: FontWeight.w600,
-                                                    //color: StyleConstants.darkPurpleGrey)),
-                                                    color: Color(0xffbfbfbf),
-                                                  )
+                                                  hintStyle: StyleConstants.boldText.copyWith(color: StyleConstants.lightGrey),
                                               )
                                           ),
                                         ),
@@ -628,29 +600,11 @@ class _PetInfoEditingScreenState extends State<PetInfoEditingScreen> {
                                           child: TextFormField(
                                               controller: _temperamentInputController,
                                               decoration: InputDecoration(
-                                                  border: OutlineInputBorder(
-                                                    borderRadius:
-                                                    BorderRadius.circular(8.0),
-                                                  ),
-                                                  focusedBorder: OutlineInputBorder(
-                                                    borderSide: BorderSide(
-                                                        color: Color(0xff575b5f),
-                                                        //StyleConstants.darkPurpleGrey,
-                                                        width: 2.0),
-                                                  ),
-                                                  enabledBorder: OutlineInputBorder(
-                                                    borderSide: BorderSide(
-                                                      //color: StyleConstants.darkPurpleGrey,
-                                                        color: Color(0xff575b5f),
-                                                        width: 1.5),
-                                                  ),
+                                                  border: StyleConstants.textBoxBorder,
+                                                  focusedBorder: StyleConstants.textBoxBorderFocused,
+                                                  enabledBorder: StyleConstants.textBoxBorderEnabled,
                                                   hintText: 'Full Name',
-                                                  hintStyle: TextStyle(
-                                                    fontSize: 15.0,
-                                                    fontWeight: FontWeight.w600,
-                                                    //color: StyleConstants.darkPurpleGrey)),
-                                                    color: Color(0xffbfbfbf),
-                                                  )
+                                                  hintStyle: StyleConstants.boldText.copyWith(color: StyleConstants.lightGrey),
                                               )
                                           ),
                                         ),
@@ -750,29 +704,11 @@ class _PetInfoEditingScreenState extends State<PetInfoEditingScreen> {
                                             child: TextFormField(
                                                 controller: _additionalInfoInputController,
                                                 decoration: InputDecoration(
-                                                    border: OutlineInputBorder(
-                                                      borderRadius:
-                                                      BorderRadius.circular(8.0),
-                                                    ),
-                                                    focusedBorder: OutlineInputBorder(
-                                                      borderSide: BorderSide(
-                                                          color: Color(0xff575b5f),
-                                                          //StyleConstants.darkPurpleGrey,
-                                                          width: 2.0),
-                                                    ),
-                                                    enabledBorder: OutlineInputBorder(
-                                                      borderSide: BorderSide(
-                                                        //color: StyleConstants.darkPurpleGrey,
-                                                          color: Color(0xff575b5f),
-                                                          width: 1.5),
-                                                    ),
+                                                    border: StyleConstants.textBoxBorder,
+                                                    focusedBorder: StyleConstants.textBoxBorderFocused,
+                                                    enabledBorder: StyleConstants.textBoxBorderEnabled,
                                                     hintText: 'Full Name',
-                                                    hintStyle: TextStyle(
-                                                      fontSize: 15.0,
-                                                      fontWeight: FontWeight.w600,
-                                                      //color: StyleConstants.darkPurpleGrey)),
-                                                      color: Color(0xffbfbfbf),
-                                                    )
+                                                    hintStyle: StyleConstants.boldText.copyWith(color: StyleConstants.lightGrey),
                                                 )
                                             ),
                                           ),

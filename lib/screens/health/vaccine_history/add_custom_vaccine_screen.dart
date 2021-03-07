@@ -44,12 +44,7 @@ class _AddCustomVaccineState extends State<AddCustomVaccine> {
                                 focusedBorder: StyleConstants.textBoxBorderFocused,
                                 enabledBorder: StyleConstants.textBoxBorderEnabled,
                                 hintText: 'Vaccine Name',
-                                hintStyle: TextStyle(
-                                  fontSize: 15.0,
-                                  fontWeight: FontWeight.w600,
-                                  //color: StyleConstants.darkPurpleGrey)),
-                                  color: Color(0xffbfbfbf),
-                                )
+                                hintStyle: StyleConstants.boldText.copyWith(color: StyleConstants.lightGrey),
                             )
                         ),
                       ),
@@ -80,12 +75,7 @@ class _AddCustomVaccineState extends State<AddCustomVaccine> {
                                 focusedBorder: StyleConstants.textBoxBorderFocused,
                                 enabledBorder: StyleConstants.textBoxBorderEnabled,
                                 hintText: 'Description',
-                                hintStyle: TextStyle(
-                                  fontSize: 15.0,
-                                  fontWeight: FontWeight.w600,
-                                  //color: StyleConstants.darkPurpleGrey)),
-                                  color: Color(0xffbfbfbf),
-                                )
+                                hintStyle: StyleConstants.boldText.copyWith(color: StyleConstants.lightGrey),
                             )
                         ),
                       ),
@@ -114,12 +104,7 @@ class _AddCustomVaccineState extends State<AddCustomVaccine> {
                                 focusedBorder: StyleConstants.textBoxBorderFocused,
                                 enabledBorder: StyleConstants.textBoxBorderEnabled,
                                 hintText: 'Expiration Date',
-                                hintStyle: TextStyle(
-                                  fontSize: 15.0,
-                                  fontWeight: FontWeight.w600,
-                                  //color: StyleConstants.darkPurpleGrey)),
-                                  color: Color(0xffbfbfbf),
-                                )
+                                hintStyle: StyleConstants.boldText.copyWith(color: StyleConstants.lightGrey),
                             )
                         ),
                       ),

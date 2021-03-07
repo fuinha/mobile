@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:petcode_app/utils/custom_icons/petcode_icons.dart';
 import 'package:petcode_app/utils/style_constants.dart';
 import 'package:petcode_app/widgets/quick_links/quick_link_button.dart';
 
@@ -41,7 +42,7 @@ class QuickLinksWidget extends StatelessWidget {
             QuickLinkButton(
               name: 'Scan Locations',
               icon: Icon(
-                Icons.location_pin,
+                PetCodeIcons.scanlocations,
                 color: StyleConstants.pcBlue,
               ),
               path: 'scanLocations',
@@ -49,7 +50,7 @@ class QuickLinksWidget extends StatelessWidget {
             QuickLinkButton(
               name: 'Create Lost Poster',
               icon: Icon(
-                Icons.photo,
+                PetCodeIcons.poster,
                 color: StyleConstants.pcBlue,
               ),
               path: 'createLostPoster',

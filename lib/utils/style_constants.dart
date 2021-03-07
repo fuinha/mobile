@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-class StyleConstants{
+class StyleConstants {
   static MediaQueryData _mediaQueryData;
 
   //for iPhone SE2 - 647.0 and 375.0
@@ -133,9 +133,14 @@ class StyleConstants{
     color: darkGrey,
   );
 
+  static TextStyle boldTitleTextLarge = TextStyle(
+    fontSize: 25.0,
+    fontWeight: FontWeight.w600,
+    color: darkGrey,
+  );
+
   static OutlineInputBorder textBoxBorder = OutlineInputBorder(
-    borderRadius:
-    BorderRadius.circular(8.0),
+    borderRadius: BorderRadius.circular(8.0),
   );
 
   static OutlineInputBorder textBoxBorderFocused = OutlineInputBorder(
@@ -147,14 +152,43 @@ class StyleConstants{
 
   static OutlineInputBorder textBoxBorderEnabled = OutlineInputBorder(
     borderSide: BorderSide(
-      //color: StyleConstants.darkPurpleGrey,
+        //color: StyleConstants.darkPurpleGrey,
         color: Color(0xff575b5f),
         width: 1.5),
   );
 
+  static LinearGradient homePageGradientBackground = LinearGradient(
+    begin: Alignment.bottomRight,
+    end: Alignment(0.6, 0.6),
+    colors: [
+      Color(0xffC5F2FF).withOpacity(0.75),
+      Colors.white,
+    ],
+  );
 
+  static LinearGradient blueButtonGradient = LinearGradient(
+    begin: Alignment.centerRight,
+    end: Alignment.centerLeft,
+    colors: [
+      Color(0xff87D4EA),
+      Color(0xff51BCDA),
+    ],
+  );
+  static LinearGradient redButtonGradient = LinearGradient(
+    begin: Alignment.centerRight,
+    end: Alignment.centerLeft,
+    colors: [
+      Color(0xffFE8C8C),
+      Color(0xffD64A4A),
+    ],
+  );
 
-
-
-
+  static LinearGradient yellowButtonGradient = LinearGradient(
+    begin: Alignment.centerRight,
+    end: Alignment.centerLeft,
+    colors: [
+      Color(0xffF9DDA5),
+      Color(0xffFBC658),
+    ],
+  );
 }

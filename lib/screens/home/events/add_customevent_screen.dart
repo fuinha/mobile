@@ -313,7 +313,9 @@ class _AddCustomEventScreenState extends State<AddCustomEventScreen> {
               width: width,
               decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(10.0),
-                  color: StyleConstants.pcBlue),
+                  color: StyleConstants.pcBlue,
+                gradient: StyleConstants.blueButtonGradient,
+              ),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [

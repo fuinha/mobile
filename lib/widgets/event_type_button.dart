@@ -3,6 +3,7 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:petcode_app/screens/home/events/add_customevent_screen.dart';
 import 'package:petcode_app/screens/home/events/add_normalevent_screen.dart';
 import 'package:petcode_app/screens/home/events/add_weightevent_screen.dart';
+import 'package:petcode_app/utils/custom_icons/petcode_icons.dart';
 import 'package:petcode_app/utils/style_constants.dart';
 
 class EventTypeButton extends StatelessWidget {
@@ -16,18 +17,18 @@ class EventTypeButton extends StatelessWidget {
 
   final List<FaIcon> eventIcons = [
     //row 1
-    FaIcon(FontAwesomeIcons.hamburger, size: 45.0, color: StyleConstants.pcBlue,),
-    FaIcon(FontAwesomeIcons.bone,size: 45.0, color: StyleConstants.pcBlue,),
+    FaIcon(PetCodeIcons.food, size: 45.0, color: StyleConstants.pcBlue,),
+    FaIcon(PetCodeIcons.treat,size: 45.0, color: StyleConstants.pcBlue,),
     //row 2
-    FaIcon(FontAwesomeIcons.dog,size: 45.0, color: StyleConstants.green,),
-    FaIcon(FontAwesomeIcons.poop,size: 45.0, color: StyleConstants.green,),
-    FaIcon(FontAwesomeIcons.dog,size: 45.0, color: StyleConstants.green,),
+    FaIcon(PetCodeIcons.dog_walk, size: 45.0, color: StyleConstants.green,),
+    FaIcon(PetCodeIcons.poop, size: 45.0, color: StyleConstants.green,),
+    FaIcon(PetCodeIcons.dog_walk,size: 45.0, color: StyleConstants.green,),
     //row 3
-    FaIcon(FontAwesomeIcons.pills,size: 45.0, color: StyleConstants.red,),
-    FaIcon(FontAwesomeIcons.cut,size: 45.0, color: StyleConstants.red,),
-    FaIcon(FontAwesomeIcons.weight,size: 45.0, color: StyleConstants.red,),
+    FaIcon(PetCodeIcons.pill,size: 45.0, color: StyleConstants.red,),
+    FaIcon(PetCodeIcons.comb,size: 45.0, color: StyleConstants.red,),
+    FaIcon(PetCodeIcons.weight, size: 45.0, color: StyleConstants.red,),
     //row 4
-    FaIcon(FontAwesomeIcons.wrench,size: 45.0, color: StyleConstants.yellow,),
+    FaIcon(PetCodeIcons.wrench,size: 45.0, color: StyleConstants.yellow,),
   ];
 
   final eventColors = [
