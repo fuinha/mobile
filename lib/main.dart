@@ -1,3 +1,4 @@
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:petcode_app/providers/current_location_provider.dart';
 import 'package:petcode_app/providers/pet_parks_map_provider.dart';
@@ -8,10 +9,10 @@ import 'package:petcode_app/set_up_keys.dart';
 import 'package:petcode_app/utils/routes.gr.dart';
 import 'package:provider/provider.dart';
 
-void main() {
+void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   SetUpKeys().createKeys();
-
+  await Firebase.initializeApp();
   runApp(MyApp());
 }
 

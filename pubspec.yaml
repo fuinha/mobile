@@ -17,6 +17,9 @@ dependencies:
   cached_network_image: ^3.0.0-nullsafety
   circular_check_box: ^1.0.4
   dio: ^4.0.0-beta5
+  firebase_auth: ^1.0.0
+  firebase_core: ^1.0.0
+  firebase_storage: ^8.0.0
   flutter_secure_storage: ^4.0.0
   font_awesome_flutter: ^9.0.0-nullsafety
   geolocator: ^7.0.1
